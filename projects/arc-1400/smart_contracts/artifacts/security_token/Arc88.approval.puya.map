@@ -3,7 +3,7 @@
   "sources": [
     "C:/Users/scholtz/source/repos/scholtz/arc-1400/projects/arc-1400/smart_contracts/security_token/arc88.algo.ts"
   ],
-  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAYA;;AAAA;;;AAAA;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;;;AAAA;;;;;;;;;;;;;;;;;;AAAA;;AAuFG;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;;AAbA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;;AAZA;;AAAA;AAAA;AAAA;;AAAA;AA9DH;;;AA8DG;;;AAAA;;AAVA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;;AAVA;;AAAA;AAAA;AAAA;;AAAA;AA1CH;;;AA0CG;;;AAAA;;AARA;;AAAA;AAAA;AAAA;;AAAA;AAlCH;;;AAkCG;;;AAAA;;AATA;;AAAA;AAAA;AAAA;;AAAA;AAzBH;;;AAyBG;;;AAAA;;AAAA;AAAA;AAAA;AAAA;;AANA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;;AAAA;AAAA;AAAA;AAAA;;AAnBH;;AAAA;;;AAAA;;AAAA;AAAA;AAAA;;AAGqD;AAAA;AAQ3B;AAAA;;AAAlB;;;AAR6C;AAAA;AAAA;AAAA;AAQQ;AAArD;;;AAV0C;AAAA;AAW5B;AAAA;;AAAZ;;;AAXwC;AAYC;;AAA3C;AAV6C;AAYtB;;;AAAzB;;AAMF;;;AApB8C;AAAA;AAAA;AAAA;AAqB9C;AAGF;;;AAEE;;;AA1B8C;AAAA;AA2B9B;AAAA;;AAAZ;;;AAA6B;;AAAP;AA3BoB;AAAA;AAAA;AAAA;AA4BrB;AAArB;AAAJ;;;AAAoD;;AAAP;AA5BC;AAAA;AAAA;AAAA;AA6BzB;;AAAA;AAAd;;AAAA;AAAA;;AAAA;AAAP;AAIF;;;AA/BmD;AAAA;AAiCvB;AAAA;;AAAjB;;;AAjCwC;AAAA;AAAA;AAAA;AAiCY;AAAW;AAAlC;AAA7B;;;;AAAF;AAAP;AACO;;AAAc;AAAd;AAAP;AApC8C;AAqC9C;;AAAA;AAnCiD;AAoCxB;;;AAAzB;;;;;;AAGF;;;AAEE;;;AAC4B;;AA5CkB;AAAA;AAAA;AAAA;AA4CvC;AAAP;AACO;;AAAc;AAAd;AAAP;AA7C8C;AAAA;AAAA;AAAA;AAAA;AA+C9C;;AAAA;AACK;;AAAA;AAAL;;AAAA;AAAA;AAAA;;AAKA;;;AAC4B;;AAtDkB;AAAA;AAAA;AAAA;AAsDvC;AAAP;AAtD8C;AAAA;AAAA;AAAA;AAAA;AAwD3B;AAAnB;AACA;;;;;;AAAA;AAAA;AAAA;;AAIF;;;AAEE;;;AAC4B;;AAhEkB;AAAA;AAAA;AAAA;AAgEvC;AAAP;AACO;;AAAY;AAAZ;AAAP;AAhEqD;AAAA;AAiE/B;AAAA;;AAAlB;;;AAjEiD;AAAA;AAAA;AAAA;AAiES;AAA5B;AAA9B;AAAA;AAjEiD;AAoErD;;AAAA;AArE8C;AAAA;AAAA;AAAA;AAsEzC;;AAAA;AAAL;;;;;;AAAA;AAAA;AAAA;;AAKA;;;AA1EqD;AAAA;AA2E5B;AAAA;;AAAzB;AACoC;;AA5EiB;AAAA;AAAA;AAAA;AA6E9C;;AAAA;AAAP;AA9E8C;AAAA;AAAA;AAAA;AAAA;AAgF9C;;AAAA;AA/EqD;AAgF3B;AAA1B;AACK;AAAA;AAAL;;;;;;AAAA;;AAAA;AAAA;AACA;;AAAA;AAAA;AAAA;;AAKA;;;AAC4B;;AAzFkB;AAAA;AAAA;AAAA;AAyFvC;AAAP;AAxFqD;AAyF3B;AAA1B;",
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAeA;;AAAA;;;AAAA;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;;;AAAA;;;;;;;;;;;;;;;;;;AAAA;;AAuFG;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;;AAbA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;;AAZA;;AAAA;AAAA;AAAA;;AAAA;AA9DH;;;AA8DG;;;AAAA;;AAVA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;;AAVA;;AAAA;AAAA;AAAA;;AAAA;AA1CH;;;AA0CG;;;AAAA;;AARA;;AAAA;AAAA;AAAA;;AAAA;AAlCH;;;AAkCG;;;AAAA;;AATA;;AAAA;AAAA;AAAA;;AAAA;AAzBH;;;AAyBG;;;AAAA;;AAAA;AAAA;AAAA;AAAA;;AANA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;;AAAA;AAAA;AAAA;AAAA;;AAnBH;;AAAA;;;AAAA;;AAAA;AAAA;AAAA;;AAGqD;AAAA;AAQ3B;AAAA;;AAAlB;;;AAR6C;AAAA;AAAA;AAAA;AAQQ;AAArD;;;AAV0C;AAAA;AAW5B;AAAA;;AAAZ;;;AAXwC;AAYC;;AAA3C;AAV6C;AAYtB;;;AAAzB;;AAMF;;;AApB8C;AAAA;AAAA;AAAA;AAqB9C;AAGF;;;AAEE;;;AA1B8C;AAAA;AA2B9B;AAAA;;AAAZ;;;AAA6B;;AAAP;AA3BoB;AAAA;AAAA;AAAA;AA4BrB;AAArB;AAAJ;;;AAAoD;;AAAP;AA5BC;AAAA;AAAA;AAAA;AA6BzB;;AAAA;AAAd;;AAAA;AAAA;;AAAA;AAAP;AAIF;;;AA/BmD;AAAA;AAiCvB;AAAA;;AAAjB;;;AAjCwC;AAAA;AAAA;AAAA;AAiCY;AAAW;AAAlC;AAA7B;;;;AAAF;AAAP;AACO;;AAAc;AAAd;AAAP;AApC8C;AAqC9C;;AAAA;AAnCiD;AAoCxB;;;AAAzB;;;;;;AAGF;;;AAEE;;;AAC4B;;AA5CkB;AAAA;AAAA;AAAA;AA4CvC;AAAP;AACO;;AAAc;AAAd;AAAP;AA7C8C;AAAA;AAAA;AAAA;AAAA;AA+C9C;;AAAA;AACK;;AAAA;AAAL;;AAAA;AAAA;AAAA;;AAKA;;;AAC4B;;AAtDkB;AAAA;AAAA;AAAA;AAsDvC;AAAP;AAtD8C;AAAA;AAAA;AAAA;AAAA;AAwD3B;AAAnB;AACA;;;;;;AAAA;AAAA;AAAA;;AAIF;;;AAEE;;;AAC4B;;AAhEkB;AAAA;AAAA;AAAA;AAgEvC;AAAP;AACO;;AAAY;AAAZ;AAAP;AAhEqD;AAAA;AAiE/B;AAAA;;AAAlB;;;AAjEiD;AAAA;AAAA;AAAA;AAiES;AAA5B;AAA9B;AAAA;AAjEiD;AAoErD;;AAAA;AArE8C;AAAA;AAAA;AAAA;AAsEzC;;AAAA;AAAL;;;;;;AAAA;AAAA;AAAA;;AAKA;;;AA1EqD;AAAA;AA2E5B;AAAA;;AAAzB;AACoC;;AA5EiB;AAAA;AAAA;AAAA;AA6E9C;;AAAA;AAAP;AA9E8C;AAAA;AAAA;AAAA;AAAA;AAgF9C;;AAAA;AA/EqD;AAgF3B;AAA1B;AACK;AAAA;AAAL;;;;;;AAAA;;AAAA;AAAA;AACA;;AAAA;AAAA;AAAA;;AAKA;;;AAC4B;;AAzFkB;AAAA;AAAA;AAAA;AAyFvC;AAAP;AAxFqD;AAyF3B;AAA1B;",
   "op_pc_offset": 0,
   "pc_events": {
     "1": {
@@ -14,9 +14,9 @@
       "op": "intcblock 0 1"
     },
     "5": {
-      "op": "bytecblock \"o\" base32(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA) \"po\" \"oi\" 0x00 0x151f7c75 0x4355d2ad"
+      "op": "bytecblock \"arc88_o\" base32(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA) \"arc88_po\" \"arc88_oi\" 0x00 0x151f7c75 0x4355d2ad"
     },
-    "60": {
+    "78": {
       "op": "txn NumAppArgs",
       "defined_out": [
         "tmp%0#1"
@@ -25,11 +25,11 @@
         "tmp%0#1"
       ]
     },
-    "62": {
+    "80": {
       "op": "bz main_bare_routing@15",
       "stack_out": []
     },
-    "65": {
+    "83": {
       "op": "pushbytess 0x0702654e 0xd015724e 0x029fecc0 0x7349334e 0xdb7c82ef 0xfd2c2c6e 0x42a5f065 0xad4f68ea // method \"arc88_owner()address\", method \"arc88_is_owner(address)bool\", method \"arc88_initialize_owner(address)void\", method \"arc88_transfer_ownership(address)void\", method \"arc88_renounce_ownership()void\", method \"arc88_transfer_ownership_request(address)void\", method \"arc88_accept_ownership()void\", method \"arc88_cancel_ownership_request()void\"",
       "defined_out": [
         "Method(arc88_accept_ownership()void)",
@@ -52,7 +52,7 @@
         "Method(arc88_cancel_ownership_request()void)"
       ]
     },
-    "107": {
+    "125": {
       "op": "txna ApplicationArgs 0",
       "defined_out": [
         "Method(arc88_accept_ownership()void)",
@@ -77,11 +77,11 @@
         "tmp%2#0"
       ]
     },
-    "110": {
+    "128": {
       "op": "match main_arc88_owner_route@5 main_arc88_is_owner_route@6 main_arc88_initialize_owner_route@7 main_arc88_transfer_ownership_route@8 main_arc88_renounce_ownership_route@9 main_arc88_transfer_ownership_request_route@10 main_arc88_accept_ownership_route@11 main_arc88_cancel_ownership_request_route@12",
       "stack_out": []
     },
-    "128": {
+    "146": {
       "block": "main_after_if_else@19",
       "stack_in": [],
       "op": "intc_0 // 0",
@@ -92,11 +92,11 @@
         "tmp%0#0"
       ]
     },
-    "129": {
+    "147": {
       "op": "return",
       "stack_out": []
     },
-    "130": {
+    "148": {
       "block": "main_arc88_cancel_ownership_request_route@12",
       "stack_in": [],
       "op": "txn OnCompletion",
@@ -107,7 +107,7 @@
         "tmp%35#0"
       ]
     },
-    "132": {
+    "150": {
       "op": "!",
       "defined_out": [
         "tmp%36#0"
@@ -116,12 +116,12 @@
         "tmp%36#0"
       ]
     },
-    "133": {
+    "151": {
       "error": "OnCompletion is not NoOp",
       "op": "assert // OnCompletion is not NoOp",
       "stack_out": []
     },
-    "134": {
+    "152": {
       "op": "txn ApplicationID",
       "defined_out": [
         "tmp%37#0"
@@ -130,16 +130,16 @@
         "tmp%37#0"
       ]
     },
-    "136": {
+    "154": {
       "error": "can only call when not creating",
       "op": "assert // can only call when not creating",
       "stack_out": []
     },
-    "137": {
+    "155": {
       "callsub": "smart_contracts/security_token/arc88.algo.ts::Arc88.arc88_cancel_ownership_request",
       "op": "callsub arc88_cancel_ownership_request"
     },
-    "140": {
+    "158": {
       "op": "intc_1 // 1",
       "defined_out": [
         "tmp%0#0"
@@ -148,11 +148,11 @@
         "tmp%0#0"
       ]
     },
-    "141": {
+    "159": {
       "op": "return",
       "stack_out": []
     },
-    "142": {
+    "160": {
       "block": "main_arc88_accept_ownership_route@11",
       "stack_in": [],
       "op": "txn OnCompletion",
@@ -163,7 +163,7 @@
         "tmp%31#0"
       ]
     },
-    "144": {
+    "162": {
       "op": "!",
       "defined_out": [
         "tmp%32#0"
@@ -172,12 +172,12 @@
         "tmp%32#0"
       ]
     },
-    "145": {
+    "163": {
       "error": "OnCompletion is not NoOp",
       "op": "assert // OnCompletion is not NoOp",
       "stack_out": []
     },
-    "146": {
+    "164": {
       "op": "txn ApplicationID",
       "defined_out": [
         "tmp%33#0"
@@ -186,16 +186,16 @@
         "tmp%33#0"
       ]
     },
-    "148": {
+    "166": {
       "error": "can only call when not creating",
       "op": "assert // can only call when not creating",
       "stack_out": []
     },
-    "149": {
+    "167": {
       "callsub": "smart_contracts/security_token/arc88.algo.ts::Arc88.arc88_accept_ownership",
       "op": "callsub arc88_accept_ownership"
     },
-    "152": {
+    "170": {
       "op": "intc_1 // 1",
       "defined_out": [
         "tmp%0#0"
@@ -204,11 +204,11 @@
         "tmp%0#0"
       ]
     },
-    "153": {
+    "171": {
       "op": "return",
       "stack_out": []
     },
-    "154": {
+    "172": {
       "block": "main_arc88_transfer_ownership_request_route@10",
       "stack_in": [],
       "op": "txn OnCompletion",
@@ -219,7 +219,7 @@
         "tmp%27#0"
       ]
     },
-    "156": {
+    "174": {
       "op": "!",
       "defined_out": [
         "tmp%28#0"
@@ -228,12 +228,12 @@
         "tmp%28#0"
       ]
     },
-    "157": {
+    "175": {
       "error": "OnCompletion is not NoOp",
       "op": "assert // OnCompletion is not NoOp",
       "stack_out": []
     },
-    "158": {
+    "176": {
       "op": "txn ApplicationID",
       "defined_out": [
         "tmp%29#0"
@@ -242,12 +242,12 @@
         "tmp%29#0"
       ]
     },
-    "160": {
+    "178": {
       "error": "can only call when not creating",
       "op": "assert // can only call when not creating",
       "stack_out": []
     },
-    "161": {
+    "179": {
       "op": "txna ApplicationArgs 1",
       "defined_out": [
         "reinterpret_bytes[32]%3#0"
@@ -256,12 +256,12 @@
         "reinterpret_bytes[32]%3#0"
       ]
     },
-    "164": {
+    "182": {
       "callsub": "smart_contracts/security_token/arc88.algo.ts::Arc88.arc88_transfer_ownership_request",
       "op": "callsub arc88_transfer_ownership_request",
       "stack_out": []
     },
-    "167": {
+    "185": {
       "op": "intc_1 // 1",
       "defined_out": [
         "tmp%0#0"
@@ -270,11 +270,11 @@
         "tmp%0#0"
       ]
     },
-    "168": {
+    "186": {
       "op": "return",
       "stack_out": []
     },
-    "169": {
+    "187": {
       "block": "main_arc88_renounce_ownership_route@9",
       "stack_in": [],
       "op": "txn OnCompletion",
@@ -285,7 +285,7 @@
         "tmp%23#0"
       ]
     },
-    "171": {
+    "189": {
       "op": "!",
       "defined_out": [
         "tmp%24#0"
@@ -294,12 +294,12 @@
         "tmp%24#0"
       ]
     },
-    "172": {
+    "190": {
       "error": "OnCompletion is not NoOp",
       "op": "assert // OnCompletion is not NoOp",
       "stack_out": []
     },
-    "173": {
+    "191": {
       "op": "txn ApplicationID",
       "defined_out": [
         "tmp%25#0"
@@ -308,16 +308,16 @@
         "tmp%25#0"
       ]
     },
-    "175": {
+    "193": {
       "error": "can only call when not creating",
       "op": "assert // can only call when not creating",
       "stack_out": []
     },
-    "176": {
+    "194": {
       "callsub": "smart_contracts/security_token/arc88.algo.ts::Arc88.arc88_renounce_ownership",
       "op": "callsub arc88_renounce_ownership"
     },
-    "179": {
+    "197": {
       "op": "intc_1 // 1",
       "defined_out": [
         "tmp%0#0"
@@ -326,11 +326,11 @@
         "tmp%0#0"
       ]
     },
-    "180": {
+    "198": {
       "op": "return",
       "stack_out": []
     },
-    "181": {
+    "199": {
       "block": "main_arc88_transfer_ownership_route@8",
       "stack_in": [],
       "op": "txn OnCompletion",
@@ -341,7 +341,7 @@
         "tmp%19#0"
       ]
     },
-    "183": {
+    "201": {
       "op": "!",
       "defined_out": [
         "tmp%20#0"
@@ -350,12 +350,12 @@
         "tmp%20#0"
       ]
     },
-    "184": {
+    "202": {
       "error": "OnCompletion is not NoOp",
       "op": "assert // OnCompletion is not NoOp",
       "stack_out": []
     },
-    "185": {
+    "203": {
       "op": "txn ApplicationID",
       "defined_out": [
         "tmp%21#0"
@@ -364,12 +364,12 @@
         "tmp%21#0"
       ]
     },
-    "187": {
+    "205": {
       "error": "can only call when not creating",
       "op": "assert // can only call when not creating",
       "stack_out": []
     },
-    "188": {
+    "206": {
       "op": "txna ApplicationArgs 1",
       "defined_out": [
         "reinterpret_bytes[32]%2#0"
@@ -378,12 +378,12 @@
         "reinterpret_bytes[32]%2#0"
       ]
     },
-    "191": {
+    "209": {
       "callsub": "smart_contracts/security_token/arc88.algo.ts::Arc88.arc88_transfer_ownership",
       "op": "callsub arc88_transfer_ownership",
       "stack_out": []
     },
-    "194": {
+    "212": {
       "op": "intc_1 // 1",
       "defined_out": [
         "tmp%0#0"
@@ -392,11 +392,11 @@
         "tmp%0#0"
       ]
     },
-    "195": {
+    "213": {
       "op": "return",
       "stack_out": []
     },
-    "196": {
+    "214": {
       "block": "main_arc88_initialize_owner_route@7",
       "stack_in": [],
       "op": "txn OnCompletion",
@@ -407,7 +407,7 @@
         "tmp%15#0"
       ]
     },
-    "198": {
+    "216": {
       "op": "!",
       "defined_out": [
         "tmp%16#0"
@@ -416,12 +416,12 @@
         "tmp%16#0"
       ]
     },
-    "199": {
+    "217": {
       "error": "OnCompletion is not NoOp",
       "op": "assert // OnCompletion is not NoOp",
       "stack_out": []
     },
-    "200": {
+    "218": {
       "op": "txn ApplicationID",
       "defined_out": [
         "tmp%17#0"
@@ -430,12 +430,12 @@
         "tmp%17#0"
       ]
     },
-    "202": {
+    "220": {
       "error": "can only call when not creating",
       "op": "assert // can only call when not creating",
       "stack_out": []
     },
-    "203": {
+    "221": {
       "op": "txna ApplicationArgs 1",
       "defined_out": [
         "reinterpret_bytes[32]%1#0"
@@ -444,12 +444,12 @@
         "reinterpret_bytes[32]%1#0"
       ]
     },
-    "206": {
+    "224": {
       "callsub": "smart_contracts/security_token/arc88.algo.ts::Arc88.arc88_initialize_owner",
       "op": "callsub arc88_initialize_owner",
       "stack_out": []
     },
-    "209": {
+    "227": {
       "op": "intc_1 // 1",
       "defined_out": [
         "tmp%0#0"
@@ -458,11 +458,11 @@
         "tmp%0#0"
       ]
     },
-    "210": {
+    "228": {
       "op": "return",
       "stack_out": []
     },
-    "211": {
+    "229": {
       "block": "main_arc88_is_owner_route@6",
       "stack_in": [],
       "op": "txn OnCompletion",
@@ -473,7 +473,7 @@
         "tmp%9#0"
       ]
     },
-    "213": {
+    "231": {
       "op": "!",
       "defined_out": [
         "tmp%10#0"
@@ -482,12 +482,12 @@
         "tmp%10#0"
       ]
     },
-    "214": {
+    "232": {
       "error": "OnCompletion is not NoOp",
       "op": "assert // OnCompletion is not NoOp",
       "stack_out": []
     },
-    "215": {
+    "233": {
       "op": "txn ApplicationID",
       "defined_out": [
         "tmp%11#0"
@@ -496,12 +496,12 @@
         "tmp%11#0"
       ]
     },
-    "217": {
+    "235": {
       "error": "can only call when not creating",
       "op": "assert // can only call when not creating",
       "stack_out": []
     },
-    "218": {
+    "236": {
       "op": "txna ApplicationArgs 1",
       "defined_out": [
         "reinterpret_bytes[32]%0#0"
@@ -510,7 +510,7 @@
         "reinterpret_bytes[32]%0#0"
       ]
     },
-    "221": {
+    "239": {
       "callsub": "smart_contracts/security_token/arc88.algo.ts::Arc88.arc88_is_owner",
       "op": "callsub arc88_is_owner",
       "defined_out": [
@@ -520,7 +520,7 @@
         "tmp%13#0"
       ]
     },
-    "224": {
+    "242": {
       "op": "bytec 5 // 0x151f7c75",
       "defined_out": [
         "0x151f7c75",
@@ -531,14 +531,14 @@
         "0x151f7c75"
       ]
     },
-    "226": {
+    "244": {
       "op": "swap",
       "stack_out": [
         "0x151f7c75",
         "tmp%13#0"
       ]
     },
-    "227": {
+    "245": {
       "op": "concat",
       "defined_out": [
         "tmp%14#0"
@@ -547,11 +547,11 @@
         "tmp%14#0"
       ]
     },
-    "228": {
+    "246": {
       "op": "log",
       "stack_out": []
     },
-    "229": {
+    "247": {
       "op": "intc_1 // 1",
       "defined_out": [
         "tmp%0#0"
@@ -560,11 +560,11 @@
         "tmp%0#0"
       ]
     },
-    "230": {
+    "248": {
       "op": "return",
       "stack_out": []
     },
-    "231": {
+    "249": {
       "block": "main_arc88_owner_route@5",
       "stack_in": [],
       "op": "txn OnCompletion",
@@ -575,7 +575,7 @@
         "tmp%3#0"
       ]
     },
-    "233": {
+    "251": {
       "op": "!",
       "defined_out": [
         "tmp%4#0"
@@ -584,12 +584,12 @@
         "tmp%4#0"
       ]
     },
-    "234": {
+    "252": {
       "error": "OnCompletion is not NoOp",
       "op": "assert // OnCompletion is not NoOp",
       "stack_out": []
     },
-    "235": {
+    "253": {
       "op": "txn ApplicationID",
       "defined_out": [
         "tmp%5#0"
@@ -598,12 +598,12 @@
         "tmp%5#0"
       ]
     },
-    "237": {
+    "255": {
       "error": "can only call when not creating",
       "op": "assert // can only call when not creating",
       "stack_out": []
     },
-    "238": {
+    "256": {
       "callsub": "smart_contracts/security_token/arc88.algo.ts::Arc88.arc88_owner",
       "op": "callsub arc88_owner",
       "defined_out": [
@@ -613,7 +613,7 @@
         "tmp%7#0"
       ]
     },
-    "241": {
+    "259": {
       "op": "bytec 5 // 0x151f7c75",
       "defined_out": [
         "0x151f7c75",
@@ -624,14 +624,14 @@
         "0x151f7c75"
       ]
     },
-    "243": {
+    "261": {
       "op": "swap",
       "stack_out": [
         "0x151f7c75",
         "tmp%7#0"
       ]
     },
-    "244": {
+    "262": {
       "op": "concat",
       "defined_out": [
         "tmp%8#0"
@@ -640,11 +640,11 @@
         "tmp%8#0"
       ]
     },
-    "245": {
+    "263": {
       "op": "log",
       "stack_out": []
     },
-    "246": {
+    "264": {
       "op": "intc_1 // 1",
       "defined_out": [
         "tmp%0#0"
@@ -653,11 +653,11 @@
         "tmp%0#0"
       ]
     },
-    "247": {
+    "265": {
       "op": "return",
       "stack_out": []
     },
-    "248": {
+    "266": {
       "block": "main_bare_routing@15",
       "stack_in": [],
       "op": "txn OnCompletion",
@@ -668,11 +668,11 @@
         "tmp%39#0"
       ]
     },
-    "250": {
+    "268": {
       "op": "bnz main_after_if_else@19",
       "stack_out": []
     },
-    "253": {
+    "271": {
       "op": "txn ApplicationID",
       "defined_out": [
         "tmp%40#0"
@@ -681,7 +681,7 @@
         "tmp%40#0"
       ]
     },
-    "255": {
+    "273": {
       "op": "!",
       "defined_out": [
         "tmp%41#0"
@@ -690,12 +690,12 @@
         "tmp%41#0"
       ]
     },
-    "256": {
+    "274": {
       "error": "can only call when creating",
       "op": "assert // can only call when creating",
       "stack_out": []
     },
-    "257": {
+    "275": {
       "op": "intc_1 // 1",
       "defined_out": [
         "tmp%0#0"
@@ -704,11 +704,11 @@
         "tmp%0#0"
       ]
     },
-    "258": {
+    "276": {
       "op": "return",
       "stack_out": []
     },
-    "259": {
+    "277": {
       "subroutine": "smart_contracts/security_token/arc88.algo.ts::Arc88._ensureDefaultOwner",
       "params": {},
       "block": "_ensureDefaultOwner",
@@ -721,18 +721,18 @@
         "0"
       ]
     },
-    "260": {
-      "op": "bytec_3 // \"oi\"",
+    "278": {
+      "op": "bytec_3 // \"arc88_oi\"",
       "defined_out": [
-        "\"oi\"",
+        "\"arc88_oi\"",
         "0"
       ],
       "stack_out": [
         "0",
-        "\"oi\""
+        "\"arc88_oi\""
       ]
     },
-    "261": {
+    "279": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%0#0",
@@ -743,30 +743,30 @@
         "maybe_exists%0#0"
       ]
     },
-    "262": {
+    "280": {
       "op": "bury 1",
       "stack_out": [
         "maybe_exists%0#0"
       ]
     },
-    "264": {
+    "282": {
       "op": "bz _ensureDefaultOwner_if_body@2",
       "stack_out": []
     },
-    "267": {
+    "285": {
       "op": "intc_0 // 0",
       "stack_out": [
         "0"
       ]
     },
-    "268": {
-      "op": "bytec_3 // \"oi\"",
+    "286": {
+      "op": "bytec_3 // \"arc88_oi\"",
       "stack_out": [
         "0",
-        "\"oi\""
+        "\"arc88_oi\""
       ]
     },
-    "269": {
+    "287": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%1#0",
@@ -777,14 +777,14 @@
         "maybe_exists%1#0"
       ]
     },
-    "270": {
+    "288": {
       "error": "check GlobalState exists",
       "op": "assert // check GlobalState exists",
       "stack_out": [
         "maybe_value%1#0"
       ]
     },
-    "271": {
+    "289": {
       "op": "btoi",
       "defined_out": [
         "tmp%0#0"
@@ -793,11 +793,11 @@
         "tmp%0#0"
       ]
     },
-    "272": {
+    "290": {
       "op": "bnz _ensureDefaultOwner_after_if_else@5",
       "stack_out": []
     },
-    "275": {
+    "293": {
       "block": "_ensureDefaultOwner_if_body@2",
       "stack_in": [],
       "op": "intc_0 // 0",
@@ -808,18 +808,18 @@
         "0"
       ]
     },
-    "276": {
-      "op": "bytec_0 // \"o\"",
+    "294": {
+      "op": "bytec_0 // \"arc88_o\"",
       "defined_out": [
-        "\"o\"",
+        "\"arc88_o\"",
         "0"
       ],
       "stack_out": [
         "0",
-        "\"o\""
+        "\"arc88_o\""
       ]
     },
-    "277": {
+    "295": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%2#0",
@@ -830,70 +830,70 @@
         "maybe_exists%2#0"
       ]
     },
-    "278": {
+    "296": {
       "op": "bury 1",
       "stack_out": [
         "maybe_exists%2#0"
       ]
     },
-    "280": {
+    "298": {
       "op": "bnz _ensureDefaultOwner_after_if_else@4",
       "stack_out": []
     },
-    "283": {
-      "op": "bytec_0 // \"o\"",
+    "301": {
+      "op": "bytec_0 // \"arc88_o\"",
       "stack_out": [
-        "\"o\""
+        "\"arc88_o\""
       ]
     },
-    "284": {
+    "302": {
       "op": "global CreatorAddress",
       "defined_out": [
-        "\"o\"",
+        "\"arc88_o\"",
         "new_state_value%0#0"
       ],
       "stack_out": [
-        "\"o\"",
+        "\"arc88_o\"",
         "new_state_value%0#0"
       ]
     },
-    "286": {
+    "304": {
       "op": "app_global_put",
       "stack_out": []
     },
-    "287": {
+    "305": {
       "block": "_ensureDefaultOwner_after_if_else@4",
       "stack_in": [],
-      "op": "bytec_3 // \"oi\"",
+      "op": "bytec_3 // \"arc88_oi\"",
       "defined_out": [
-        "\"oi\""
+        "\"arc88_oi\""
       ],
       "stack_out": [
-        "\"oi\""
+        "\"arc88_oi\""
       ]
     },
-    "288": {
+    "306": {
       "op": "pushbytes 0x01",
       "defined_out": [
-        "\"oi\"",
+        "\"arc88_oi\"",
         "0x01"
       ],
       "stack_out": [
-        "\"oi\"",
+        "\"arc88_oi\"",
         "0x01"
       ]
     },
-    "291": {
+    "309": {
       "op": "app_global_put",
       "stack_out": []
     },
-    "292": {
+    "310": {
       "block": "_ensureDefaultOwner_after_if_else@5",
       "stack_in": [],
       "retsub": true,
       "op": "retsub"
     },
-    "293": {
+    "311": {
       "subroutine": "smart_contracts/security_token/arc88.algo.ts::Arc88.arc88_owner",
       "params": {},
       "block": "arc88_owner",
@@ -901,7 +901,7 @@
       "callsub": "smart_contracts/security_token/arc88.algo.ts::Arc88._ensureDefaultOwner",
       "op": "callsub _ensureDefaultOwner"
     },
-    "296": {
+    "314": {
       "op": "intc_0 // 0",
       "defined_out": [
         "0"
@@ -910,18 +910,18 @@
         "0"
       ]
     },
-    "297": {
-      "op": "bytec_0 // \"o\"",
+    "315": {
+      "op": "bytec_0 // \"arc88_o\"",
       "defined_out": [
-        "\"o\"",
+        "\"arc88_o\"",
         "0"
       ],
       "stack_out": [
         "0",
-        "\"o\""
+        "\"arc88_o\""
       ]
     },
-    "298": {
+    "316": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%0#0",
@@ -932,18 +932,18 @@
         "maybe_exists%0#0"
       ]
     },
-    "299": {
+    "317": {
       "error": "check GlobalState exists",
       "op": "assert // check GlobalState exists",
       "stack_out": [
         "maybe_value%0#0"
       ]
     },
-    "300": {
+    "318": {
       "retsub": true,
       "op": "retsub"
     },
-    "301": {
+    "319": {
       "subroutine": "smart_contracts/security_token/arc88.algo.ts::Arc88.arc88_is_owner",
       "params": {
         "query#0": "bytes"
@@ -952,11 +952,11 @@
       "stack_in": [],
       "op": "proto 1 1"
     },
-    "304": {
+    "322": {
       "callsub": "smart_contracts/security_token/arc88.algo.ts::Arc88._ensureDefaultOwner",
       "op": "callsub _ensureDefaultOwner"
     },
-    "307": {
+    "325": {
       "op": "intc_0 // 0",
       "defined_out": [
         "0"
@@ -965,18 +965,18 @@
         "0"
       ]
     },
-    "308": {
-      "op": "bytec_0 // \"o\"",
+    "326": {
+      "op": "bytec_0 // \"arc88_o\"",
       "defined_out": [
-        "\"o\"",
+        "\"arc88_o\"",
         "0"
       ],
       "stack_out": [
         "0",
-        "\"o\""
+        "\"arc88_o\""
       ]
     },
-    "309": {
+    "327": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%0#0",
@@ -987,17 +987,17 @@
         "maybe_exists%0#0"
       ]
     },
-    "310": {
+    "328": {
       "op": "bury 1",
       "stack_out": [
         "maybe_exists%0#0"
       ]
     },
-    "312": {
+    "330": {
       "op": "bnz arc88_is_owner_after_if_else@2",
       "stack_out": []
     },
-    "315": {
+    "333": {
       "op": "bytec 4 // 0x00",
       "defined_out": [
         "0x00"
@@ -1006,11 +1006,11 @@
         "0x00"
       ]
     },
-    "317": {
+    "335": {
       "retsub": true,
       "op": "retsub"
     },
-    "318": {
+    "336": {
       "block": "arc88_is_owner_after_if_else@2",
       "stack_in": [],
       "op": "intc_0 // 0",
@@ -1021,18 +1021,18 @@
         "0"
       ]
     },
-    "319": {
-      "op": "bytec_0 // \"o\"",
+    "337": {
+      "op": "bytec_0 // \"arc88_o\"",
       "defined_out": [
-        "\"o\"",
+        "\"arc88_o\"",
         "0"
       ],
       "stack_out": [
         "0",
-        "\"o\""
+        "\"arc88_o\""
       ]
     },
-    "320": {
+    "338": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%1#0",
@@ -1043,14 +1043,14 @@
         "maybe_exists%1#0"
       ]
     },
-    "321": {
+    "339": {
       "error": "check GlobalState exists",
       "op": "assert // check GlobalState exists",
       "stack_out": [
         "maybe_value%1#0"
       ]
     },
-    "322": {
+    "340": {
       "op": "bytec_1 // addr AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY5HFKQ",
       "defined_out": [
         "Address(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY5HFKQ)",
@@ -1061,7 +1061,7 @@
         "Address(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY5HFKQ)"
       ]
     },
-    "323": {
+    "341": {
       "op": "==",
       "defined_out": [
         "tmp%0#0"
@@ -1070,11 +1070,11 @@
         "tmp%0#0"
       ]
     },
-    "324": {
+    "342": {
       "op": "bz arc88_is_owner_after_if_else@4",
       "stack_out": []
     },
-    "327": {
+    "345": {
       "op": "bytec 4 // 0x00",
       "defined_out": [
         "0x00"
@@ -1083,11 +1083,11 @@
         "0x00"
       ]
     },
-    "329": {
+    "347": {
       "retsub": true,
       "op": "retsub"
     },
-    "330": {
+    "348": {
       "block": "arc88_is_owner_after_if_else@4",
       "stack_in": [],
       "op": "intc_0 // 0",
@@ -1098,18 +1098,18 @@
         "0"
       ]
     },
-    "331": {
-      "op": "bytec_0 // \"o\"",
+    "349": {
+      "op": "bytec_0 // \"arc88_o\"",
       "defined_out": [
-        "\"o\"",
+        "\"arc88_o\"",
         "0"
       ],
       "stack_out": [
         "0",
-        "\"o\""
+        "\"arc88_o\""
       ]
     },
-    "332": {
+    "350": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%2#0",
@@ -1120,14 +1120,14 @@
         "maybe_exists%2#0"
       ]
     },
-    "333": {
+    "351": {
       "error": "check GlobalState exists",
       "op": "assert // check GlobalState exists",
       "stack_out": [
         "maybe_value%2#0"
       ]
     },
-    "334": {
+    "352": {
       "op": "frame_dig -1",
       "defined_out": [
         "maybe_value%2#0",
@@ -1138,7 +1138,7 @@
         "query#0 (copy)"
       ]
     },
-    "336": {
+    "354": {
       "op": "==",
       "defined_out": [
         "to_encode%0#0"
@@ -1147,7 +1147,7 @@
         "to_encode%0#0"
       ]
     },
-    "337": {
+    "355": {
       "op": "bytec 4 // 0x00",
       "defined_out": [
         "0x00",
@@ -1158,7 +1158,7 @@
         "0x00"
       ]
     },
-    "339": {
+    "357": {
       "op": "intc_0 // 0",
       "stack_out": [
         "to_encode%0#0",
@@ -1166,7 +1166,7 @@
         "0"
       ]
     },
-    "340": {
+    "358": {
       "op": "uncover 2",
       "stack_out": [
         "0x00",
@@ -1174,7 +1174,7 @@
         "to_encode%0#0"
       ]
     },
-    "342": {
+    "360": {
       "op": "setbit",
       "defined_out": [
         "encoded_bool%0#0"
@@ -1183,11 +1183,11 @@
         "encoded_bool%0#0"
       ]
     },
-    "343": {
+    "361": {
       "retsub": true,
       "op": "retsub"
     },
-    "344": {
+    "362": {
       "subroutine": "smart_contracts/security_token/arc88.algo.ts::Arc88.arc88_initialize_owner",
       "params": {
         "new_owner#0": "bytes"
@@ -1196,7 +1196,7 @@
       "stack_in": [],
       "op": "proto 1 0"
     },
-    "347": {
+    "365": {
       "op": "intc_0 // 0",
       "defined_out": [
         "0"
@@ -1205,18 +1205,18 @@
         "0"
       ]
     },
-    "348": {
-      "op": "bytec_3 // \"oi\"",
+    "366": {
+      "op": "bytec_3 // \"arc88_oi\"",
       "defined_out": [
-        "\"oi\"",
+        "\"arc88_oi\"",
         "0"
       ],
       "stack_out": [
         "0",
-        "\"oi\""
+        "\"arc88_oi\""
       ]
     },
-    "349": {
+    "367": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%0#0",
@@ -1227,30 +1227,30 @@
         "maybe_exists%0#0"
       ]
     },
-    "350": {
+    "368": {
       "op": "bury 1",
       "stack_out": [
         "maybe_exists%0#0"
       ]
     },
-    "352": {
+    "370": {
       "op": "bz arc88_initialize_owner_bool_false@3",
       "stack_out": []
     },
-    "355": {
+    "373": {
       "op": "intc_0 // 0",
       "stack_out": [
         "0"
       ]
     },
-    "356": {
-      "op": "bytec_3 // \"oi\"",
+    "374": {
+      "op": "bytec_3 // \"arc88_oi\"",
       "stack_out": [
         "0",
-        "\"oi\""
+        "\"arc88_oi\""
       ]
     },
-    "357": {
+    "375": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%1#0",
@@ -1261,14 +1261,14 @@
         "maybe_exists%1#0"
       ]
     },
-    "358": {
+    "376": {
       "error": "check GlobalState exists",
       "op": "assert // check GlobalState exists",
       "stack_out": [
         "maybe_value%1#0"
       ]
     },
-    "359": {
+    "377": {
       "op": "btoi",
       "defined_out": [
         "tmp%0#0"
@@ -1277,7 +1277,7 @@
         "tmp%0#0"
       ]
     },
-    "360": {
+    "378": {
       "op": "intc_1 // 1",
       "defined_out": [
         "1",
@@ -1288,7 +1288,7 @@
         "1"
       ]
     },
-    "361": {
+    "379": {
       "op": "==",
       "defined_out": [
         "tmp%1#0"
@@ -1297,11 +1297,11 @@
         "tmp%1#0"
       ]
     },
-    "362": {
+    "380": {
       "op": "bz arc88_initialize_owner_bool_false@3",
       "stack_out": []
     },
-    "365": {
+    "383": {
       "op": "intc_1 // 1",
       "defined_out": [
         "and_result%0#0"
@@ -1310,7 +1310,7 @@
         "and_result%0#0"
       ]
     },
-    "366": {
+    "384": {
       "block": "arc88_initialize_owner_bool_merge@4",
       "stack_in": [
         "and_result%0#0"
@@ -1323,12 +1323,12 @@
         "tmp%2#0"
       ]
     },
-    "367": {
+    "385": {
       "error": "already_initialized",
       "op": "assert // already_initialized",
       "stack_out": []
     },
-    "368": {
+    "386": {
       "op": "frame_dig -1",
       "defined_out": [
         "new_owner#0 (copy)"
@@ -1337,7 +1337,7 @@
         "new_owner#0 (copy)"
       ]
     },
-    "370": {
+    "388": {
       "op": "bytec_1 // addr AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY5HFKQ",
       "defined_out": [
         "Address(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY5HFKQ)",
@@ -1348,7 +1348,7 @@
         "Address(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY5HFKQ)"
       ]
     },
-    "371": {
+    "389": {
       "op": "!=",
       "defined_out": [
         "tmp%3#0"
@@ -1357,60 +1357,60 @@
         "tmp%3#0"
       ]
     },
-    "372": {
+    "390": {
       "error": "zero_address_not_allowed",
       "op": "assert // zero_address_not_allowed",
       "stack_out": []
     },
-    "373": {
-      "op": "bytec_0 // \"o\"",
+    "391": {
+      "op": "bytec_0 // \"arc88_o\"",
       "defined_out": [
-        "\"o\""
+        "\"arc88_o\""
       ],
       "stack_out": [
-        "\"o\""
+        "\"arc88_o\""
       ]
     },
-    "374": {
+    "392": {
       "op": "frame_dig -1",
       "stack_out": [
-        "\"o\"",
+        "\"arc88_o\"",
         "new_owner#0 (copy)"
       ]
     },
-    "376": {
+    "394": {
       "op": "app_global_put",
       "stack_out": []
     },
-    "377": {
-      "op": "bytec_3 // \"oi\"",
+    "395": {
+      "op": "bytec_3 // \"arc88_oi\"",
       "defined_out": [
-        "\"oi\""
+        "\"arc88_oi\""
       ],
       "stack_out": [
-        "\"oi\""
+        "\"arc88_oi\""
       ]
     },
-    "378": {
+    "396": {
       "op": "pushbytes 0x01",
       "defined_out": [
-        "\"oi\"",
+        "\"arc88_oi\"",
         "0x01"
       ],
       "stack_out": [
-        "\"oi\"",
+        "\"arc88_oi\"",
         "0x01"
       ]
     },
-    "381": {
+    "399": {
       "op": "app_global_put",
       "stack_out": []
     },
-    "382": {
+    "400": {
       "retsub": true,
       "op": "retsub"
     },
-    "383": {
+    "401": {
       "block": "arc88_initialize_owner_bool_false@3",
       "stack_in": [],
       "op": "intc_0 // 0",
@@ -1421,10 +1421,10 @@
         "and_result%0#0"
       ]
     },
-    "384": {
+    "402": {
       "op": "b arc88_initialize_owner_bool_merge@4"
     },
-    "387": {
+    "405": {
       "subroutine": "smart_contracts/security_token/arc88.algo.ts::Arc88.arc88_transfer_ownership",
       "params": {
         "new_owner#0": "bytes"
@@ -1433,11 +1433,11 @@
       "stack_in": [],
       "op": "proto 1 0"
     },
-    "390": {
+    "408": {
       "callsub": "smart_contracts/security_token/arc88.algo.ts::Arc88._ensureDefaultOwner",
       "op": "callsub _ensureDefaultOwner"
     },
-    "393": {
+    "411": {
       "op": "txn Sender",
       "defined_out": [
         "tmp%0#0"
@@ -1446,7 +1446,7 @@
         "tmp%0#0"
       ]
     },
-    "395": {
+    "413": {
       "op": "intc_0 // 0",
       "defined_out": [
         "0",
@@ -1457,20 +1457,20 @@
         "0"
       ]
     },
-    "396": {
-      "op": "bytec_0 // \"o\"",
+    "414": {
+      "op": "bytec_0 // \"arc88_o\"",
       "defined_out": [
-        "\"o\"",
+        "\"arc88_o\"",
         "0",
         "tmp%0#0"
       ],
       "stack_out": [
         "tmp%0#0",
         "0",
-        "\"o\""
+        "\"arc88_o\""
       ]
     },
-    "397": {
+    "415": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%0#0",
@@ -1483,7 +1483,7 @@
         "maybe_exists%0#0"
       ]
     },
-    "398": {
+    "416": {
       "error": "check GlobalState exists",
       "op": "assert // check GlobalState exists",
       "stack_out": [
@@ -1491,7 +1491,7 @@
         "maybe_value%0#0"
       ]
     },
-    "399": {
+    "417": {
       "op": "==",
       "defined_out": [
         "tmp%1#0"
@@ -1500,12 +1500,12 @@
         "tmp%1#0"
       ]
     },
-    "400": {
+    "418": {
       "error": "not_owner",
       "op": "assert // not_owner",
       "stack_out": []
     },
-    "401": {
+    "419": {
       "op": "frame_dig -1",
       "defined_out": [
         "new_owner#0 (copy)"
@@ -1514,7 +1514,7 @@
         "new_owner#0 (copy)"
       ]
     },
-    "403": {
+    "421": {
       "op": "bytec_1 // addr AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY5HFKQ",
       "defined_out": [
         "Address(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY5HFKQ)",
@@ -1525,7 +1525,7 @@
         "Address(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY5HFKQ)"
       ]
     },
-    "404": {
+    "422": {
       "op": "!=",
       "defined_out": [
         "tmp%2#0"
@@ -1534,25 +1534,25 @@
         "tmp%2#0"
       ]
     },
-    "405": {
+    "423": {
       "error": "zero_address_not_allowed",
       "op": "assert // zero_address_not_allowed",
       "stack_out": []
     },
-    "406": {
+    "424": {
       "op": "intc_0 // 0",
       "stack_out": [
         "0"
       ]
     },
-    "407": {
-      "op": "bytec_0 // \"o\"",
+    "425": {
+      "op": "bytec_0 // \"arc88_o\"",
       "stack_out": [
         "0",
-        "\"o\""
+        "\"arc88_o\""
       ]
     },
-    "408": {
+    "426": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%1#0",
@@ -1563,42 +1563,42 @@
         "maybe_exists%1#0"
       ]
     },
-    "409": {
+    "427": {
       "error": "check GlobalState exists",
       "op": "assert // check GlobalState exists",
       "stack_out": [
         "previous#0"
       ]
     },
-    "410": {
-      "op": "bytec_0 // \"o\"",
+    "428": {
+      "op": "bytec_0 // \"arc88_o\"",
       "stack_out": [
         "previous#0",
-        "\"o\""
+        "\"arc88_o\""
       ]
     },
-    "411": {
+    "429": {
       "op": "frame_dig -1",
       "stack_out": [
         "previous#0",
-        "\"o\"",
+        "\"arc88_o\"",
         "new_owner#0 (copy)"
       ]
     },
-    "413": {
+    "431": {
       "op": "app_global_put",
       "stack_out": [
         "previous#0"
       ]
     },
-    "414": {
+    "432": {
       "op": "frame_dig -1",
       "stack_out": [
         "previous#0",
         "new_owner#0 (copy)"
       ]
     },
-    "416": {
+    "434": {
       "op": "concat",
       "defined_out": [
         "encoded_tuple_buffer%2#0"
@@ -1607,7 +1607,7 @@
         "encoded_tuple_buffer%2#0"
       ]
     },
-    "417": {
+    "435": {
       "op": "bytec 6 // method \"arc88_OwnershipTransferred(address,address)\"",
       "defined_out": [
         "Method(arc88_OwnershipTransferred(address,address))",
@@ -1618,14 +1618,14 @@
         "Method(arc88_OwnershipTransferred(address,address))"
       ]
     },
-    "419": {
+    "437": {
       "op": "swap",
       "stack_out": [
         "Method(arc88_OwnershipTransferred(address,address))",
         "encoded_tuple_buffer%2#0"
       ]
     },
-    "420": {
+    "438": {
       "op": "concat",
       "defined_out": [
         "event%0#0"
@@ -1634,15 +1634,15 @@
         "event%0#0"
       ]
     },
-    "421": {
+    "439": {
       "op": "log",
       "stack_out": []
     },
-    "422": {
+    "440": {
       "retsub": true,
       "op": "retsub"
     },
-    "423": {
+    "441": {
       "subroutine": "smart_contracts/security_token/arc88.algo.ts::Arc88.arc88_renounce_ownership",
       "params": {},
       "block": "arc88_renounce_ownership",
@@ -1650,7 +1650,7 @@
       "callsub": "smart_contracts/security_token/arc88.algo.ts::Arc88._ensureDefaultOwner",
       "op": "callsub _ensureDefaultOwner"
     },
-    "426": {
+    "444": {
       "op": "txn Sender",
       "defined_out": [
         "tmp%0#0"
@@ -1659,7 +1659,7 @@
         "tmp%0#0"
       ]
     },
-    "428": {
+    "446": {
       "op": "intc_0 // 0",
       "defined_out": [
         "0",
@@ -1670,20 +1670,20 @@
         "0"
       ]
     },
-    "429": {
-      "op": "bytec_0 // \"o\"",
+    "447": {
+      "op": "bytec_0 // \"arc88_o\"",
       "defined_out": [
-        "\"o\"",
+        "\"arc88_o\"",
         "0",
         "tmp%0#0"
       ],
       "stack_out": [
         "tmp%0#0",
         "0",
-        "\"o\""
+        "\"arc88_o\""
       ]
     },
-    "430": {
+    "448": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%0#0",
@@ -1696,7 +1696,7 @@
         "maybe_exists%0#0"
       ]
     },
-    "431": {
+    "449": {
       "error": "check GlobalState exists",
       "op": "assert // check GlobalState exists",
       "stack_out": [
@@ -1704,7 +1704,7 @@
         "maybe_value%0#0"
       ]
     },
-    "432": {
+    "450": {
       "op": "==",
       "defined_out": [
         "tmp%1#0"
@@ -1713,25 +1713,25 @@
         "tmp%1#0"
       ]
     },
-    "433": {
+    "451": {
       "error": "not_owner",
       "op": "assert // not_owner",
       "stack_out": []
     },
-    "434": {
+    "452": {
       "op": "intc_0 // 0",
       "stack_out": [
         "0"
       ]
     },
-    "435": {
-      "op": "bytec_0 // \"o\"",
+    "453": {
+      "op": "bytec_0 // \"arc88_o\"",
       "stack_out": [
         "0",
-        "\"o\""
+        "\"arc88_o\""
       ]
     },
-    "436": {
+    "454": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%1#0",
@@ -1742,40 +1742,40 @@
         "maybe_exists%1#0"
       ]
     },
-    "437": {
+    "455": {
       "error": "check GlobalState exists",
       "op": "assert // check GlobalState exists",
       "stack_out": [
         "previous#0"
       ]
     },
-    "438": {
-      "op": "bytec_0 // \"o\"",
+    "456": {
+      "op": "bytec_0 // \"arc88_o\"",
       "stack_out": [
         "previous#0",
-        "\"o\""
+        "\"arc88_o\""
       ]
     },
-    "439": {
+    "457": {
       "op": "bytec_1 // addr AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY5HFKQ",
       "defined_out": [
-        "\"o\"",
+        "\"arc88_o\"",
         "Address(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY5HFKQ)",
         "previous#0"
       ],
       "stack_out": [
         "previous#0",
-        "\"o\"",
+        "\"arc88_o\"",
         "Address(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY5HFKQ)"
       ]
     },
-    "440": {
+    "458": {
       "op": "app_global_put",
       "stack_out": [
         "previous#0"
       ]
     },
-    "441": {
+    "459": {
       "op": "pushbytes 0x346aa166 // method \"arc88_OwnershipRenounced(address)\"",
       "defined_out": [
         "Method(arc88_OwnershipRenounced(address))",
@@ -1786,14 +1786,14 @@
         "Method(arc88_OwnershipRenounced(address))"
       ]
     },
-    "447": {
+    "465": {
       "op": "swap",
       "stack_out": [
         "Method(arc88_OwnershipRenounced(address))",
         "previous#0"
       ]
     },
-    "448": {
+    "466": {
       "op": "concat",
       "defined_out": [
         "event%0#0"
@@ -1802,15 +1802,15 @@
         "event%0#0"
       ]
     },
-    "449": {
+    "467": {
       "op": "log",
       "stack_out": []
     },
-    "450": {
+    "468": {
       "retsub": true,
       "op": "retsub"
     },
-    "451": {
+    "469": {
       "subroutine": "smart_contracts/security_token/arc88.algo.ts::Arc88.arc88_transfer_ownership_request",
       "params": {
         "pending#0": "bytes"
@@ -1819,11 +1819,11 @@
       "stack_in": [],
       "op": "proto 1 0"
     },
-    "454": {
+    "472": {
       "callsub": "smart_contracts/security_token/arc88.algo.ts::Arc88._ensureDefaultOwner",
       "op": "callsub _ensureDefaultOwner"
     },
-    "457": {
+    "475": {
       "op": "txn Sender",
       "defined_out": [
         "tmp%0#0"
@@ -1832,7 +1832,7 @@
         "tmp%0#0"
       ]
     },
-    "459": {
+    "477": {
       "op": "intc_0 // 0",
       "defined_out": [
         "0",
@@ -1843,20 +1843,20 @@
         "0"
       ]
     },
-    "460": {
-      "op": "bytec_0 // \"o\"",
+    "478": {
+      "op": "bytec_0 // \"arc88_o\"",
       "defined_out": [
-        "\"o\"",
+        "\"arc88_o\"",
         "0",
         "tmp%0#0"
       ],
       "stack_out": [
         "tmp%0#0",
         "0",
-        "\"o\""
+        "\"arc88_o\""
       ]
     },
-    "461": {
+    "479": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%0#0",
@@ -1869,7 +1869,7 @@
         "maybe_exists%0#0"
       ]
     },
-    "462": {
+    "480": {
       "error": "check GlobalState exists",
       "op": "assert // check GlobalState exists",
       "stack_out": [
@@ -1877,7 +1877,7 @@
         "maybe_value%0#0"
       ]
     },
-    "463": {
+    "481": {
       "op": "==",
       "defined_out": [
         "tmp%1#0"
@@ -1886,12 +1886,12 @@
         "tmp%1#0"
       ]
     },
-    "464": {
+    "482": {
       "error": "not_owner",
       "op": "assert // not_owner",
       "stack_out": []
     },
-    "465": {
+    "483": {
       "op": "frame_dig -1",
       "defined_out": [
         "pending#0 (copy)"
@@ -1900,7 +1900,7 @@
         "pending#0 (copy)"
       ]
     },
-    "467": {
+    "485": {
       "op": "bytec_1 // addr AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY5HFKQ",
       "defined_out": [
         "Address(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY5HFKQ)",
@@ -1911,7 +1911,7 @@
         "Address(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY5HFKQ)"
       ]
     },
-    "468": {
+    "486": {
       "op": "!=",
       "defined_out": [
         "tmp%2#0"
@@ -1920,29 +1920,29 @@
         "tmp%2#0"
       ]
     },
-    "469": {
+    "487": {
       "error": "zero_address_not_allowed",
       "op": "assert // zero_address_not_allowed",
       "stack_out": []
     },
-    "470": {
+    "488": {
       "op": "intc_0 // 0",
       "stack_out": [
         "0"
       ]
     },
-    "471": {
-      "op": "bytec_2 // \"po\"",
+    "489": {
+      "op": "bytec_2 // \"arc88_po\"",
       "defined_out": [
-        "\"po\"",
+        "\"arc88_po\"",
         "0"
       ],
       "stack_out": [
         "0",
-        "\"po\""
+        "\"arc88_po\""
       ]
     },
-    "472": {
+    "490": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%1#0",
@@ -1953,30 +1953,30 @@
         "maybe_exists%1#0"
       ]
     },
-    "473": {
+    "491": {
       "op": "bury 1",
       "stack_out": [
         "maybe_exists%1#0"
       ]
     },
-    "475": {
+    "493": {
       "op": "bz arc88_transfer_ownership_request_after_if_else@3",
       "stack_out": []
     },
-    "478": {
+    "496": {
       "op": "intc_0 // 0",
       "stack_out": [
         "0"
       ]
     },
-    "479": {
-      "op": "bytec_2 // \"po\"",
+    "497": {
+      "op": "bytec_2 // \"arc88_po\"",
       "stack_out": [
         "0",
-        "\"po\""
+        "\"arc88_po\""
       ]
     },
-    "480": {
+    "498": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%2#0",
@@ -1987,21 +1987,21 @@
         "maybe_exists%2#0"
       ]
     },
-    "481": {
+    "499": {
       "error": "check GlobalState exists",
       "op": "assert // check GlobalState exists",
       "stack_out": [
         "maybe_value%2#0"
       ]
     },
-    "482": {
+    "500": {
       "op": "bytec_1 // addr AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY5HFKQ",
       "stack_out": [
         "maybe_value%2#0",
         "Address(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY5HFKQ)"
       ]
     },
-    "483": {
+    "501": {
       "op": "!=",
       "defined_out": [
         "tmp%3#0"
@@ -2010,7 +2010,7 @@
         "tmp%3#0"
       ]
     },
-    "484": {
+    "502": {
       "op": "!",
       "defined_out": [
         "not%tmp%3#0"
@@ -2019,38 +2019,38 @@
         "not%tmp%3#0"
       ]
     },
-    "485": {
+    "503": {
       "error": "pending_transfer_exists",
       "op": "assert // pending_transfer_exists",
       "stack_out": []
     },
-    "486": {
+    "504": {
       "block": "arc88_transfer_ownership_request_after_if_else@3",
       "stack_in": [],
-      "op": "bytec_2 // \"po\"",
+      "op": "bytec_2 // \"arc88_po\"",
       "defined_out": [
-        "\"po\""
+        "\"arc88_po\""
       ],
       "stack_out": [
-        "\"po\""
+        "\"arc88_po\""
       ]
     },
-    "487": {
+    "505": {
       "op": "frame_dig -1",
       "defined_out": [
-        "\"po\"",
+        "\"arc88_po\"",
         "pending#0 (copy)"
       ],
       "stack_out": [
-        "\"po\"",
+        "\"arc88_po\"",
         "pending#0 (copy)"
       ]
     },
-    "489": {
+    "507": {
       "op": "app_global_put",
       "stack_out": []
     },
-    "490": {
+    "508": {
       "op": "intc_0 // 0",
       "defined_out": [
         "0"
@@ -2059,18 +2059,18 @@
         "0"
       ]
     },
-    "491": {
-      "op": "bytec_0 // \"o\"",
+    "509": {
+      "op": "bytec_0 // \"arc88_o\"",
       "defined_out": [
-        "\"o\"",
+        "\"arc88_o\"",
         "0"
       ],
       "stack_out": [
         "0",
-        "\"o\""
+        "\"arc88_o\""
       ]
     },
-    "492": {
+    "510": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%3#0",
@@ -2081,21 +2081,21 @@
         "maybe_exists%3#0"
       ]
     },
-    "493": {
+    "511": {
       "error": "check GlobalState exists",
       "op": "assert // check GlobalState exists",
       "stack_out": [
         "maybe_value%3#0"
       ]
     },
-    "494": {
+    "512": {
       "op": "frame_dig -1",
       "stack_out": [
         "maybe_value%3#0",
         "pending#0 (copy)"
       ]
     },
-    "496": {
+    "514": {
       "op": "concat",
       "defined_out": [
         "encoded_tuple_buffer%2#0"
@@ -2104,7 +2104,7 @@
         "encoded_tuple_buffer%2#0"
       ]
     },
-    "497": {
+    "515": {
       "op": "pushbytes 0x16bf1f91 // method \"arc88_OwnershipTransferRequested(address,address)\"",
       "defined_out": [
         "Method(arc88_OwnershipTransferRequested(address,address))",
@@ -2115,14 +2115,14 @@
         "Method(arc88_OwnershipTransferRequested(address,address))"
       ]
     },
-    "503": {
+    "521": {
       "op": "swap",
       "stack_out": [
         "Method(arc88_OwnershipTransferRequested(address,address))",
         "encoded_tuple_buffer%2#0"
       ]
     },
-    "504": {
+    "522": {
       "op": "concat",
       "defined_out": [
         "event%0#0"
@@ -2131,15 +2131,15 @@
         "event%0#0"
       ]
     },
-    "505": {
+    "523": {
       "op": "log",
       "stack_out": []
     },
-    "506": {
+    "524": {
       "retsub": true,
       "op": "retsub"
     },
-    "507": {
+    "525": {
       "subroutine": "smart_contracts/security_token/arc88.algo.ts::Arc88.arc88_accept_ownership",
       "params": {},
       "block": "arc88_accept_ownership",
@@ -2147,7 +2147,7 @@
       "callsub": "smart_contracts/security_token/arc88.algo.ts::Arc88._ensureDefaultOwner",
       "op": "callsub _ensureDefaultOwner"
     },
-    "510": {
+    "528": {
       "op": "intc_0 // 0",
       "defined_out": [
         "0"
@@ -2156,18 +2156,18 @@
         "0"
       ]
     },
-    "511": {
-      "op": "bytec_2 // \"po\"",
+    "529": {
+      "op": "bytec_2 // \"arc88_po\"",
       "defined_out": [
-        "\"po\"",
+        "\"arc88_po\"",
         "0"
       ],
       "stack_out": [
         "0",
-        "\"po\""
+        "\"arc88_po\""
       ]
     },
-    "512": {
+    "530": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%0#0",
@@ -2178,18 +2178,18 @@
         "maybe_exists%0#0"
       ]
     },
-    "513": {
+    "531": {
       "op": "bury 1",
       "stack_out": [
         "maybe_exists%0#0"
       ]
     },
-    "515": {
+    "533": {
       "error": "not_pending_owner",
       "op": "assert // not_pending_owner",
       "stack_out": []
     },
-    "516": {
+    "534": {
       "op": "txn Sender",
       "defined_out": [
         "sender#0"
@@ -2198,22 +2198,22 @@
         "sender#0"
       ]
     },
-    "518": {
+    "536": {
       "op": "intc_0 // 0",
       "stack_out": [
         "sender#0",
         "0"
       ]
     },
-    "519": {
-      "op": "bytec_2 // \"po\"",
+    "537": {
+      "op": "bytec_2 // \"arc88_po\"",
       "stack_out": [
         "sender#0",
         "0",
-        "\"po\""
+        "\"arc88_po\""
       ]
     },
-    "520": {
+    "538": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%1#0",
@@ -2226,7 +2226,7 @@
         "maybe_exists%1#0"
       ]
     },
-    "521": {
+    "539": {
       "error": "check GlobalState exists",
       "op": "assert // check GlobalState exists",
       "stack_out": [
@@ -2234,7 +2234,7 @@
         "maybe_value%1#0"
       ]
     },
-    "522": {
+    "540": {
       "op": "dig 1",
       "defined_out": [
         "maybe_value%1#0",
@@ -2247,7 +2247,7 @@
         "sender#0 (copy)"
       ]
     },
-    "524": {
+    "542": {
       "op": "==",
       "defined_out": [
         "sender#0",
@@ -2258,34 +2258,34 @@
         "tmp%0#0"
       ]
     },
-    "525": {
+    "543": {
       "error": "not_pending_owner",
       "op": "assert // not_pending_owner",
       "stack_out": [
         "sender#0"
       ]
     },
-    "526": {
+    "544": {
       "op": "intc_0 // 0",
       "stack_out": [
         "sender#0",
         "0"
       ]
     },
-    "527": {
-      "op": "bytec_0 // \"o\"",
+    "545": {
+      "op": "bytec_0 // \"arc88_o\"",
       "defined_out": [
-        "\"o\"",
+        "\"arc88_o\"",
         "0",
         "sender#0"
       ],
       "stack_out": [
         "sender#0",
         "0",
-        "\"o\""
+        "\"arc88_o\""
       ]
     },
-    "528": {
+    "546": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%2#0",
@@ -2298,7 +2298,7 @@
         "maybe_exists%2#0"
       ]
     },
-    "529": {
+    "547": {
       "error": "check GlobalState exists",
       "op": "assert // check GlobalState exists",
       "stack_out": [
@@ -2306,42 +2306,42 @@
         "previous#0"
       ]
     },
-    "530": {
-      "op": "bytec_0 // \"o\"",
+    "548": {
+      "op": "bytec_0 // \"arc88_o\"",
       "stack_out": [
         "sender#0",
         "previous#0",
-        "\"o\""
+        "\"arc88_o\""
       ]
     },
-    "531": {
+    "549": {
       "op": "dig 2",
       "stack_out": [
         "sender#0",
         "previous#0",
-        "\"o\"",
+        "\"arc88_o\"",
         "sender#0 (copy)"
       ]
     },
-    "533": {
+    "551": {
       "op": "app_global_put",
       "stack_out": [
         "sender#0",
         "previous#0"
       ]
     },
-    "534": {
-      "op": "bytec_2 // \"po\"",
+    "552": {
+      "op": "bytec_2 // \"arc88_po\"",
       "stack_out": [
         "sender#0",
         "previous#0",
-        "\"po\""
+        "\"arc88_po\""
       ]
     },
-    "535": {
+    "553": {
       "op": "bytec_1 // addr AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY5HFKQ",
       "defined_out": [
-        "\"po\"",
+        "\"arc88_po\"",
         "Address(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY5HFKQ)",
         "previous#0",
         "sender#0"
@@ -2349,25 +2349,25 @@
       "stack_out": [
         "sender#0",
         "previous#0",
-        "\"po\"",
+        "\"arc88_po\"",
         "Address(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY5HFKQ)"
       ]
     },
-    "536": {
+    "554": {
       "op": "app_global_put",
       "stack_out": [
         "sender#0",
         "previous#0"
       ]
     },
-    "537": {
+    "555": {
       "op": "swap",
       "stack_out": [
         "previous#0",
         "sender#0"
       ]
     },
-    "538": {
+    "556": {
       "op": "concat",
       "defined_out": [
         "encoded_tuple_buffer%2#0"
@@ -2376,7 +2376,7 @@
         "encoded_tuple_buffer%2#0"
       ]
     },
-    "539": {
+    "557": {
       "op": "pushbytes 0xf7e36b37 // method \"arc88_OwnershipTransferAccepted(address,address)\"",
       "defined_out": [
         "Method(arc88_OwnershipTransferAccepted(address,address))",
@@ -2387,7 +2387,7 @@
         "Method(arc88_OwnershipTransferAccepted(address,address))"
       ]
     },
-    "545": {
+    "563": {
       "op": "dig 1",
       "defined_out": [
         "Method(arc88_OwnershipTransferAccepted(address,address))",
@@ -2400,7 +2400,7 @@
         "encoded_tuple_buffer%2#0 (copy)"
       ]
     },
-    "547": {
+    "565": {
       "op": "concat",
       "defined_out": [
         "encoded_tuple_buffer%2#0",
@@ -2411,13 +2411,13 @@
         "event%0#0"
       ]
     },
-    "548": {
+    "566": {
       "op": "log",
       "stack_out": [
         "encoded_tuple_buffer%2#0"
       ]
     },
-    "549": {
+    "567": {
       "op": "bytec 6 // method \"arc88_OwnershipTransferred(address,address)\"",
       "defined_out": [
         "Method(arc88_OwnershipTransferred(address,address))",
@@ -2428,14 +2428,14 @@
         "Method(arc88_OwnershipTransferred(address,address))"
       ]
     },
-    "551": {
+    "569": {
       "op": "swap",
       "stack_out": [
         "Method(arc88_OwnershipTransferred(address,address))",
         "encoded_tuple_buffer%2#0"
       ]
     },
-    "552": {
+    "570": {
       "op": "concat",
       "defined_out": [
         "event%1#0"
@@ -2444,15 +2444,15 @@
         "event%1#0"
       ]
     },
-    "553": {
+    "571": {
       "op": "log",
       "stack_out": []
     },
-    "554": {
+    "572": {
       "retsub": true,
       "op": "retsub"
     },
-    "555": {
+    "573": {
       "subroutine": "smart_contracts/security_token/arc88.algo.ts::Arc88.arc88_cancel_ownership_request",
       "params": {},
       "block": "arc88_cancel_ownership_request",
@@ -2460,7 +2460,7 @@
       "callsub": "smart_contracts/security_token/arc88.algo.ts::Arc88._ensureDefaultOwner",
       "op": "callsub _ensureDefaultOwner"
     },
-    "558": {
+    "576": {
       "op": "txn Sender",
       "defined_out": [
         "tmp%0#0"
@@ -2469,7 +2469,7 @@
         "tmp%0#0"
       ]
     },
-    "560": {
+    "578": {
       "op": "intc_0 // 0",
       "defined_out": [
         "0",
@@ -2480,20 +2480,20 @@
         "0"
       ]
     },
-    "561": {
-      "op": "bytec_0 // \"o\"",
+    "579": {
+      "op": "bytec_0 // \"arc88_o\"",
       "defined_out": [
-        "\"o\"",
+        "\"arc88_o\"",
         "0",
         "tmp%0#0"
       ],
       "stack_out": [
         "tmp%0#0",
         "0",
-        "\"o\""
+        "\"arc88_o\""
       ]
     },
-    "562": {
+    "580": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%0#0",
@@ -2506,7 +2506,7 @@
         "maybe_exists%0#0"
       ]
     },
-    "563": {
+    "581": {
       "error": "check GlobalState exists",
       "op": "assert // check GlobalState exists",
       "stack_out": [
@@ -2514,7 +2514,7 @@
         "maybe_value%0#0"
       ]
     },
-    "564": {
+    "582": {
       "op": "==",
       "defined_out": [
         "tmp%1#0"
@@ -2523,36 +2523,36 @@
         "tmp%1#0"
       ]
     },
-    "565": {
+    "583": {
       "error": "not_owner",
       "op": "assert // not_owner",
       "stack_out": []
     },
-    "566": {
-      "op": "bytec_2 // \"po\"",
+    "584": {
+      "op": "bytec_2 // \"arc88_po\"",
       "defined_out": [
-        "\"po\""
+        "\"arc88_po\""
       ],
       "stack_out": [
-        "\"po\""
+        "\"arc88_po\""
       ]
     },
-    "567": {
+    "585": {
       "op": "bytec_1 // addr AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY5HFKQ",
       "defined_out": [
-        "\"po\"",
+        "\"arc88_po\"",
         "Address(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY5HFKQ)"
       ],
       "stack_out": [
-        "\"po\"",
+        "\"arc88_po\"",
         "Address(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY5HFKQ)"
       ]
     },
-    "568": {
+    "586": {
       "op": "app_global_put",
       "stack_out": []
     },
-    "569": {
+    "587": {
       "retsub": true,
       "op": "retsub"
     }

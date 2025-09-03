@@ -20,6 +20,19 @@ class arc1410_partition_transfer extends arc4.Struct<{
   data: arc4.DynamicBytes
 }> {}
 
+class arc1410_partition_issue extends arc4.Struct<{
+  to: arc4.Address
+  partition: arc4.Address
+  amount: arc4.UintN256
+  data: arc4.DynamicBytes
+}> {}
+class arc1410_partition_redeem extends arc4.Struct<{
+  from: arc4.Address
+  partition: arc4.Address
+  amount: arc4.UintN256
+  data: arc4.DynamicBytes
+}> {}
+
 class arc1410_can_transfer_by_partition_return extends arc4.Struct<{
   code: arc4.Byte
   status: arc4.Str
@@ -365,5 +378,49 @@ export class Arc1410 extends Arc200 {
     const key = new arc1410_OperatorPortionKey({ holder, operator, partition })
     if (!this.operatorPortionAllowances(key).exists) return new arc4.Bool(false)
     return new arc4.Bool(this.operatorPortionAllowances(key).value.native > 0)
+  }
+
+  @arc4.abimethod()
+  public arc1410_issue_by_partition(
+    to: arc4.Address,
+    partition: arc4.Address,
+    amount: arc4.UintN256,
+    data: arc4.DynamicBytes,
+  ): void {
+    assert(this.arc88_is_owner(new arc4.Address(Txn.sender)).native === true, 'only_owner')
+    assert(amount.native > 0, 'Invalid amount')
+    // increase ARC-200 total supply and recipient balance (default partition logic not used; explicit partition)
+    const toKey = new arc1410_PartitionKey({ holder: to, partition })
+    if (!this.partitions(toKey).exists) {
+      this.partitions(toKey).value = new arc4.UintN256(0)
+      this._add_participation_to_holder(to, partition)
+    }
+    this.partitions(toKey).value = new arc4.UintN256(this.partitions(toKey).value.native + amount.native)
+    // Also bump fungible balance
+    if (!this.balances(to).exists) {
+      this.balances(to).value = new arc4.UintN256(0)
+    }
+    this.balances(to).value = new arc4.UintN256(this.balances(to).value.native + amount.native)
+    this.totalSupply.value = new arc4.UintN256(this.totalSupply.value.native + amount.native)
+    emit('Issue', new arc1410_partition_issue({ to, partition, amount, data }))
+  }
+
+  @arc4.abimethod()
+  public arc1410_redeem_by_partition(
+    from: arc4.Address,
+    partition: arc4.Address,
+    amount: arc4.UintN256,
+    data: arc4.DynamicBytes,
+  ): void {
+    assert(amount.native > 0, 'Invalid amount')
+    const fromKey = new arc1410_PartitionKey({ holder: from, partition })
+    assert(this.partitions(fromKey).exists, 'Partition balance missing')
+    assert(this.partitions(fromKey).value.native >= amount.native, 'Insufficient partition balance')
+    this.partitions(fromKey).value = new arc4.UintN256(this.partitions(fromKey).value.native - amount.native)
+    // decrease fungible balance and total supply
+    assert(this.balances(from).exists && this.balances(from).value.native >= amount.native, 'Insufficient balance')
+    this.balances(from).value = new arc4.UintN256(this.balances(from).value.native - amount.native)
+    this.totalSupply.value = new arc4.UintN256(this.totalSupply.value.native - amount.native)
+    emit('Redeem', new arc1410_partition_redeem({ from, partition, amount, data }))
   }
 }
