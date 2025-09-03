@@ -28,7 +28,11 @@ Many contracts require a single privileged authority (issuer, admin, upgrade con
 
 ### 3.2 Initialization
 
-At contract creation the `owner` SHOULD default to the transaction sender, unless an `arc88_initialize_owner(address new_owner)` call in the same atomic group specifies a different owner (e.g., a multisig). If deferred initialization is desired, owner MAY start as zero and be set exactly once.
+Default rule: If no explicit initialization occurs, the `owner` MUST be set to the application creator (deployment sender) at creation time. This gives a deterministic starting authority.
+
+An `arc88_initialize_owner(new_owner: address)` call in the SAME atomic transaction group as creation MAY override the default and set a different initial owner (e.g., multisig). After initialization (either implicit default or explicit override) further initialize attempts MUST fail with `already_initialized`.
+
+A deferred-zero pattern (starting with owner = zero) is NOT standard under ARC-88; implementers desiring that MUST document divergence. ARC-88 compliant tooling can safely assume a non-zero owner immediately after creation unless event `arc88_ownership_renounced` has occurred.
 
 ### 3.3 Methods (ABI)
 
@@ -37,7 +41,7 @@ All method names are snake*case, prefixed with `arc88*`, and use ARC-4 data type
 1. `arc88_owner() -> (owner: address)` (readonly)
 2. `arc88_transfer_ownership(new_owner: address)`
 3. `arc88_renounce_ownership()`
-4. `arc88_initialize_owner(new_owner: address)` (MAY only succeed if current owner is zero; sets owner exactly once)
+4. `arc88_initialize_owner(new_owner: address)` (creation group only OR pre-first-use; fails if already set)
 5. `arc88_is_owner(query: address) -> (flag: uint64)` (1 if query == stored owner and owner != zero)
 
 Optional extensions:
@@ -46,9 +50,10 @@ Optional extensions:
 
 ### 3.4 Semantics
 
+- Initial owner is deployer unless overridden via `arc88_initialize_owner` in creation group.
 - `arc88_transfer_ownership` MUST fail if caller != current owner OR `new_owner` is zero.
 - `arc88_renounce_ownership` MUST fail if caller != current owner. Sets owner to zero.
-- `arc88_initialize_owner` MUST fail unless current owner is zero. After success, future initialize calls MUST fail.
+- `arc88_initialize_owner` MUST fail if owner already set (including implicit default). Only valid before any transfer/renounce and prior to first use, practically restricted to creation group for deterministic indexing.
 - `arc88_is_owner` returns 1 only if owner != zero AND query == stored owner.
 - Once renounced (owner zero) privileged methods relying on ownership MUST become permanently inaccessible unless contract defines an alternate revival extension (non-standard).
 
@@ -115,10 +120,11 @@ Projects may already expose non-standard naming. They can add ARC-88 methods alo
 
 ### 3.11 Test Vectors (Illustrative)
 
-1. Initialize -> query owner -> expect deployer.
-2. Transfer to new address -> query -> new owner, old no longer passes `arc88_is_owner`.
-3. Renounce -> `arc88_owner` returns zero -> `arc88_transfer_ownership` now fails with `no_owner_set`.
-4. Two-step (optional): request -> accept by pending -> event sequence 0x03 then 0x04.
+1. Deploy (no init) -> query owner -> expect creator.
+2. Deploy with grouped `arc88_initialize_owner(multisig)` -> query owner -> multisig.
+3. Transfer to new address -> query -> new owner, old no longer passes `arc88_is_owner`.
+4. Renounce -> `arc88_owner` returns zero -> `arc88_transfer_ownership` now fails with `no_owner_set`.
+5. Two-step (optional): request -> accept by pending -> event sequence 0x03 then 0x04.
 
 ## 4. Appendix A: Two-Step Ownership (Optional)
 
