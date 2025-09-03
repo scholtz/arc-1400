@@ -24,11 +24,6 @@ export class Arc1594 extends Arc1410 {
   }
 
   /* ------------------------- admin / setup methods ------------------------- */
-  @arc4.abimethod()
-  public arc1594_set_halt(flag: arc4.UintN64): void {
-    this._onlyOwner()
-    this.halt.value = flag
-  }
 
   @arc4.abimethod()
   public arc1594_set_issuable(flag: arc4.Bool): void {
