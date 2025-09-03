@@ -1,5 +1,5 @@
 import { arc4, assert, emit, Global, GlobalState, Txn } from '@algorandfoundation/algorand-typescript'
-import { Arc1594 } from './arc1594.algo'
+import { Arc200 } from './arc200.algo'
 
 // Events (follow ARC-1644 doc tags conceptually; actual tag auto-derived by framework label)
 class arc1644_controller_transfer_event extends arc4.Struct<{
@@ -26,7 +26,7 @@ const CODE_SUCCESS = new arc4.Byte(0x51)
 const CODE_CONTROLLER_DISABLED = new arc4.Byte(0x51)
 const CODE_JUSTIFICATION_REQUIRED = new arc4.Byte(0x52)
 
-export class Arc1644 extends Arc1594 {
+export class Arc1644 extends Arc200 {
   // Controller address (single-controller base). If unset, controllable = false.
   public controller = GlobalState<arc4.Address>({ key: 'ctrl' })
   public controllable = GlobalState<arc4.Bool>({ key: 'ctrlen' })

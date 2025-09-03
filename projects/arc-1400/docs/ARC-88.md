@@ -9,7 +9,7 @@ type: Standards Track
 category: Interface
 sub-category: Access Control
 created: 2025-09-03
-requires: 4, 200
+requires: 4
 replaces:
 ---
 
