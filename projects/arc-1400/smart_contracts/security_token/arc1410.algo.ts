@@ -1,4 +1,4 @@
-import { arc4, assert, BoxMap, emit, Txn } from '@algorandfoundation/algorand-typescript'
+import { arc4, assert, BoxMap, emit, GlobalState, Txn } from '@algorandfoundation/algorand-typescript'
 import { Arc200 } from './arc200.algo'
 
 // Define a struct for the event with named parameters
@@ -21,11 +21,18 @@ class arc1410_partition_transfer extends arc4.Struct<{
 }> {}
 
 export class Arc1410 extends Arc200 {
+  public arc1410_total_supply = GlobalState<arc4.UintN256>({ key: 'arc1410_total_supply' })
+
   public partitions = BoxMap<arc1410_PartitionKey, arc4.UintN256>({ keyPrefix: 'p' })
   public holderPartitionsCurrentPage = BoxMap<arc4.Address, arc4.UintN64>({ keyPrefix: 'hp_p' })
   public holderPartitionsAddresses = BoxMap<arc1410_HoldingPartitionsPaginatedKey, arc4.Address[]>({
     keyPrefix: 'hp_a',
   })
+
+  constructor() {
+    super()
+    this.arc1410_total_supply.value = new arc4.UintN256(0)
+  }
 
   @arc4.abimethod({ readonly: true })
   public arc1410_balance_of_partition(holder: arc4.Address, partition: arc4.Address): arc4.UintN256 {
