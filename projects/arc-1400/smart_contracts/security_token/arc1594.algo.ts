@@ -1,4 +1,4 @@
-import { arc4, assert, BoxMap, emit, Global, GlobalState, Txn } from '@algorandfoundation/algorand-typescript'
+import { arc4, assert, BoxMap, emit, GlobalState, Txn } from '@algorandfoundation/algorand-typescript'
 import { Arc1410 } from './arc1410.algo'
 
 // Event structs
@@ -8,16 +8,6 @@ class arc1594_redeem_event extends arc4.Struct<{
   amount: arc4.UintN256
   data: arc4.DynamicBytes
 }> {}
-class arc1594_validate_event extends arc4.Struct<{
-  from: arc4.Address
-  to: arc4.Address
-  amount: arc4.UintN256
-  code: arc4.UintN64
-  reason: arc4.Str
-}> {}
-
-// Validation ephemeral box key per sender (could also be local state) storing last code
-class arc1594_LastValidationKey extends arc4.Struct<{ sender: arc4.Address }> {}
 
 export class Arc1594 extends Arc1410 {
   // Governance / control flags (owner via Arc88 acts as issuer)
@@ -27,8 +17,6 @@ export class Arc1594 extends Arc1410 {
   public kyc = BoxMap<arc4.Address, arc4.UintN64>({ keyPrefix: 'kyc' }) // 1 = eligible
   public lockupUntil = BoxMap<arc4.Address, arc4.UintN64>({ keyPrefix: 'lku' }) // round number until which locked
 
-  // Last validation code (per sender) optional
-  public lastValidation = BoxMap<arc1594_LastValidationKey, arc4.UintN64>({ keyPrefix: 'lvc' })
 
   constructor() {
     super()
@@ -89,45 +77,4 @@ export class Arc1594 extends Arc1410 {
     emit('Redeem', new arc1594_redeem_event({ from, amount, data }))
   }
 
-  /* ------------------------- validation ------------------------- */
-  @arc4.abimethod({ readonly: true })
-  public arc1594_validate_transfer(
-    from: arc4.Address,
-    to: arc4.Address,
-    amount: arc4.UintN256,
-    data: arc4.DynamicBytes,
-  ): arc4.UintN64 {
-    // Begin with default success code 0
-    let code = new arc4.UintN64(0)
-    // Check halted
-    if (this.halt.hasValue && this.halt.value.native === 1) {
-      code = new arc4.UintN64(14) // GlobalTransferHalted
-    }
-    // KYC
-    if (code.native === 0) {
-      if (!this.kyc(from).exists || this.kyc(from).value.native === 0) code = new arc4.UintN64(10)
-    }
-    if (code.native === 0) {
-      if (!this.kyc(to).exists || this.kyc(to).value.native === 0) code = new arc4.UintN64(11)
-    }
-    // Amount and balance
-    if (code.native === 0) {
-      if (amount.native === 0n) code = new arc4.UintN64(40) // treat zero as internal error here
-    }
-    if (code.native === 0) {
-      if (!this.balances(from).exists || this.balances(from).value.native < amount.native) {
-        code = new arc4.UintN64(13)
-      }
-    }
-    // Lockup
-    if (code.native === 0) {
-      if (this.lockupUntil(from).exists && Global.round <= this.lockupUntil(from).value.native) {
-        code = new arc4.UintN64(15)
-      }
-    }
-    // Partition checks (simplified - if partition not zero and not supported)
-    // Partition checks removed (core profile partitionless)
-    // Write last validation code (non-readonly variant would be needed; for pure readonly we skip persisting)
-    return code
-  }
 }
