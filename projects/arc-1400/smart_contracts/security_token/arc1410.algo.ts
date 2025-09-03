@@ -2,7 +2,7 @@ import { arc4, assert, BoxMap, emit, Txn } from '@algorandfoundation/algorand-ty
 import { Arc200 } from './arc200.algo'
 
 // Define a struct for the event with named parameters
-class arc1410_PartitionKey extends arc4.Struct<{
+export class arc1410_PartitionKey extends arc4.Struct<{
   holder: arc4.Address
   partition: arc4.Address
 }> {}

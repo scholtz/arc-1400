@@ -1,9 +1,19 @@
-import { arc4, assert, BoxMap, GlobalState, emit, Txn, Global, op } from '@algorandfoundation/algorand-typescript'
-import { Arc200 } from './arc200.algo'
+import { arc4, assert, BoxMap, emit, Global, GlobalState, Txn } from '@algorandfoundation/algorand-typescript'
+import { Arc1410, arc1410_PartitionKey } from './arc1410.algo'
 
 // Event structs
-class arc1594_issue_event extends arc4.Struct<{ to: arc4.Address; amount: arc4.UintN256; partition: arc4.Address; data: arc4.DynamicBytes }> {}
-class arc1594_redeem_event extends arc4.Struct<{ from: arc4.Address; amount: arc4.UintN256; partition: arc4.Address; data: arc4.DynamicBytes }> {}
+class arc1594_issue_event extends arc4.Struct<{
+  to: arc4.Address
+  amount: arc4.UintN256
+  partition: arc4.Address
+  data: arc4.DynamicBytes
+}> {}
+class arc1594_redeem_event extends arc4.Struct<{
+  from: arc4.Address
+  amount: arc4.UintN256
+  partition: arc4.Address
+  data: arc4.DynamicBytes
+}> {}
 class arc1594_validate_event extends arc4.Struct<{
   from: arc4.Address
   to: arc4.Address
@@ -16,9 +26,8 @@ class arc1594_validate_event extends arc4.Struct<{
 // Validation ephemeral box key per sender (could also be local state) storing last code
 class arc1594_LastValidationKey extends arc4.Struct<{ sender: arc4.Address }> {}
 
-export class Arc1594 extends Arc200 {
-  // Governance / control accounts
-  public issuer = GlobalState<arc4.Address>({ key: 'isr' })
+export class Arc1594 extends Arc1410 {
+  // Governance / control flags (owner via Arc88 acts as issuer)
   public halt = GlobalState<arc4.UintN64>({ key: 'hlt' }) // 1 = halted
 
   // Per-account compliance flags (simple model)
@@ -33,58 +42,53 @@ export class Arc1594 extends Arc200 {
   }
 
   /* ------------------------- internal helpers ------------------------- */
-  protected _isIssuer(addr: arc4.Address): boolean {
-    if (!this.issuer.hasValue) return false
-    return this.issuer.value === addr
-  }
-
-  protected _onlyIssuer(): void {
-    assert(this._isIssuer(new arc4.Address(Txn.sender)) || this.arc88_is_owner(new arc4.Address(Txn.sender)).native === true, 'not_issuer')
+  protected _onlyOwner(): void {
+    assert(this.arc88_is_owner(new arc4.Address(Txn.sender)).native === true, 'only_owner')
   }
 
   /* ------------------------- admin / setup methods ------------------------- */
   @arc4.abimethod()
-  public arc1594_set_issuer(issuer: arc4.Address): void {
-    assert(!this.issuer.hasValue || this.arc88_is_owner(new arc4.Address(Txn.sender)).native === true, 'only_owner_once_set')
-    this.issuer.value = issuer
-  }
-
-  @arc4.abimethod()
   public arc1594_set_halt(flag: arc4.UintN64): void {
-    this._onlyIssuer()
+    this._onlyOwner()
     this.halt.value = flag
   }
 
   @arc4.abimethod()
   public arc1594_set_kyc(account: arc4.Address, flag: arc4.UintN64): void {
-    this._onlyIssuer()
+    this._onlyOwner()
     this.kyc(account).value = flag
   }
 
   @arc4.abimethod()
   public arc1594_set_lockup(account: arc4.Address, round: arc4.UintN64): void {
-    this._onlyIssuer()
+    this._onlyOwner()
     this.lockupUntil(account).value = round
   }
 
   /* ------------------------- issuance / redemption ------------------------- */
   @arc4.abimethod()
-  public arc1594_issue(to: arc4.Address, amount: arc4.UintN256, partition: arc4.Address, data: arc4.DynamicBytes): void {
-    this._onlyIssuer()
+  public arc1594_issue(
+    to: arc4.Address,
+    amount: arc4.UintN256,
+    partition: arc4.Address,
+    data: arc4.DynamicBytes,
+  ): void {
+    this._onlyOwner()
     assert(amount.native > 0n, 'invalid_amount')
-    // Increase total supply and balance (partition unused here; integration with Arc1410 would map it or delegate)
-    if (!this.balances(to).exists) {
-      this.balances(to).value = new arc4.UintN256(0)
-    }
-    this.balances(to).value = new arc4.UintN256(this.balances(to).value.native + amount.native)
-    this.totalSupply.value = new arc4.UintN256(this.totalSupply.value.native + amount.native)
+    // Delegate to ARC-1410 issuance logic for partition & supply handling
+    this.arc1410_issue_by_partition(to, partition, amount, data)
     emit('Issue', new arc1594_issue_event({ to, amount, partition, data }))
   }
 
   @arc4.abimethod()
-  public arc1594_redeem(from: arc4.Address, amount: arc4.UintN256, partition: arc4.Address, data: arc4.DynamicBytes): void {
+  public arc1594_redeem(
+    from: arc4.Address,
+    amount: arc4.UintN256,
+    partition: arc4.Address,
+    data: arc4.DynamicBytes,
+  ): void {
     const sender = new arc4.Address(Txn.sender)
-    assert(sender === from || this._isIssuer(sender), 'not_auth')
+    assert(sender === from || this.arc88_is_owner(sender).native === true, 'not_auth')
     assert(amount.native > 0n, 'invalid_amount')
     assert(this.balances(from).exists && this.balances(from).value.native >= amount.native, 'insufficient_balance')
     this.balances(from).value = new arc4.UintN256(this.balances(from).value.native - amount.native)
@@ -130,11 +134,9 @@ export class Arc1594 extends Arc200 {
       }
     }
     // Partition checks (simplified - if partition not zero and not supported)
-    if (code.native === 0) {
-      if (partition !== new arc4.Address()) {
-        // Without Arc1410 integration we don't track partitions, so mark unknown
-        code = new arc4.UintN64(20)
-      }
+    if (code.native === 0 && partition !== new arc4.Address()) {
+      const partKey = new arc1410_PartitionKey({ holder: from, partition })
+      if (!this.partitions(partKey).exists) code = new arc4.UintN64(20)
     }
     // Write last validation code (non-readonly variant would be needed; for pure readonly we skip persisting)
     return code
