@@ -1,0 +1,137 @@
+# ARC-88: Ownable Access Control (Draft)
+
+Status: Draft  
+Category: Standard Track  
+Created: 2025-09-03  
+Author(s): Ludovit Scholtz  
+Depends On: ARC-4 (ABI), ARC-200 (optional integration)  
+Replaces: (none)
+
+## 1. Abstract
+
+ARC-88 defines a minimal, composable, and standardized ownership / single-administrator pattern for Algorand smart contracts. It provides deterministic method names, ABI types, events, and error codes for acquiring, transferring, renouncing, and querying a canonical `owner` address. The goal is cross-tool interoperability and reduced bespoke patterns.
+
+## 2. Motivation
+
+Many contracts require a single privileged authority (issuer, admin, upgrade controller, treasury). Current implementations vary in method names and semantics (e.g., `set_owner`, `changeAdmin`, `transferOwnership`). A unified ARC improves:
+
+- Indexer & wallet discoverability of privileged accounts
+- Security auditing consistency
+- Reuse of client libraries
+- Simplified composition with higher-level governance layers (timelocks, multisigs)
+
+## 3. Specification
+
+### 3.1 Owner Definition
+
+`owner` is an ARC-4 `address` stored in application global state (or a dedicated box `owner`). The zero address `0x000...0` indicates the absence of an owner (post-renouncement). Implementations MUST reject privileged calls when owner is zero (unless otherwise noted).
+
+### 3.2 Initialization
+
+At contract creation the `owner` SHOULD default to the transaction sender, unless an `arc88_initialize_owner(address new_owner)` call in the same atomic group specifies a different owner (e.g., a multisig). If deferred initialization is desired, owner MAY start as zero and be set exactly once.
+
+### 3.3 Methods (ABI)
+
+All method names are snake*case, prefixed with `arc88*`, and use ARC-4 data types.
+
+1. `arc88_owner() -> (owner: address)` (readonly)
+2. `arc88_transfer_ownership(new_owner: address)`
+3. `arc88_renounce_ownership()`
+4. `arc88_initialize_owner(new_owner: address)` (MAY only succeed if current owner is zero; sets owner exactly once)
+5. `arc88_is_owner(query: address) -> (flag: uint64)` (1 if query == stored owner and owner != zero)
+
+Optional extensions:
+
+- `arc88_pending_owner() -> (pending: address)` plus a two-step pattern (`arc88_transfer_ownership_request` / `arc88_accept_ownership`) for safer transfer; see Appendix A.
+
+### 3.4 Semantics
+
+- `arc88_transfer_ownership` MUST fail if caller != current owner OR `new_owner` is zero.
+- `arc88_renounce_ownership` MUST fail if caller != current owner. Sets owner to zero.
+- `arc88_initialize_owner` MUST fail unless current owner is zero. After success, future initialize calls MUST fail.
+- `arc88_is_owner` returns 1 only if owner != zero AND query == stored owner.
+- Once renounced (owner zero) privileged methods relying on ownership MUST become permanently inaccessible unless contract defines an alternate revival extension (non-standard).
+
+### 3.5 Error Codes
+
+Implementations SHOULD surface deterministic short codes (uint8) via simulation helpers or revert messages (string) for UI mapping:
+
+- `0x01` not_owner (caller lacks ownership)
+- `0x02` zero_address_not_allowed (attempt to set owner to zero in transfer)
+- `0x03` already_initialized (initialize after owner set)
+- `0x04` no_owner_set (actions disallowed because owner is zero)
+- `0x05` pending_transfer_exists (two-step pattern only)
+- `0x06` not_pending_owner (accept called by non-pending)
+
+Codes >= `0x20` are reserved for project-specific extensions.
+
+### 3.6 Events (Logs)
+
+Recommended log schema (tag values illustrative; implementers MAY choose deterministic short tags):
+
+- Tag `0x01` `arc88_ownership_transferred` | previous_owner(address) | new_owner(address)
+- Tag `0x02` `arc88_ownership_renounced` | previous_owner(address)
+- Tag `0x03` `arc88_ownership_transfer_requested` | previous_owner(address) | pending_owner(address) (two-step only)
+- Tag `0x04` `arc88_ownership_transfer_accepted` | previous_owner(address) | new_owner(address) (two-step only)
+
+### 3.7 Security Considerations
+
+- Front-running: Two-step ownership transfer mitigates risk of transferring to an unintended address.
+- Renouncement: Irreversible; UIs MUST strongly warn before invoking.
+- Multisig owners: If using an escrow address (LogicSig) or multisig, ensure validity period and fallback plan.
+- Upgradeability: If used with upgradable proxy patterns, ensure both proxy and implementation align on ownership semantics to avoid lockout.
+
+### 3.8 Rationale
+
+A minimal interface enables straightforward layering of governance (timelock, DAO vote) where those systems call only the standardized methods. Explicit zero address semantics make post-renouncement state unambiguous.
+
+### 3.9 Reference Implementation Sketch
+
+Global state keys (or boxes):
+
+- `owner`: bytes (32) storing address (zeroed if none)
+- (optional) `pending_owner`: bytes (32) for two-step pattern
+
+Pseudocode (TypeScript / Algorand AVM style):
+
+```
+arc88_transfer_ownership(new_owner):
+  assert(sender == owner, "not_owner")
+  assert(new_owner != ZERO, "zero_address_not_allowed")
+  previous = owner
+  owner = new_owner
+  emit OwnershipTransferred(previous, new_owner)
+
+arc88_renounce_ownership():
+  assert(sender == owner, "not_owner")
+  previous = owner
+  owner = ZERO
+  emit OwnershipRenounced(previous)
+```
+
+### 3.10 Backwards Compatibility
+
+Projects may already expose non-standard naming. They can add ARC-88 methods alongside legacy ones to migrate clients gradually.
+
+### 3.11 Test Vectors (Illustrative)
+
+1. Initialize -> query owner -> expect deployer.
+2. Transfer to new address -> query -> new owner, old no longer passes `arc88_is_owner`.
+3. Renounce -> `arc88_owner` returns zero -> `arc88_transfer_ownership` now fails with `no_owner_set`.
+4. Two-step (optional): request -> accept by pending -> event sequence 0x03 then 0x04.
+
+## 4. Appendix A: Two-Step Ownership (Optional)
+
+Additional methods:
+
+- `arc88_transfer_ownership_request(pending: address)` (only owner; cannot be zero)
+- `arc88_accept_ownership()` (only pending address)
+- `arc88_cancel_ownership_request()` (only owner; clears pending)
+
+State: store `pending_owner`.
+
+Semantics: Upon accept, emit both acceptance event and transfer event; clear pending.
+
+## 5. Copyright
+
+CC0 1.0 Universal.

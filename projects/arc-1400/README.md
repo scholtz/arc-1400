@@ -11,6 +11,7 @@ Documentation for the Algorand adaptation of the ERC-1400 security token standar
 - `ARC-1410.md` – Partitioned balances
 - `ARC-1643.md` – Document registry
 - `ARC-1644.md` – Controller operations
+- `ARC-88.md` – Ownable access control (separate foundational utility spec)
 - `index.md` – Summary index
 
 All specs currently in Draft status and released under CC0 1.0. Feedback and issues welcome via repository discussions / issues.
@@ -163,7 +164,7 @@ This project makes use of Algorand TypeScript to build Algorand smart contracts.
 
 - [Algorand](https://www.algorand.com/) - Layer 1 Blockchain; [Developer portal](https://dev.algorand.co/), [Why Algorand?](https://dev.algorand.co/getting-started/why-algorand/)
 - [AlgoKit](https://github.com/algorandfoundation/algokit-cli) - One-stop shop tool for developers building on the Algorand network; [docs](https://github.com/algorandfoundation/algokit-cli/blob/main/docs/algokit.md), [intro tutorial](https://github.com/algorandfoundation/algokit-cli/blob/main/docs/tutorials/intro.md)
-- [Algorand TypeScript](https://github.com/algorandfoundation/puya-ts/) - A semantically and syntactically compatible, typed TypeScript language that works with standard TypeScript tooling and allows you to express smart contracts (apps) and smart signatures (logic signatures) for deployment on the Algorand Virtual Machine (AVM); [docs](https://github.com/algorandfoundation/puya-ts/), [examples](https://github.com/algorandfoundation/puya-ts/tree/main/examples)
+- [Algorand TypeScript](https://github.com/algorandfoundation/puya-ts/) - A semantically and syntactically compatible, typed TypeScript language that works with standard TypeScript tooling and allows you to express smart contracts (apps) and smart signatures for deployment on the Algorand Virtual Machine (AVM); [docs](https://github.com/algorandfoundation/puya-ts/), [examples](https://github.com/algorandfoundation/puya-ts/tree/main/examples)
 - [AlgoKit Utils](https://github.com/algorandfoundation/algokit-utils-ts) - A set of core Algorand utilities that make it easier to build solutions on Algorand.
 - [NPM](https://www.npmjs.com/): TypeScript packaging and dependency management.
 - [TypeScript](https://www.typescriptlang.org/): Strongly typed programming language that builds on JavaScript
