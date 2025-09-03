@@ -1,17 +1,25 @@
-# ARC-88: Ownable Access Control (Draft)
+---
+arc: 88
+title: Ownable Access Control
+description: Minimal single-administrator / ownership interface for Algorand smart contracts
+author: Ludovit Scholtz (@scholtz)
+discussions-to: https://github.com/algorandfoundation/ARCs/discussions
+status: Draft
+type: Standards Track
+category: Interface
+sub-category: Access Control
+created: 2025-09-03
+requires: 4, 200
+replaces:
+---
 
-Status: Draft  
-Category: Standard Track  
-Created: 2025-09-03  
-Author(s): Ludovit Scholtz  
-Depends On: ARC-4 (ABI), ARC-200 (optional integration)  
-Replaces: (none)
+# ARC-88: Ownable Access Control
 
-## 1. Abstract
+## Abstract
 
 ARC-88 defines a minimal, composable, and standardized ownership / single-administrator pattern for Algorand smart contracts. It provides deterministic method names, ABI types, events, and error codes for acquiring, transferring, renouncing, and querying a canonical `owner` address. The goal is cross-tool interoperability and reduced bespoke patterns.
 
-## 2. Motivation
+## Motivation
 
 Many contracts require a single privileged authority (issuer, admin, upgrade controller, treasury). Current implementations vary in method names and semantics (e.g., `set_owner`, `changeAdmin`, `transferOwnership`). A unified ARC improves:
 
@@ -20,7 +28,7 @@ Many contracts require a single privileged authority (issuer, admin, upgrade con
 - Reuse of client libraries
 - Simplified composition with higher-level governance layers (timelocks, multisigs)
 
-## 3. Specification
+## Specification
 
 ### 3.1 Owner Definition
 
@@ -126,7 +134,19 @@ Projects may already expose non-standard naming. They can add ARC-88 methods alo
 4. Renounce -> `arc88_owner` returns zero -> `arc88_transfer_ownership` now fails with `no_owner_set`.
 5. Two-step (optional): request -> accept by pending -> event sequence 0x03 then 0x04.
 
-## 4. Appendix A: Two-Step Ownership (Optional)
+## Rationale
+
+See Appendix A for design trade-offs; choosing single-field owner reduces state and gas vs multi-role patterns while enabling composition.
+
+## Backwards Compatibility
+
+Projects with existing non-standard ownership methods can add ARC-88 methods alongside legacy ones to offer a migration path without breaking clients.
+
+## Security Considerations
+
+Security concerns are captured in section 3.7; centralization risks and renouncement irreversibility are primary issues.
+
+## Appendix A: Two-Step Ownership (Optional)
 
 Additional methods:
 
@@ -138,6 +158,6 @@ State: store `pending_owner`.
 
 Semantics: Upon accept, emit both acceptance event and transfer event; clear pending.
 
-## 5. Copyright
+## Copyright
 
 CC0 1.0 Universal.
