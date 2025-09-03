@@ -9,7 +9,7 @@ main:
     // export class Arc1410 extends Arc200 {
     txn NumAppArgs
     bz main_bare_routing@38
-    pushbytess 0x35f8135f 0xda7025b9 0x3f256713 0x95b4f9e3 0x80cc49ab 0x07962165 0xe78961da 0xfd9480d7 0xb1b1d69a 0xc1bed789 0x3bfe1833 0x599cd1a5 0x220fcf98 0x28f023d7 0x975382e2 0x657d13ec 0xb6ae1a25 0x84ec13d5 0xec996041 0x82e573c4 0x4a968f8f 0xb5422125 0xbbb319f3 0x0702654e 0xd015724e 0x029fecc0 0x7349334e 0xdb7c82ef 0xfd2c2c6e 0x42a5f065 0xad4f68ea // method "arc1410_balance_of_partition(address,address)uint256", method "arc200_transfer(address,uint256)bool", method "arc1410_transfer_by_partition(address,address,uint256,byte[])address", method "arc1410_partitions_of(address,uint64)address[]", method "arc1410_is_operator(address,address,address)bool", method "arc1410_authorize_operator(address,address,address)void", method "arc1410_revoke_operator(address,address,address)void", method "arc1410_operator_transfer_by_partition(address,address,address,uint256,byte[])address", method "arc1410_can_transfer_by_partition(address,address,address,uint256,byte[])(byte,string,address)", method "arc1410_authorize_operator_by_portion(address,address,address,uint256)void", method "arc1410_is_operator_by_portion(address,address,address)bool", method "arc1410_issue_by_partition(address,address,uint256,byte[])void", method "arc1410_redeem_by_partition(address,address,uint256,byte[])void", method "arc1410_operator_redeem_by_partition(address,address,uint256,byte[])void", method "bootstrap(byte[],byte[],uint8,uint256)bool", method "arc200_name()byte[32]", method "arc200_symbol()byte[8]", method "arc200_decimals()uint8", method "arc200_totalSupply()uint256", method "arc200_balanceOf(address)uint256", method "arc200_transferFrom(address,address,uint256)bool", method "arc200_approve(address,uint256)bool", method "arc200_allowance(address,address)uint256", method "arc88_owner()address", method "arc88_is_owner(address)bool", method "arc88_initialize_owner(address)void", method "arc88_transfer_ownership(address)void", method "arc88_renounce_ownership()void", method "arc88_transfer_ownership_request(address)void", method "arc88_accept_ownership()void", method "arc88_cancel_ownership_request()void"
+    pushbytess 0x35f8135f 0xda7025b9 0x3f256713 0x95b4f9e3 0x80cc49ab 0x07962165 0xe78961da 0xfd9480d7 0xb1b1d69a 0xc1bed789 0x3bfe1833 0x599cd1a5 0x6de94166 0x28f023d7 0x975382e2 0x657d13ec 0xb6ae1a25 0x84ec13d5 0xec996041 0x82e573c4 0x4a968f8f 0xb5422125 0xbbb319f3 0x0702654e 0xd015724e 0x029fecc0 0x7349334e 0xdb7c82ef 0xfd2c2c6e 0x42a5f065 0xad4f68ea // method "arc1410_balance_of_partition(address,address)uint256", method "arc200_transfer(address,uint256)bool", method "arc1410_transfer_by_partition(address,address,uint256,byte[])address", method "arc1410_partitions_of(address,uint64)address[]", method "arc1410_is_operator(address,address,address)bool", method "arc1410_authorize_operator(address,address,address)void", method "arc1410_revoke_operator(address,address,address)void", method "arc1410_operator_transfer_by_partition(address,address,address,uint256,byte[])address", method "arc1410_can_transfer_by_partition(address,address,address,uint256,byte[])(byte,string,address)", method "arc1410_authorize_operator_by_portion(address,address,address,uint256)void", method "arc1410_is_operator_by_portion(address,address,address)bool", method "arc1410_issue_by_partition(address,address,uint256,byte[])void", method "arc1410_redeem_by_partition(address,uint256,byte[])void", method "arc1410_operator_redeem_by_partition(address,address,uint256,byte[])void", method "bootstrap(byte[],byte[],uint8,uint256)bool", method "arc200_name()byte[32]", method "arc200_symbol()byte[8]", method "arc200_decimals()uint8", method "arc200_totalSupply()uint256", method "arc200_balanceOf(address)uint256", method "arc200_transferFrom(address,address,uint256)bool", method "arc200_approve(address,uint256)bool", method "arc200_allowance(address,address)uint256", method "arc88_owner()address", method "arc88_is_owner(address)bool", method "arc88_initialize_owner(address)void", method "arc88_transfer_ownership(address)void", method "arc88_renounce_ownership()void", method "arc88_transfer_ownership_request(address)void", method "arc88_accept_ownership()void", method "arc88_cancel_ownership_request()void"
     txna ApplicationArgs 0
     match main_arc1410_balance_of_partition_route@5 main_arc200_transfer_route@6 main_arc1410_transfer_by_partition_route@7 main_arc1410_partitions_of_route@8 main_arc1410_is_operator_route@9 main_arc1410_authorize_operator_route@10 main_arc1410_revoke_operator_route@11 main_arc1410_operator_transfer_by_partition_route@12 main_arc1410_can_transfer_by_partition_route@13 main_arc1410_authorize_operator_by_portion_route@14 main_arc1410_is_operator_by_portion_route@15 main_arc1410_issue_by_partition_route@16 main_arc1410_redeem_by_partition_route@17 main_arc1410_operator_redeem_by_partition_route@18 main_bootstrap_route@19 main_arc200_name_route@20 main_arc200_symbol_route@21 main_arc200_decimals_route@22 main_arc200_totalSupply_route@23 main_arc200_balanceOf_route@24 main_arc200_transferFrom_route@25 main_arc200_approve_route@26 main_arc200_allowance_route@27 main_arc88_owner_route@28 main_arc88_is_owner_route@29 main_arc88_initialize_owner_route@30 main_arc88_transfer_ownership_route@31 main_arc88_renounce_ownership_route@32 main_arc88_transfer_ownership_request_route@33 main_arc88_accept_ownership_route@34 main_arc88_cancel_ownership_request_route@35
 
@@ -320,7 +320,7 @@ main_bootstrap_route@19:
     return
 
 main_arc1410_operator_redeem_by_partition_route@18:
-    // smart_contracts/security_token/arc1410.algo.ts:432
+    // smart_contracts/security_token/arc1410.algo.ts:427
     // @arc4.abimethod()
     txn OnCompletion
     !
@@ -333,7 +333,7 @@ main_arc1410_operator_redeem_by_partition_route@18:
     txna ApplicationArgs 2
     txna ApplicationArgs 3
     txna ApplicationArgs 4
-    // smart_contracts/security_token/arc1410.algo.ts:432
+    // smart_contracts/security_token/arc1410.algo.ts:427
     // @arc4.abimethod()
     callsub arc1410_operator_redeem_by_partition
     intc_1 // 1
@@ -352,7 +352,6 @@ main_arc1410_redeem_by_partition_route@17:
     txna ApplicationArgs 1
     txna ApplicationArgs 2
     txna ApplicationArgs 3
-    txna ApplicationArgs 4
     // smart_contracts/security_token/arc1410.algo.ts:408
     // @arc4.abimethod()
     callsub arc1410_redeem_by_partition
@@ -1979,73 +1978,44 @@ arc1410_issue_by_partition_after_if_else@4:
     retsub
 
 
-// smart_contracts/security_token/arc1410.algo.ts::Arc1410.arc1410_redeem_by_partition(from: bytes, partition: bytes, amount: bytes, data: bytes) -> void:
+// smart_contracts/security_token/arc1410.algo.ts::Arc1410.arc1410_redeem_by_partition(partition: bytes, amount: bytes, data: bytes) -> void:
 arc1410_redeem_by_partition:
-    // smart_contracts/security_token/arc1410.algo.ts:408-414
+    // smart_contracts/security_token/arc1410.algo.ts:408-413
     // @arc4.abimethod()
     // public arc1410_redeem_by_partition(
-    //   from: arc4.Address,
     //   partition: arc4.Address,
     //   amount: arc4.UintN256,
     //   data: arc4.DynamicBytes,
     // ): void {
-    proto 4 0
-    intc_0 // 0
-    dupn 2
-    // smart_contracts/security_token/arc1410.algo.ts:415
-    // const sender = new arc4.Address(Txn.sender)
+    proto 3 0
+    // smart_contracts/security_token/arc1410.algo.ts:414
+    // const from = new arc4.Address(Txn.sender)
     txn Sender
-    dup
-    // smart_contracts/security_token/arc1410.algo.ts:417
-    // sender === from || this.arc1410_is_operator(from, sender, partition).native === true,
-    frame_dig -4
-    ==
-    bnz arc1410_redeem_by_partition_bool_true@2
-    frame_dig -4
-    frame_dig 3
-    frame_dig -3
-    callsub arc1410_is_operator
-    intc_0 // 0
-    getbit
-    intc_1 // 1
-    ==
-    bz arc1410_redeem_by_partition_bool_false@3
-
-arc1410_redeem_by_partition_bool_true@2:
-    intc_1 // 1
-
-arc1410_redeem_by_partition_bool_merge@4:
-    // smart_contracts/security_token/arc1410.algo.ts:416-419
-    // assert(
-    //   sender === from || this.arc1410_is_operator(from, sender, partition).native === true,
-    //   'Not authorized operator',
-    // )
-    assert // Not authorized operator
-    // smart_contracts/security_token/arc1410.algo.ts:420
+    // smart_contracts/security_token/arc1410.algo.ts:415
     // assert(amount.native > 0, 'Invalid amount')
     frame_dig -2
     pushbytes 0x
     b>
     assert // Invalid amount
-    // smart_contracts/security_token/arc1410.algo.ts:421
+    // smart_contracts/security_token/arc1410.algo.ts:416
     // const fromKey = new arc1410_PartitionKey({ holder: from, partition })
-    frame_dig -4
+    dup
     frame_dig -3
     concat
     dup
-    frame_bury 1
+    cover 2
     // smart_contracts/security_token/arc1410.algo.ts:57
     // public partitions = BoxMap<arc1410_PartitionKey, arc4.UintN256>({ keyPrefix: 'p' })
     bytec 4 // "p"
     swap
     concat
-    // smart_contracts/security_token/arc1410.algo.ts:422
+    // smart_contracts/security_token/arc1410.algo.ts:417
     // assert(this.partitions(fromKey).exists, 'Partition balance missing')
     dup
     box_len
     bury 1
     assert // Partition balance missing
-    // smart_contracts/security_token/arc1410.algo.ts:423
+    // smart_contracts/security_token/arc1410.algo.ts:418
     // assert(this.partitions(fromKey).value.native >= amount.native, 'Insufficient partition balance')
     dup
     box_get
@@ -2053,7 +2023,7 @@ arc1410_redeem_by_partition_bool_merge@4:
     frame_dig -2
     b>=
     assert // Insufficient partition balance
-    // smart_contracts/security_token/arc1410.algo.ts:424
+    // smart_contracts/security_token/arc1410.algo.ts:419
     // this.partitions(fromKey).value = new arc4.UintN256(this.partitions(fromKey).value.native - amount.native)
     dup
     box_get
@@ -2068,34 +2038,33 @@ arc1410_redeem_by_partition_bool_merge@4:
     intc_2 // 32
     bzero
     dup
-    frame_bury 0
+    cover 4
     b|
     box_put
     // smart_contracts/security_token/arc200.algo.ts:53
     // public balances = BoxMap<Address, UintN256>({ keyPrefix: 'b' })
     bytec 6 // "b"
-    frame_dig -4
+    swap
     concat
     dup
-    frame_bury 2
-    // smart_contracts/security_token/arc1410.algo.ts:426
+    // smart_contracts/security_token/arc1410.algo.ts:421
     // assert(this.balances(from).exists && this.balances(from).value.native >= amount.native, 'Insufficient balance')
     box_len
     bury 1
-    bz arc1410_redeem_by_partition_bool_false@7
+    bz arc1410_redeem_by_partition_bool_false@3
     frame_dig 2
     box_get
     assert // Box must have value
     frame_dig -2
     b>=
-    bz arc1410_redeem_by_partition_bool_false@7
+    bz arc1410_redeem_by_partition_bool_false@3
     intc_1 // 1
 
-arc1410_redeem_by_partition_bool_merge@8:
-    // smart_contracts/security_token/arc1410.algo.ts:426
+arc1410_redeem_by_partition_bool_merge@4:
+    // smart_contracts/security_token/arc1410.algo.ts:421
     // assert(this.balances(from).exists && this.balances(from).value.native >= amount.native, 'Insufficient balance')
     assert // Insufficient balance
-    // smart_contracts/security_token/arc1410.algo.ts:427
+    // smart_contracts/security_token/arc1410.algo.ts:422
     // this.balances(from).value = new arc4.UintN256(this.balances(from).value.native - amount.native)
     frame_dig 2
     dup
@@ -2108,7 +2077,7 @@ arc1410_redeem_by_partition_bool_merge@8:
     intc_2 // 32
     <=
     assert // overflow
-    frame_dig 0
+    frame_dig 1
     dup
     cover 3
     b|
@@ -2119,7 +2088,7 @@ arc1410_redeem_by_partition_bool_merge@8:
     bytec_3 // "t"
     app_global_get_ex
     assert // check GlobalState exists
-    // smart_contracts/security_token/arc1410.algo.ts:428
+    // smart_contracts/security_token/arc1410.algo.ts:423
     // this.totalSupply.value = new arc4.UintN256(this.totalSupply.value.native - amount.native)
     frame_dig -2
     b-
@@ -2132,13 +2101,13 @@ arc1410_redeem_by_partition_bool_merge@8:
     // smart_contracts/security_token/arc200.algo.ts:51
     // public totalSupply = GlobalState<UintN256>({ key: 't' })
     bytec_3 // "t"
-    // smart_contracts/security_token/arc1410.algo.ts:428
+    // smart_contracts/security_token/arc1410.algo.ts:423
     // this.totalSupply.value = new arc4.UintN256(this.totalSupply.value.native - amount.native)
     swap
     app_global_put
-    // smart_contracts/security_token/arc1410.algo.ts:429
+    // smart_contracts/security_token/arc1410.algo.ts:424
     // emit('Redeem', new arc1410_partition_redeem({ from, partition, amount, data }))
-    frame_dig 1
+    frame_dig 0
     frame_dig -2
     concat
     bytec 16 // 0x0062
@@ -2154,10 +2123,6 @@ arc1410_redeem_by_partition_bool_merge@8:
     log
     retsub
 
-arc1410_redeem_by_partition_bool_false@7:
-    intc_0 // 0
-    b arc1410_redeem_by_partition_bool_merge@8
-
 arc1410_redeem_by_partition_bool_false@3:
     intc_0 // 0
     b arc1410_redeem_by_partition_bool_merge@4
@@ -2165,7 +2130,7 @@ arc1410_redeem_by_partition_bool_false@3:
 
 // smart_contracts/security_token/arc1410.algo.ts::Arc1410.arc1410_operator_redeem_by_partition(from: bytes, partition: bytes, amount: bytes, data: bytes) -> void:
 arc1410_operator_redeem_by_partition:
-    // smart_contracts/security_token/arc1410.algo.ts:432-438
+    // smart_contracts/security_token/arc1410.algo.ts:427-433
     // @arc4.abimethod()
     // public arc1410_operator_redeem_by_partition(
     //   from: arc4.Address,
@@ -2176,16 +2141,16 @@ arc1410_operator_redeem_by_partition:
     proto 4 0
     intc_0 // 0
     dupn 3
-    // smart_contracts/security_token/arc1410.algo.ts:439
+    // smart_contracts/security_token/arc1410.algo.ts:434
     // const sender = new arc4.Address(Txn.sender)
     txn Sender
-    // smart_contracts/security_token/arc1410.algo.ts:441
+    // smart_contracts/security_token/arc1410.algo.ts:436
     // let authorized = this.arc1410_is_operator(from, sender, partition).native === true
     frame_dig -4
-    // smart_contracts/security_token/arc1410.algo.ts:439
+    // smart_contracts/security_token/arc1410.algo.ts:434
     // const sender = new arc4.Address(Txn.sender)
     txn Sender
-    // smart_contracts/security_token/arc1410.algo.ts:441
+    // smart_contracts/security_token/arc1410.algo.ts:436
     // let authorized = this.arc1410_is_operator(from, sender, partition).native === true
     frame_dig -3
     callsub arc1410_is_operator
@@ -2194,10 +2159,10 @@ arc1410_operator_redeem_by_partition:
     intc_1 // 1
     ==
     dupn 2
-    // smart_contracts/security_token/arc1410.algo.ts:442
+    // smart_contracts/security_token/arc1410.algo.ts:437
     // if (!authorized) {
     bnz arc1410_operator_redeem_by_partition_after_if_else@4
-    // smart_contracts/security_token/arc1410.algo.ts:443
+    // smart_contracts/security_token/arc1410.algo.ts:438
     // const pKey = new arc1410_OperatorPortionKey({ holder: from, operator: sender, partition })
     frame_dig -4
     frame_dig 4
@@ -2211,28 +2176,28 @@ arc1410_operator_redeem_by_partition:
     concat
     dup
     frame_bury 3
-    // smart_contracts/security_token/arc1410.algo.ts:444
+    // smart_contracts/security_token/arc1410.algo.ts:439
     // if (this.operatorPortionAllowances(pKey).exists) {
     box_len
     bury 1
     bz arc1410_operator_redeem_by_partition_after_if_else@3
-    // smart_contracts/security_token/arc1410.algo.ts:445
+    // smart_contracts/security_token/arc1410.algo.ts:440
     // const remaining = this.operatorPortionAllowances(pKey).value
     frame_dig 3
     dup
     box_get
     assert // Box must have value
-    // smart_contracts/security_token/arc1410.algo.ts:446
+    // smart_contracts/security_token/arc1410.algo.ts:441
     // assert(remaining.native >= amount.native, 'Portion allowance exceeded')
     dup
     frame_dig -2
     b>=
     assert // Portion allowance exceeded
-    // smart_contracts/security_token/arc1410.algo.ts:447
+    // smart_contracts/security_token/arc1410.algo.ts:442
     // authorized = true
     intc_1 // 1
     frame_bury 5
-    // smart_contracts/security_token/arc1410.algo.ts:448
+    // smart_contracts/security_token/arc1410.algo.ts:443
     // this.operatorPortionAllowances(pKey).value = new arc4.UintN256(remaining.native - amount.native)
     frame_dig -2
     b-
@@ -2252,10 +2217,10 @@ arc1410_operator_redeem_by_partition_after_if_else@3:
 
 arc1410_operator_redeem_by_partition_after_if_else@4:
     frame_dig 6
-    // smart_contracts/security_token/arc1410.algo.ts:451
+    // smart_contracts/security_token/arc1410.algo.ts:446
     // assert(authorized, 'Not authorized operator')
     assert // Not authorized operator
-    // smart_contracts/security_token/arc1410.algo.ts:453
+    // smart_contracts/security_token/arc1410.algo.ts:448
     // const fromKey = new arc1410_PartitionKey({ holder: from, partition })
     frame_dig -4
     frame_dig -3
@@ -2267,13 +2232,13 @@ arc1410_operator_redeem_by_partition_after_if_else@4:
     bytec 4 // "p"
     swap
     concat
-    // smart_contracts/security_token/arc1410.algo.ts:454
+    // smart_contracts/security_token/arc1410.algo.ts:449
     // assert(this.partitions(fromKey).exists, 'Partition balance missing')
     dup
     box_len
     bury 1
     assert // Partition balance missing
-    // smart_contracts/security_token/arc1410.algo.ts:455
+    // smart_contracts/security_token/arc1410.algo.ts:450
     // assert(this.partitions(fromKey).value.native >= amount.native, 'Insufficient partition balance')
     dup
     box_get
@@ -2281,7 +2246,7 @@ arc1410_operator_redeem_by_partition_after_if_else@4:
     frame_dig -2
     b>=
     assert // Insufficient partition balance
-    // smart_contracts/security_token/arc1410.algo.ts:456
+    // smart_contracts/security_token/arc1410.algo.ts:451
     // this.partitions(fromKey).value = new arc4.UintN256(this.partitions(fromKey).value.native - amount.native)
     dup
     box_get
@@ -2306,7 +2271,7 @@ arc1410_operator_redeem_by_partition_after_if_else@4:
     concat
     dup
     frame_bury 2
-    // smart_contracts/security_token/arc1410.algo.ts:457
+    // smart_contracts/security_token/arc1410.algo.ts:452
     // assert(this.balances(from).exists && this.balances(from).value.native >= amount.native, 'Insufficient balance')
     box_len
     bury 1
@@ -2320,10 +2285,10 @@ arc1410_operator_redeem_by_partition_after_if_else@4:
     intc_1 // 1
 
 arc1410_operator_redeem_by_partition_bool_merge@8:
-    // smart_contracts/security_token/arc1410.algo.ts:457
+    // smart_contracts/security_token/arc1410.algo.ts:452
     // assert(this.balances(from).exists && this.balances(from).value.native >= amount.native, 'Insufficient balance')
     assert // Insufficient balance
-    // smart_contracts/security_token/arc1410.algo.ts:458
+    // smart_contracts/security_token/arc1410.algo.ts:453
     // this.balances(from).value = new arc4.UintN256(this.balances(from).value.native - amount.native)
     frame_dig 2
     dup
@@ -2347,7 +2312,7 @@ arc1410_operator_redeem_by_partition_bool_merge@8:
     bytec_3 // "t"
     app_global_get_ex
     assert // check GlobalState exists
-    // smart_contracts/security_token/arc1410.algo.ts:459
+    // smart_contracts/security_token/arc1410.algo.ts:454
     // this.totalSupply.value = new arc4.UintN256(this.totalSupply.value.native - amount.native)
     frame_dig -2
     b-
@@ -2360,11 +2325,11 @@ arc1410_operator_redeem_by_partition_bool_merge@8:
     // smart_contracts/security_token/arc200.algo.ts:51
     // public totalSupply = GlobalState<UintN256>({ key: 't' })
     bytec_3 // "t"
-    // smart_contracts/security_token/arc1410.algo.ts:459
+    // smart_contracts/security_token/arc1410.algo.ts:454
     // this.totalSupply.value = new arc4.UintN256(this.totalSupply.value.native - amount.native)
     swap
     app_global_put
-    // smart_contracts/security_token/arc1410.algo.ts:460
+    // smart_contracts/security_token/arc1410.algo.ts:455
     // emit('Redeem', new arc1410_partition_redeem({ from, partition, amount, data }))
     frame_dig 1
     frame_dig -2

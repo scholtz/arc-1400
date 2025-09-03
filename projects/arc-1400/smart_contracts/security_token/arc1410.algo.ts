@@ -407,16 +407,11 @@ export class Arc1410 extends Arc200 {
 
   @arc4.abimethod()
   public arc1410_redeem_by_partition(
-    from: arc4.Address,
     partition: arc4.Address,
     amount: arc4.UintN256,
     data: arc4.DynamicBytes,
   ): void {
-    const sender = new arc4.Address(Txn.sender)
-    assert(
-      sender === from || this.arc1410_is_operator(from, sender, partition).native === true,
-      'Not authorized operator',
-    )
+    const from = new arc4.Address(Txn.sender)
     assert(amount.native > 0, 'Invalid amount')
     const fromKey = new arc1410_PartitionKey({ holder: from, partition })
     assert(this.partitions(fromKey).exists, 'Partition balance missing')
