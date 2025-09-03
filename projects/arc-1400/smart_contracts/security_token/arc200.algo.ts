@@ -1,14 +1,4 @@
-import {
-  arc4,
-  assert,
-  BoxMap,
-  Contract,
-  emit,
-  Global,
-  GlobalState,
-  op,
-  Txn,
-} from '@algorandfoundation/algorand-typescript'
+import { arc4, assert, BoxMap, emit, Global, GlobalState, op, Txn } from '@algorandfoundation/algorand-typescript'
 
 import {
   Address,
@@ -18,6 +8,7 @@ import {
   UintN256,
   UintN8,
 } from '@algorandfoundation/algorand-typescript/arc4'
+import { Arc88 } from './arc88.algo'
 
 class ApprovalStruct extends arc4.Struct<{
   approvalAmount: UintN256
@@ -41,7 +32,7 @@ class arc200_Approval extends arc4.Struct<{
  * Smart Contract Token Base Interface
  */
 // eslint-disable-next-line no-unused-vars
-export class Arc200 extends Contract {
+export class Arc200 extends Arc88 {
   /**
    * Name of the asset. Max 32 bytes
    */
