@@ -4,7 +4,7 @@ This project has been generated using AlgoKit. See below for default getting sta
 
 ## ARC-1400 Suite (Draft)
 
-Documentation for the Algorand adaptation of the ERC-1400 security token standard family is located in `./docs`:
+Documentation for the Algorand adaptation of the ERC-1400 security token standard family (built atop ARC-200 fungible token primitive) is located in `./docs`:
 
 - `ARC-1400.md` – Umbrella specification
 - `ARC-1594.md` – Core issuance / redemption / validation
