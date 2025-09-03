@@ -115,7 +115,7 @@ describe('Arc1643 document registry', () => {
         args: { name: s2b('R2'), uri: 'ipfs://r2', hash: hashBytes('r2') },
         sender: nonOwner,
       }),
-  ).rejects.toThrow(/only_owner/i)
+    ).rejects.toThrow(/only_owner/i)
     await expect(async () => client.send.arc1643RemoveDocument({ args: { name }, sender: nonOwner })).rejects.toThrow(
       /only_owner/i,
     )
