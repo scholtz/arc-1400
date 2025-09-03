@@ -48,15 +48,31 @@ export class Arc1410 extends Arc200 {
     )
     return this._transfer(new arc4.Address(Txn.sender), to, value)
   }
-
+  /**
+   * Transfer an amount of tokens from partition to receiver. If receiver has the particition with the same name registered, it will move to this partition. Otherwise basic receiver partition will be used.
+   *
+   * @param partition Sender partition
+   * @param to Receiver address
+   * @param amount Amount to transfer
+   * @param data Additional data
+   * @returns Receiver partition address
+   */
   @arc4.abimethod()
   public arc1410_transfer_by_partition(
     partition: arc4.Address,
     to: arc4.Address,
     amount: arc4.UintN256,
     data: arc4.DynamicBytes,
-  ): void {
+  ): arc4.Address {
+    let receiverPartition = new arc4.Address()
+
+    if (this.partitions(new arc1410_PartitionKey({ holder: to, partition: partition })).exists) {
+      receiverPartition = partition
+    }
+
     this._transfer_partition(new arc4.Address(Txn.sender), partition, to, new arc4.Address(), amount, data)
+
+    return receiverPartition
   }
 
   @arc4.abimethod()
