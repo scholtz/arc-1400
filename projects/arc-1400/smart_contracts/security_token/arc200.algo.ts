@@ -188,12 +188,12 @@ export class Arc200 extends Contract {
     return this._allowance(owner, spender)
   }
 
-  private _balanceOf(owner: Address): UintN256 {
+  protected _balanceOf(owner: Address): UintN256 {
     if (!this.balances(owner).exists) return new UintN256(0)
     return this.balances(owner).value
   }
 
-  private _transfer(sender: Address, recipient: Address, amount: UintN256): Bool {
+  protected _transfer(sender: Address, recipient: Address, amount: UintN256): Bool {
     const sender_balance = this._balanceOf(sender)
     const recipient_balance = this._balanceOf(recipient)
     assert(sender_balance.native >= amount.native, 'Insufficient balance at the sender account')
@@ -206,17 +206,17 @@ export class Arc200 extends Contract {
     emit(new arc200_Transfer({ from: sender, to: recipient, value: amount }))
     return new Bool(true)
   }
-  private _approvalKey(owner: Address, spender: Address): StaticBytes<32> {
+  protected _approvalKey(owner: Address, spender: Address): StaticBytes<32> {
     return new StaticBytes<32>(op.sha256(op.concat(owner.bytes, spender.bytes)))
   }
 
-  private _allowance(owner: Address, spender: Address): UintN256 {
+  protected _allowance(owner: Address, spender: Address): UintN256 {
     const key = this._approvalKey(owner, spender)
     if (!this.approvals(key).exists) return new UintN256(0)
     return this.approvals(key).value.approvalAmount
   }
 
-  private _approve(owner: Address, spender: Address, amount: UintN256): Bool {
+  protected _approve(owner: Address, spender: Address, amount: UintN256): Bool {
     const key = this._approvalKey(owner, spender)
     const approvalBox: ApprovalStruct = new ApprovalStruct({
       approvalAmount: amount,
