@@ -26,12 +26,20 @@ class arc1410_can_transfer_by_partition_return extends arc4.Struct<{
   receiverPartition: arc4.Address
 }> {}
 
+// Operator struct (holder + operator + partition scope (0 address = all partitions))
+class arc1410_OperatorKey extends arc4.Struct<{
+  holder: arc4.Address
+  operator: arc4.Address
+  partition: arc4.Address
+}> {}
+
 export class Arc1410 extends Arc200 {
   public partitions = BoxMap<arc1410_PartitionKey, arc4.UintN256>({ keyPrefix: 'p' })
   public holderPartitionsCurrentPage = BoxMap<arc4.Address, arc4.UintN64>({ keyPrefix: 'hp_p' })
   public holderPartitionsAddresses = BoxMap<arc1410_HoldingPartitionsPaginatedKey, arc4.Address[]>({
     keyPrefix: 'hp_a',
   })
+  public operators = BoxMap<arc1410_OperatorKey, arc4.Byte>({ keyPrefix: 'op' }) // value = 1 authorized
 
   constructor() {
     super()
@@ -59,13 +67,7 @@ export class Arc1410 extends Arc200 {
     return this._transfer(new arc4.Address(Txn.sender), to, value)
   }
   /**
-   * Transfer an amount of tokens from partition to receiver. If receiver has the particition with the same name registered, it will move to this partition. Otherwise basic receiver partition will be used.
-   *
-   * @param partition Sender partition
-   * @param to Receiver address
-   * @param amount Amount to transfer
-   * @param data Additional data
-   * @returns Receiver partition address
+   * Transfer an amount of tokens from partition to receiver. Sender must be msg.sender or authorized operator.
    */
   @arc4.abimethod()
   public arc1410_transfer_by_partition(
@@ -74,8 +76,10 @@ export class Arc1410 extends Arc200 {
     amount: arc4.UintN256,
     data: arc4.DynamicBytes,
   ): arc4.Address {
+    const sender = new arc4.Address(Txn.sender)
+    // operator not needed if sender initiates, but if acting for another we would expose a different method
     let receiverPartition = this._receiverPartition(to, partition)
-    this._transfer_partition(new arc4.Address(Txn.sender), partition, to, receiverPartition, amount, data)
+    this._transfer_partition(sender, partition, to, receiverPartition, amount, data)
     return receiverPartition
   }
 
@@ -84,6 +88,53 @@ export class Arc1410 extends Arc200 {
     const key = new arc1410_HoldingPartitionsPaginatedKey({ holder: holder, page: page })
     if (!this.holderPartitionsAddresses(key).exists) return []
     return this.holderPartitionsAddresses(key).value
+  }
+
+  @arc4.abimethod({ readonly: true })
+  public arc1410_is_operator(holder: arc4.Address, operator: arc4.Address, partition: arc4.Address): arc4.Bool {
+    if (operator === holder) return new arc4.Bool(true)
+    const specific = new arc1410_OperatorKey({ holder: holder, operator: operator, partition: partition })
+    if (this.operators(specific).exists && this.operators(specific).value.native === 1) {
+      return new arc4.Bool(true)
+    }
+    const globalKey = new arc1410_OperatorKey({ holder: holder, operator: operator, partition: new arc4.Address() })
+    if (this.operators(globalKey).exists && this.operators(globalKey).value.native === 1) {
+      return new arc4.Bool(true)
+    }
+    return new arc4.Bool(false)
+  }
+
+  @arc4.abimethod()
+  public arc1410_authorize_operator(holder: arc4.Address, operator: arc4.Address, partition: arc4.Address): void {
+    assert(new arc4.Address(Txn.sender) === holder, 'Only holder can authorize')
+    const key = new arc1410_OperatorKey({ holder: holder, operator: operator, partition: partition })
+    this.operators(key).value = new arc4.Byte(1)
+  }
+
+  @arc4.abimethod()
+  public arc1410_revoke_operator(holder: arc4.Address, operator: arc4.Address, partition: arc4.Address): void {
+    assert(new arc4.Address(Txn.sender) === holder, 'Only holder can revoke')
+    const key = new arc1410_OperatorKey({ holder: holder, operator: operator, partition: partition })
+    if (this.operators(key).exists) {
+      this.operators(key).delete()
+    }
+  }
+
+  @arc4.abimethod()
+  public arc1410_operator_transfer_by_partition(
+    from: arc4.Address,
+    partition: arc4.Address,
+    to: arc4.Address,
+    amount: arc4.UintN256,
+    data: arc4.DynamicBytes,
+  ): arc4.Address {
+    assert(
+      this.arc1410_is_operator(from, new arc4.Address(Txn.sender), partition).native === true,
+      'Not authorized operator',
+    )
+    let receiverPartition = this._receiverPartition(to, partition)
+    this._transfer_partition(from, partition, to, receiverPartition, amount, data)
+    return receiverPartition
   }
 
   @arc4.abimethod()
@@ -117,6 +168,18 @@ export class Arc1410 extends Arc200 {
         status: new arc4.Str('Invalid receiver'),
         receiverPartition: new arc4.Address(),
       })
+    }
+
+    // Check operator authorization for readonly simulation if sender != from
+    const senderAddr = new arc4.Address(Txn.sender)
+    if (senderAddr !== from) {
+      if (this.arc1410_is_operator(from, senderAddr, partition).native !== true) {
+        return new arc1410_can_transfer_by_partition_return({
+          code: new arc4.Byte(0x58),
+          status: new arc4.Str('Operator not authorized'),
+          receiverPartition: new arc4.Address(),
+        })
+      }
     }
 
     let receiverPartition = this._receiverPartition(to, partition)
@@ -198,53 +261,54 @@ export class Arc1410 extends Arc200 {
       }
     }
   }
+
+  /**
+   * Internal transfer function with partition support
+   * @param from Sender address
+   * @param fromPartition Sender partition
+   * @param to Receiver address
+   * @param toPartition Receiver partition
+   * @param amount Transfer amount
+   * @param data Transfer data
+   */
   protected _transfer_partition(
-    sender: arc4.Address,
-    senderPartition: arc4.Address,
-    recipient: arc4.Address,
-    recipientPartition: arc4.Address,
+    from: arc4.Address,
+    fromPartition: arc4.Address,
+    to: arc4.Address,
+    toPartition: arc4.Address,
     amount: arc4.UintN256,
     data: arc4.DynamicBytes,
   ): void {
-    // Implement partitioned transfer logic here
-    var senderPartitionKey = new arc1410_PartitionKey({
-      holder: sender,
-      partition: senderPartition,
-    })
-
-    var recipientPartitionKey = new arc1410_PartitionKey({
-      holder: recipient,
-      partition: recipientPartition,
-    })
-
-    assert(this.partitions(senderPartitionKey).exists, 'Sender partition does not exist')
-    assert(
-      this.partitions(recipientPartitionKey).value.native >= amount.native,
-      'Insufficient balance in sender partition',
-    )
-
-    this._add_participation_to_holder(recipient, recipientPartition)
-
-    this.partitions(senderPartitionKey).value = new arc4.UintN256(
-      this.partitions(recipientPartitionKey).value.native - amount.native,
-    )
-
-    if (!this.partitions(recipientPartitionKey).exists) {
-      this.partitions(recipientPartitionKey).value = amount
-    } else {
-      this.partitions(recipientPartitionKey).value = new arc4.UintN256(
-        amount.native + this.partitions(recipientPartitionKey).value.native,
-      )
+    assert(amount.native > 0, 'Invalid amount')
+    // 1. Deduct from sender partition
+    const fromKey = new arc1410_PartitionKey({ holder: from, partition: fromPartition })
+    if (!this.partitions(fromKey).exists) {
+      this.partitions(fromKey).value = new arc4.UintN256(0)
     }
+    this.partitions(fromKey).value = new arc4.UintN256(this.partitions(fromKey).value.native - amount.native)
 
+    // 2. Emit transfer event
     emit(
+      'Transfer',
       new arc1410_partition_transfer({
-        from: sender,
-        to: recipient,
-        partition: recipientPartition,
+        from: from,
+        to: to,
+        partition: fromPartition,
         amount: amount,
         data: data,
       }),
     )
+
+    // 3. Add participation if new receiver partition
+    if (toPartition !== fromPartition) {
+      this._add_participation_to_holder(to, toPartition)
+    }
+
+    // 4. Credit to receiver partition
+    const toKey = new arc1410_PartitionKey({ holder: to, partition: toPartition })
+    if (!this.partitions(toKey).exists) {
+      this.partitions(toKey).value = new arc4.UintN256(0)
+    }
+    this.partitions(toKey).value = new arc4.UintN256(this.partitions(toKey).value.native + amount.native)
   }
 }
