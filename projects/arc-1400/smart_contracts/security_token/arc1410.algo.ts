@@ -412,12 +412,48 @@ export class Arc1410 extends Arc200 {
     amount: arc4.UintN256,
     data: arc4.DynamicBytes,
   ): void {
+    const sender = new arc4.Address(Txn.sender)
+    assert(
+      sender === from || this.arc1410_is_operator(from, sender, partition).native === true,
+      'Not authorized operator',
+    )
     assert(amount.native > 0, 'Invalid amount')
     const fromKey = new arc1410_PartitionKey({ holder: from, partition })
     assert(this.partitions(fromKey).exists, 'Partition balance missing')
     assert(this.partitions(fromKey).value.native >= amount.native, 'Insufficient partition balance')
     this.partitions(fromKey).value = new arc4.UintN256(this.partitions(fromKey).value.native - amount.native)
     // decrease fungible balance and total supply
+    assert(this.balances(from).exists && this.balances(from).value.native >= amount.native, 'Insufficient balance')
+    this.balances(from).value = new arc4.UintN256(this.balances(from).value.native - amount.native)
+    this.totalSupply.value = new arc4.UintN256(this.totalSupply.value.native - amount.native)
+    emit('Redeem', new arc1410_partition_redeem({ from, partition, amount, data }))
+  }
+
+  @arc4.abimethod()
+  public arc1410_operator_redeem_by_partition(
+    from: arc4.Address,
+    partition: arc4.Address,
+    amount: arc4.UintN256,
+    data: arc4.DynamicBytes,
+  ): void {
+    const sender = new arc4.Address(Txn.sender)
+    // Check full operator right first
+    let authorized = this.arc1410_is_operator(from, sender, partition).native === true
+    if (!authorized) {
+      const pKey = new arc1410_OperatorPortionKey({ holder: from, operator: sender, partition })
+      if (this.operatorPortionAllowances(pKey).exists) {
+        const remaining = this.operatorPortionAllowances(pKey).value
+        assert(remaining.native >= amount.native, 'Portion allowance exceeded')
+        authorized = true
+        this.operatorPortionAllowances(pKey).value = new arc4.UintN256(remaining.native - amount.native)
+      }
+    }
+    assert(authorized, 'Not authorized operator')
+    // reuse redeem logic
+    const fromKey = new arc1410_PartitionKey({ holder: from, partition })
+    assert(this.partitions(fromKey).exists, 'Partition balance missing')
+    assert(this.partitions(fromKey).value.native >= amount.native, 'Insufficient partition balance')
+    this.partitions(fromKey).value = new arc4.UintN256(this.partitions(fromKey).value.native - amount.native)
     assert(this.balances(from).exists && this.balances(from).value.native >= amount.native, 'Insufficient balance')
     this.balances(from).value = new arc4.UintN256(this.balances(from).value.native - amount.native)
     this.totalSupply.value = new arc4.UintN256(this.totalSupply.value.native - amount.native)
