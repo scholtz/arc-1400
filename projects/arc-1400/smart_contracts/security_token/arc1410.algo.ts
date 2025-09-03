@@ -33,6 +33,13 @@ class arc1410_OperatorKey extends arc4.Struct<{
   partition: arc4.Address
 }> {}
 
+// Portion operator struct (holder + operator + specific partition) -> remaining allowance amount
+class arc1410_OperatorPortionKey extends arc4.Struct<{
+  holder: arc4.Address
+  operator: arc4.Address
+  partition: arc4.Address
+}> {}
+
 export class Arc1410 extends Arc200 {
   public partitions = BoxMap<arc1410_PartitionKey, arc4.UintN256>({ keyPrefix: 'p' })
   public holderPartitionsCurrentPage = BoxMap<arc4.Address, arc4.UintN64>({ keyPrefix: 'hp_p' })
@@ -40,6 +47,7 @@ export class Arc1410 extends Arc200 {
     keyPrefix: 'hp_a',
   })
   public operators = BoxMap<arc1410_OperatorKey, arc4.Byte>({ keyPrefix: 'op' }) // value = 1 authorized
+  public operatorPortionAllowances = BoxMap<arc1410_OperatorPortionKey, arc4.UintN256>({ keyPrefix: 'opa' })
 
   constructor() {
     super()
@@ -128,10 +136,23 @@ export class Arc1410 extends Arc200 {
     amount: arc4.UintN256,
     data: arc4.DynamicBytes,
   ): arc4.Address {
-    assert(
-      this.arc1410_is_operator(from, new arc4.Address(Txn.sender), partition).native === true,
-      'Not authorized operator',
-    )
+    const sender = new arc4.Address(Txn.sender)
+    // Check full operator right first
+    let authorized = this.arc1410_is_operator(from, sender, partition).native === true
+    let usedPortion = false
+    if (!authorized) {
+      // fallback to portion allowance
+      const pKey = new arc1410_OperatorPortionKey({ holder: from, operator: sender, partition })
+      if (this.operatorPortionAllowances(pKey).exists) {
+        const remaining = this.operatorPortionAllowances(pKey).value
+        assert(remaining.native >= amount.native, 'Portion allowance exceeded')
+        authorized = true
+        usedPortion = true
+        // decrement
+        this.operatorPortionAllowances(pKey).value = new arc4.UintN256(remaining.native - amount.native)
+      }
+    }
+    assert(authorized, 'Not authorized operator')
     let receiverPartition = this._receiverPartition(to, partition)
     this._transfer_partition(from, partition, to, receiverPartition, amount, data)
     return receiverPartition
@@ -173,7 +194,17 @@ export class Arc1410 extends Arc200 {
     // Check operator authorization for readonly simulation if sender != from
     const senderAddr = new arc4.Address(Txn.sender)
     if (senderAddr !== from) {
-      if (this.arc1410_is_operator(from, senderAddr, partition).native !== true) {
+      let authorized = this.arc1410_is_operator(from, senderAddr, partition).native === true
+      if (!authorized) {
+        const pKey = new arc1410_OperatorPortionKey({ holder: from, operator: senderAddr, partition })
+        if (this.operatorPortionAllowances(pKey).exists) {
+          const remaining = this.operatorPortionAllowances(pKey).value
+          if (remaining.native >= amount.native) {
+            authorized = true
+          }
+        }
+      }
+      if (!authorized) {
         return new arc1410_can_transfer_by_partition_return({
           code: new arc4.Byte(0x58),
           status: new arc4.Str('Operator not authorized'),
@@ -310,5 +341,29 @@ export class Arc1410 extends Arc200 {
       this.partitions(toKey).value = new arc4.UintN256(0)
     }
     this.partitions(toKey).value = new arc4.UintN256(this.partitions(toKey).value.native + amount.native)
+  }
+
+  @arc4.abimethod()
+  public arc1410_authorize_operator_by_portion(
+    holder: arc4.Address,
+    operator: arc4.Address,
+    partition: arc4.Address,
+    amount: arc4.UintN256,
+  ): void {
+    assert(new arc4.Address(Txn.sender) === holder, 'Only holder can authorize portion')
+    const key = new arc1410_OperatorPortionKey({ holder, operator, partition })
+    this.operatorPortionAllowances(key).value = amount
+  }
+
+  @arc4.abimethod({ readonly: true })
+  public arc1410_is_operator_by_portion(
+    holder: arc4.Address,
+    operator: arc4.Address,
+    partition: arc4.Address,
+  ): arc4.Bool {
+    if (operator === holder) return new arc4.Bool(true)
+    const key = new arc1410_OperatorPortionKey({ holder, operator, partition })
+    if (!this.operatorPortionAllowances(key).exists) return new arc4.Bool(false)
+    return new arc4.Bool(this.operatorPortionAllowances(key).value.native > 0)
   }
 }
