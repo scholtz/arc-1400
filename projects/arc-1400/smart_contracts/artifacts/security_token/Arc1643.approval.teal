@@ -4,12 +4,12 @@
 // @algorandfoundation/algorand-typescript/arc4/index.d.ts::Contract.approvalProgram() -> uint64:
 main:
     intcblock 0 1 2 6
-    bytecblock "arc88_o" base32(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA) "arc88_po" "docs" "arc88_oi" 0x151f7c75 "doc" 0x00 0x0000 0x0006 0x0002 0x4355d2ad
+    bytecblock "arc88_o" base32(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA) "docs" "arc88_po" "arc88_oi" 0x151f7c75 "doc" 0x00 0x0000 0x0006 0x0002 0x4355d2ad
     // smart_contracts/security_token/arc1643.algo.ts:24
     // export class Arc1643 extends Arc88 {
     txn NumAppArgs
     bz main_bare_routing@19
-    pushbytess 0x11cb36f5 0xb16d7a8c 0xa7cb3482 0x123f75b8 0x0702654e 0xd015724e 0x029fecc0 0x7349334e 0xdb7c82ef 0xfd2c2c6e 0x42a5f065 0xad4f68ea // method "arc1643_set_document(byte[],string,byte[])void", method "arc1643_get_document(byte[])(string,byte[],uint64)", method "arc1643_remove_document(byte[])void", method "arc1643_get_all_documents()byte[]", method "arc88_owner()address", method "arc88_is_owner(address)bool", method "arc88_initialize_owner(address)void", method "arc88_transfer_ownership(address)void", method "arc88_renounce_ownership()void", method "arc88_transfer_ownership_request(address)void", method "arc88_accept_ownership()void", method "arc88_cancel_ownership_request()void"
+    pushbytess 0x11cb36f5 0xb16d7a8c 0xa7cb3482 0xecb636c8 0x0702654e 0xd015724e 0x029fecc0 0x7349334e 0xdb7c82ef 0xfd2c2c6e 0x42a5f065 0xad4f68ea // method "arc1643_set_document(byte[],string,byte[])void", method "arc1643_get_document(byte[])(string,byte[],uint64)", method "arc1643_remove_document(byte[])void", method "arc1643_get_all_documents()byte[][]", method "arc88_owner()address", method "arc88_is_owner(address)bool", method "arc88_initialize_owner(address)void", method "arc88_transfer_ownership(address)void", method "arc88_renounce_ownership()void", method "arc88_transfer_ownership_request(address)void", method "arc88_accept_ownership()void", method "arc88_cancel_ownership_request()void"
     txna ApplicationArgs 0
     match main_arc1643_set_document_route@5 main_arc1643_get_document_route@6 main_arc1643_remove_document_route@7 main_arc1643_get_all_documents_route@8 main_arc88_owner_route@9 main_arc88_is_owner_route@10 main_arc88_initialize_owner_route@11 main_arc88_transfer_ownership_route@12 main_arc88_renounce_ownership_route@13 main_arc88_transfer_ownership_request_route@14 main_arc88_accept_ownership_route@15 main_arc88_cancel_ownership_request_route@16
 
@@ -144,14 +144,17 @@ main_arc88_owner_route@9:
     return
 
 main_arc1643_get_all_documents_route@8:
-    // smart_contracts/security_token/arc1643.algo.ts:63
+    // smart_contracts/security_token/arc1643.algo.ts:65
     // @arc4.abimethod({ readonly: true })
     txn OnCompletion
     !
     assert // OnCompletion is not NoOp
     txn ApplicationID
     assert // can only call when not creating
-    pushbytes 0x151f7c750000
+    callsub arc1643_get_all_documents
+    bytec 5 // 0x151f7c75
+    swap
+    concat
     log
     intc_1 // 1
     return
@@ -368,7 +371,7 @@ arc1643_set_document:
     box_put
     // smart_contracts/security_token/arc1643.algo.ts:27
     // public documentKeys = Box<arc4.DynamicBytes[]>({ key: 'docs' })
-    bytec_3 // "docs"
+    bytec_2 // "docs"
     // smart_contracts/security_token/arc1643.algo.ts:40
     // if (!this.documentKeys.exists) {
     box_len
@@ -382,14 +385,14 @@ arc1643_set_document:
     callsub dynamic_array_concat_byte_length_head
     // smart_contracts/security_token/arc1643.algo.ts:27
     // public documentKeys = Box<arc4.DynamicBytes[]>({ key: 'docs' })
-    bytec_3 // "docs"
+    bytec_2 // "docs"
     // smart_contracts/security_token/arc1643.algo.ts:41
     // this.documentKeys.value = [name]
     box_del
     pop
     // smart_contracts/security_token/arc1643.algo.ts:27
     // public documentKeys = Box<arc4.DynamicBytes[]>({ key: 'docs' })
-    bytec_3 // "docs"
+    bytec_2 // "docs"
     // smart_contracts/security_token/arc1643.algo.ts:41
     // this.documentKeys.value = [name]
     swap
@@ -431,7 +434,7 @@ arc1643_set_document_after_if_else@3:
 arc1643_set_document_else_body@2:
     // smart_contracts/security_token/arc1643.algo.ts:27
     // public documentKeys = Box<arc4.DynamicBytes[]>({ key: 'docs' })
-    bytec_3 // "docs"
+    bytec_2 // "docs"
     // smart_contracts/security_token/arc1643.algo.ts:43
     // this.documentKeys.value = [...this.documentKeys.value, name]
     box_get
@@ -455,14 +458,14 @@ arc1643_set_document_else_body@2:
     callsub dynamic_array_concat_byte_length_head
     // smart_contracts/security_token/arc1643.algo.ts:27
     // public documentKeys = Box<arc4.DynamicBytes[]>({ key: 'docs' })
-    bytec_3 // "docs"
+    bytec_2 // "docs"
     // smart_contracts/security_token/arc1643.algo.ts:43
     // this.documentKeys.value = [...this.documentKeys.value, name]
     box_del
     pop
     // smart_contracts/security_token/arc1643.algo.ts:27
     // public documentKeys = Box<arc4.DynamicBytes[]>({ key: 'docs' })
-    bytec_3 // "docs"
+    bytec_2 // "docs"
     // smart_contracts/security_token/arc1643.algo.ts:43
     // this.documentKeys.value = [...this.documentKeys.value, name]
     swap
@@ -524,7 +527,7 @@ arc1643_remove_document:
     swap
     box_del
     pop
-    // smart_contracts/security_token/arc1643.algo.ts:60
+    // smart_contracts/security_token/arc1643.algo.ts:62
     // emit('DocumentRemoved', new arc1643_document_removed_event({ name, uri: prior.uri, hash: prior.hash }))
     dup
     intc_0 // 0
@@ -572,6 +575,18 @@ arc1643_remove_document:
     swap
     concat
     log
+    retsub
+
+
+// smart_contracts/security_token/arc1643.algo.ts::Arc1643.arc1643_get_all_documents() -> bytes:
+arc1643_get_all_documents:
+    // smart_contracts/security_token/arc1643.algo.ts:27
+    // public documentKeys = Box<arc4.DynamicBytes[]>({ key: 'docs' })
+    bytec_2 // "docs"
+    // smart_contracts/security_token/arc1643.algo.ts:69
+    // return this.documentKeys.value
+    box_get
+    assert // Box must have value
     retsub
 
 
@@ -878,7 +893,7 @@ arc88_transfer_ownership_request:
     // smart_contracts/security_token/arc88.algo.ts:18
     // public pendingOwner = GlobalState<arc4.Address>({ key: 'arc88_po' }) // optional two-step
     intc_0 // 0
-    bytec_2 // "arc88_po"
+    bytec_3 // "arc88_po"
     // smart_contracts/security_token/arc88.algo.ts:83
     // if (this.pendingOwner.hasValue && this.pendingOwner.value !== new arc4.Address()) {
     app_global_get_ex
@@ -887,7 +902,7 @@ arc88_transfer_ownership_request:
     // smart_contracts/security_token/arc88.algo.ts:18
     // public pendingOwner = GlobalState<arc4.Address>({ key: 'arc88_po' }) // optional two-step
     intc_0 // 0
-    bytec_2 // "arc88_po"
+    bytec_3 // "arc88_po"
     app_global_get_ex
     assert // check GlobalState exists
     // smart_contracts/security_token/arc88.algo.ts:83
@@ -900,7 +915,7 @@ arc88_transfer_ownership_request:
 arc88_transfer_ownership_request_after_if_else@3:
     // smart_contracts/security_token/arc88.algo.ts:18
     // public pendingOwner = GlobalState<arc4.Address>({ key: 'arc88_po' }) // optional two-step
-    bytec_2 // "arc88_po"
+    bytec_3 // "arc88_po"
     // smart_contracts/security_token/arc88.algo.ts:86
     // this.pendingOwner.value = pending
     frame_dig -1
@@ -930,7 +945,7 @@ arc88_accept_ownership:
     // smart_contracts/security_token/arc88.algo.ts:18
     // public pendingOwner = GlobalState<arc4.Address>({ key: 'arc88_po' }) // optional two-step
     intc_0 // 0
-    bytec_2 // "arc88_po"
+    bytec_3 // "arc88_po"
     // smart_contracts/security_token/arc88.algo.ts:93
     // assert(this.pendingOwner.hasValue, 'not_pending_owner')
     app_global_get_ex
@@ -942,7 +957,7 @@ arc88_accept_ownership:
     // smart_contracts/security_token/arc88.algo.ts:18
     // public pendingOwner = GlobalState<arc4.Address>({ key: 'arc88_po' }) // optional two-step
     intc_0 // 0
-    bytec_2 // "arc88_po"
+    bytec_3 // "arc88_po"
     app_global_get_ex
     assert // check GlobalState exists
     // smart_contracts/security_token/arc88.algo.ts:95
@@ -963,7 +978,7 @@ arc88_accept_ownership:
     app_global_put
     // smart_contracts/security_token/arc88.algo.ts:18
     // public pendingOwner = GlobalState<arc4.Address>({ key: 'arc88_po' }) // optional two-step
-    bytec_2 // "arc88_po"
+    bytec_3 // "arc88_po"
     // smart_contracts/security_token/arc88.algo.ts:98
     // this.pendingOwner.value = new arc4.Address()
     bytec_1 // addr AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY5HFKQ
@@ -1005,7 +1020,7 @@ arc88_cancel_ownership_request:
     assert // not_owner
     // smart_contracts/security_token/arc88.algo.ts:18
     // public pendingOwner = GlobalState<arc4.Address>({ key: 'arc88_po' }) // optional two-step
-    bytec_2 // "arc88_po"
+    bytec_3 // "arc88_po"
     // smart_contracts/security_token/arc88.algo.ts:107
     // this.pendingOwner.value = new arc4.Address()
     bytec_1 // addr AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY5HFKQ
