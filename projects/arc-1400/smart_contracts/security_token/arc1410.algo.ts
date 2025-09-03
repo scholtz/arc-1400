@@ -1,4 +1,4 @@
-import { arc4, assert, BoxMap, Txn } from '@algorandfoundation/algorand-typescript'
+import { arc4, assert, BoxMap, emit, Txn } from '@algorandfoundation/algorand-typescript'
 import { Arc200 } from './arc200.algo'
 
 // Define a struct for the event with named parameters
@@ -10,6 +10,14 @@ class arc1410_PartitionKey extends arc4.Struct<{
 class arc1410_HoldingPartitionsPaginatedKey extends arc4.Struct<{
   holder: arc4.Address
   page: arc4.UintN64
+}> {}
+
+class arc1410_partition_transfer extends arc4.Struct<{
+  from: arc4.Address
+  to: arc4.Address
+  partition: arc4.Address
+  amount: arc4.UintN256
+  data: arc4.DynamicBytes
 }> {}
 
 export class Arc1410 extends Arc200 {
@@ -30,8 +38,25 @@ export class Arc1410 extends Arc200 {
 
   @arc4.abimethod()
   public override arc200_transfer(to: arc4.Address, value: arc4.UintN256): arc4.Bool {
-    this._transfer_partition(new arc4.Address(Txn.sender), new arc4.Address(), to, new arc4.Address(), value)
+    this._transfer_partition(
+      new arc4.Address(Txn.sender),
+      new arc4.Address(),
+      to,
+      new arc4.Address(),
+      value,
+      new arc4.DynamicBytes(),
+    )
     return this._transfer(new arc4.Address(Txn.sender), to, value)
+  }
+
+  @arc4.abimethod()
+  public arc1410_transfer_by_partition(
+    partition: arc4.Address,
+    to: arc4.Address,
+    amount: arc4.UintN256,
+    data: arc4.DynamicBytes,
+  ): void {
+    this._transfer_partition(new arc4.Address(Txn.sender), partition, to, new arc4.Address(), amount, data)
   }
 
   @arc4.abimethod()
@@ -101,6 +126,7 @@ export class Arc1410 extends Arc200 {
     recipient: arc4.Address,
     recipientPartition: arc4.Address,
     amount: arc4.UintN256,
+    data: arc4.DynamicBytes,
   ): void {
     // Implement partitioned transfer logic here
     var senderPartitionKey = new arc1410_PartitionKey({
@@ -132,5 +158,15 @@ export class Arc1410 extends Arc200 {
         amount.native + this.partitions(recipientPartitionKey).value.native,
       )
     }
+
+    emit(
+      new arc1410_partition_transfer({
+        from: sender,
+        to: recipient,
+        partition: recipientPartition,
+        amount: amount,
+        data: data,
+      }),
+    )
   }
 }
