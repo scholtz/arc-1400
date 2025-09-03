@@ -406,11 +406,7 @@ export class Arc1410 extends Arc200 {
   }
 
   @arc4.abimethod()
-  public arc1410_redeem_by_partition(
-    partition: arc4.Address,
-    amount: arc4.UintN256,
-    data: arc4.DynamicBytes,
-  ): void {
+  public arc1410_redeem_by_partition(partition: arc4.Address, amount: arc4.UintN256, data: arc4.DynamicBytes): void {
     const from = new arc4.Address(Txn.sender)
     assert(amount.native > 0, 'Invalid amount')
     const fromKey = new arc1410_PartitionKey({ holder: from, partition })
