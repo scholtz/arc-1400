@@ -9,9 +9,9 @@ main:
     // export class Arc1410 extends Arc200 {
     txn NumAppArgs
     bz main_bare_routing@17
-    pushbytess 0xc016a9ab 0xda7025b9 0x1d89e24c 0x975382e2 0x657d13ec 0xb6ae1a25 0x84ec13d5 0xec996041 0x82e573c4 0x4a968f8f 0xb5422125 0xbbb319f3 // method "balance_of_partition(address,address)uint256", method "arc200_transfer(address,uint256)bool", method "partitions_of(address,uint64)address[]", method "bootstrap(byte[],byte[],uint8,uint256)bool", method "arc200_name()byte[32]", method "arc200_symbol()byte[8]", method "arc200_decimals()uint8", method "arc200_totalSupply()uint256", method "arc200_balanceOf(address)uint256", method "arc200_transferFrom(address,address,uint256)bool", method "arc200_approve(address,uint256)bool", method "arc200_allowance(address,address)uint256"
+    pushbytess 0x35f8135f 0xda7025b9 0x95b4f9e3 0x975382e2 0x657d13ec 0xb6ae1a25 0x84ec13d5 0xec996041 0x82e573c4 0x4a968f8f 0xb5422125 0xbbb319f3 // method "arc1410_balance_of_partition(address,address)uint256", method "arc200_transfer(address,uint256)bool", method "arc1410_partitions_of(address,uint64)address[]", method "bootstrap(byte[],byte[],uint8,uint256)bool", method "arc200_name()byte[32]", method "arc200_symbol()byte[8]", method "arc200_decimals()uint8", method "arc200_totalSupply()uint256", method "arc200_balanceOf(address)uint256", method "arc200_transferFrom(address,address,uint256)bool", method "arc200_approve(address,uint256)bool", method "arc200_allowance(address,address)uint256"
     txna ApplicationArgs 0
-    match main_balance_of_partition_route@3 main_arc200_transfer_route@4 main_partitions_of_route@5 main_bootstrap_route@6 main_arc200_name_route@7 main_arc200_symbol_route@8 main_arc200_decimals_route@9 main_arc200_totalSupply_route@10 main_arc200_balanceOf_route@11 main_arc200_transferFrom_route@12 main_arc200_approve_route@13 main_arc200_allowance_route@14
+    match main_arc1410_balance_of_partition_route@3 main_arc200_transfer_route@4 main_arc1410_partitions_of_route@5 main_bootstrap_route@6 main_arc200_name_route@7 main_arc200_symbol_route@8 main_arc200_decimals_route@9 main_arc200_totalSupply_route@10 main_arc200_balanceOf_route@11 main_arc200_transferFrom_route@12 main_arc200_approve_route@13 main_arc200_allowance_route@14
 
 main_after_if_else@21:
     // smart_contracts/security_token/arc1410.algo.ts:15
@@ -195,7 +195,7 @@ main_bootstrap_route@6:
     intc_0 // 1
     return
 
-main_partitions_of_route@5:
+main_arc1410_partitions_of_route@5:
     // smart_contracts/security_token/arc1410.algo.ts:37
     // @arc4.abimethod()
     txn OnCompletion
@@ -209,7 +209,7 @@ main_partitions_of_route@5:
     txna ApplicationArgs 2
     // smart_contracts/security_token/arc1410.algo.ts:37
     // @arc4.abimethod()
-    callsub partitions_of
+    callsub arc1410_partitions_of
     bytec_0 // 0x151f7c75
     swap
     concat
@@ -239,7 +239,7 @@ main_arc200_transfer_route@4:
     intc_0 // 1
     return
 
-main_balance_of_partition_route@3:
+main_arc1410_balance_of_partition_route@3:
     // smart_contracts/security_token/arc1410.algo.ts:22
     // @arc4.abimethod({ readonly: true })
     txn OnCompletion
@@ -253,7 +253,7 @@ main_balance_of_partition_route@3:
     txna ApplicationArgs 2
     // smart_contracts/security_token/arc1410.algo.ts:22
     // @arc4.abimethod({ readonly: true })
-    callsub balance_of_partition
+    callsub arc1410_balance_of_partition
     bytec_0 // 0x151f7c75
     swap
     concat
@@ -273,11 +273,11 @@ main_bare_routing@17:
     return
 
 
-// smart_contracts/security_token/arc1410.algo.ts::Arc1410.balance_of_partition(holder: bytes, partition: bytes) -> bytes:
-balance_of_partition:
+// smart_contracts/security_token/arc1410.algo.ts::Arc1410.arc1410_balance_of_partition(holder: bytes, partition: bytes) -> bytes:
+arc1410_balance_of_partition:
     // smart_contracts/security_token/arc1410.algo.ts:22-23
     // @arc4.abimethod({ readonly: true })
-    // public balance_of_partition(holder: arc4.Address, partition: arc4.Address): arc4.UintN256 {
+    // public arc1410_balance_of_partition(holder: arc4.Address, partition: arc4.Address): arc4.UintN256 {
     proto 2 1
     // smart_contracts/security_token/arc1410.algo.ts:24-27
     // const key = new arc1410_PartitionKey({
@@ -313,13 +313,13 @@ arc200_transfer:
     // this._transfer_partition(new arc4.Address(Txn.sender), new arc4.Address(), to, new arc4.Address(), value)
     txn Sender
     bytec_1 // addr AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY5HFKQ
-    // smart_contracts/security_token/arc1410.algo.ts:105-108
+    // smart_contracts/security_token/arc1410.algo.ts:106-109
     // var senderPartitionKey = new arc1410_PartitionKey({
     //   holder: sender,
     //   partition: senderPartition,
     // })
     concat
-    // smart_contracts/security_token/arc1410.algo.ts:110-113
+    // smart_contracts/security_token/arc1410.algo.ts:111-114
     // var recipientPartitionKey = new arc1410_PartitionKey({
     //   holder: recipient,
     //   partition: recipientPartition,
@@ -328,7 +328,7 @@ arc200_transfer:
     // smart_contracts/security_token/arc1410.algo.ts:33
     // this._transfer_partition(new arc4.Address(Txn.sender), new arc4.Address(), to, new arc4.Address(), value)
     bytec_1 // addr AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY5HFKQ
-    // smart_contracts/security_token/arc1410.algo.ts:110-113
+    // smart_contracts/security_token/arc1410.algo.ts:111-114
     // var recipientPartitionKey = new arc1410_PartitionKey({
     //   holder: recipient,
     //   partition: recipientPartition,
@@ -341,7 +341,7 @@ arc200_transfer:
     concat
     dup
     cover 2
-    // smart_contracts/security_token/arc1410.algo.ts:115
+    // smart_contracts/security_token/arc1410.algo.ts:116
     // assert(this.partitions(senderPartitionKey).exists, 'Sender partition does not exist')
     box_len
     bury 1
@@ -352,13 +352,13 @@ arc200_transfer:
     swap
     concat
     dup
-    // smart_contracts/security_token/arc1410.algo.ts:117
+    // smart_contracts/security_token/arc1410.algo.ts:118
     // this.partitions(recipientPartitionKey).value.native >= amount.native,
     box_get
     assert // Box must have value
     frame_dig -1
     b>=
-    // smart_contracts/security_token/arc1410.algo.ts:116-119
+    // smart_contracts/security_token/arc1410.algo.ts:117-120
     // assert(
     //   this.partitions(recipientPartitionKey).value.native >= amount.native,
     //   'Insufficient balance in sender partition',
@@ -370,42 +370,42 @@ arc200_transfer:
     frame_dig -2
     concat
     dup
-    // smart_contracts/security_token/arc1410.algo.ts:55
+    // smart_contracts/security_token/arc1410.algo.ts:56
     // if (!this.holderPartitionsCurrentPage(holder).exists) {
     box_len
     bury 1
     bnz arc200_transfer_after_if_else@7
-    // smart_contracts/security_token/arc1410.algo.ts:56
+    // smart_contracts/security_token/arc1410.algo.ts:57
     // this.holderPartitionsCurrentPage(holder).value = page
     frame_dig 13
-    // smart_contracts/security_token/arc1410.algo.ts:54
+    // smart_contracts/security_token/arc1410.algo.ts:55
     // let page = new arc4.UintN64(0)
     bytec 7 // 0x0000000000000000
-    // smart_contracts/security_token/arc1410.algo.ts:56
+    // smart_contracts/security_token/arc1410.algo.ts:57
     // this.holderPartitionsCurrentPage(holder).value = page
     box_put
 
 arc200_transfer_after_if_else@7:
-    // smart_contracts/security_token/arc1410.algo.ts:58
+    // smart_contracts/security_token/arc1410.algo.ts:59
     // const lastPage = this.holderPartitionsCurrentPage(holder).value
     frame_dig 13
     box_get
     swap
     frame_bury 3
     assert // Box must have value
-    // smart_contracts/security_token/arc1410.algo.ts:59
+    // smart_contracts/security_token/arc1410.algo.ts:60
     // let found = false
     intc_2 // 0
     frame_bury 7
-    // smart_contracts/security_token/arc1410.algo.ts:54
+    // smart_contracts/security_token/arc1410.algo.ts:55
     // let page = new arc4.UintN64(0)
     bytec 7 // 0x0000000000000000
-    // smart_contracts/security_token/arc1410.algo.ts:60
+    // smart_contracts/security_token/arc1410.algo.ts:61
     // for (let curPage = page; curPage.native < lastPage.native; curPage = new arc4.UintN64(curPage.native + 1)) {
     frame_bury 2
 
 arc200_transfer_while_top@8:
-    // smart_contracts/security_token/arc1410.algo.ts:60
+    // smart_contracts/security_token/arc1410.algo.ts:61
     // for (let curPage = page; curPage.native < lastPage.native; curPage = new arc4.UintN64(curPage.native + 1)) {
     frame_dig 2
     btoi
@@ -417,7 +417,7 @@ arc200_transfer_while_top@8:
     frame_bury 10
     <
     bz arc200_transfer_block@21
-    // smart_contracts/security_token/arc1410.algo.ts:61-64
+    // smart_contracts/security_token/arc1410.algo.ts:62-65
     // const paginatedKey = new arc1410_HoldingPartitionsPaginatedKey({
     //   holder: holder,
     //   page: curPage,
@@ -432,12 +432,12 @@ arc200_transfer_while_top@8:
     concat
     dup
     frame_bury 5
-    // smart_contracts/security_token/arc1410.algo.ts:65
+    // smart_contracts/security_token/arc1410.algo.ts:66
     // if (!this.holderPartitionsAddresses(paginatedKey).exists) {
     box_len
     bury 1
     bnz arc200_transfer_after_if_else@11
-    // smart_contracts/security_token/arc1410.algo.ts:66
+    // smart_contracts/security_token/arc1410.algo.ts:67
     // this.holderPartitionsAddresses(paginatedKey).value = [participation]
     frame_dig 5
     dup
@@ -447,7 +447,7 @@ arc200_transfer_while_top@8:
     box_put
 
 arc200_transfer_after_if_else@11:
-    // smart_contracts/security_token/arc1410.algo.ts:69
+    // smart_contracts/security_token/arc1410.algo.ts:70
     // if (this.containsAddress(this.holderPartitionsAddresses(paginatedKey).value, participation)) {
     frame_dig 5
     box_get
@@ -456,7 +456,7 @@ arc200_transfer_after_if_else@11:
     cover 2
     frame_bury 0
     assert // Box must have value
-    // smart_contracts/security_token/arc1410.algo.ts:43
+    // smart_contracts/security_token/arc1410.algo.ts:44
     // for (const v of a) {
     intc_2 // 0
     extract_uint16
@@ -465,7 +465,7 @@ arc200_transfer_after_if_else@11:
     frame_bury 8
 
 arc200_transfer_for_header@12:
-    // smart_contracts/security_token/arc1410.algo.ts:43
+    // smart_contracts/security_token/arc1410.algo.ts:44
     // for (const v of a) {
     frame_dig 8
     frame_dig 6
@@ -481,27 +481,27 @@ arc200_transfer_for_header@12:
     // smart_contracts/security_token/arc1410.algo.ts:33
     // this._transfer_partition(new arc4.Address(Txn.sender), new arc4.Address(), to, new arc4.Address(), value)
     bytec_1 // addr AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY5HFKQ
-    // smart_contracts/security_token/arc1410.algo.ts:44
+    // smart_contracts/security_token/arc1410.algo.ts:45
     // if (v === x) return true
     ==
     bz arc200_transfer_after_if_else@15
     intc_0 // 1
 
 arc200_transfer_after_inlined_smart_contracts/security_token/arc1410.algo.ts::Arc1410.containsAddress@17:
-    // smart_contracts/security_token/arc1410.algo.ts:69
+    // smart_contracts/security_token/arc1410.algo.ts:70
     // if (this.containsAddress(this.holderPartitionsAddresses(paginatedKey).value, participation)) {
     bz arc200_transfer_after_if_else@19
-    // smart_contracts/security_token/arc1410.algo.ts:70
+    // smart_contracts/security_token/arc1410.algo.ts:71
     // found = true
     intc_0 // 1
     frame_bury 7
 
 arc200_transfer_block@21:
-    // smart_contracts/security_token/arc1410.algo.ts:74
+    // smart_contracts/security_token/arc1410.algo.ts:75
     // if (!found) {
     frame_dig 7
     bnz arc200_transfer_after_if_else@25
-    // smart_contracts/security_token/arc1410.algo.ts:75-78
+    // smart_contracts/security_token/arc1410.algo.ts:76-79
     // const paginatedKey = new arc1410_HoldingPartitionsPaginatedKey({
     //   holder: holder,
     //   page: lastPage,
@@ -516,26 +516,26 @@ arc200_transfer_block@21:
     concat
     dup
     frame_bury 4
-    // smart_contracts/security_token/arc1410.algo.ts:79
+    // smart_contracts/security_token/arc1410.algo.ts:80
     // const itemsCount = new arc4.UintN64(this.holderPartitionsAddresses(paginatedKey).value.length)
     box_get
     assert // Box must have value
     intc_2 // 0
     extract_uint16
     itob
-    // smart_contracts/security_token/arc1410.algo.ts:80
+    // smart_contracts/security_token/arc1410.algo.ts:81
     // if (itemsCount.native < 10) {
     btoi
     pushint 10 // 10
     <
     bz arc200_transfer_else_body@24
-    // smart_contracts/security_token/arc1410.algo.ts:83
+    // smart_contracts/security_token/arc1410.algo.ts:84
     // ...this.holderPartitionsAddresses(paginatedKey).value,
     frame_dig 4
     dup
     box_get
     assert // Box must have value
-    // smart_contracts/security_token/arc1410.algo.ts:82-85
+    // smart_contracts/security_token/arc1410.algo.ts:83-86
     // this.holderPartitionsAddresses(paginatedKey).value = [
     //   ...this.holderPartitionsAddresses(paginatedKey).value,
     //   participation,
@@ -557,7 +557,7 @@ arc200_transfer_block@21:
     box_put
 
 arc200_transfer_after_if_else@25:
-    // smart_contracts/security_token/arc1410.algo.ts:124
+    // smart_contracts/security_token/arc1410.algo.ts:125
     // this.partitions(recipientPartitionKey).value.native - amount.native,
     frame_dig 12
     dup
@@ -565,7 +565,7 @@ arc200_transfer_after_if_else@25:
     assert // Box must have value
     frame_dig -1
     b-
-    // smart_contracts/security_token/arc1410.algo.ts:123-125
+    // smart_contracts/security_token/arc1410.algo.ts:124-126
     // this.partitions(senderPartitionKey).value = new arc4.UintN256(
     //   this.partitions(recipientPartitionKey).value.native - amount.native,
     // )
@@ -582,12 +582,12 @@ arc200_transfer_after_if_else@25:
     frame_dig 11
     swap
     box_put
-    // smart_contracts/security_token/arc1410.algo.ts:127
+    // smart_contracts/security_token/arc1410.algo.ts:128
     // if (!this.partitions(recipientPartitionKey).exists) {
     box_len
     bury 1
     bnz arc200_transfer_else_body@3
-    // smart_contracts/security_token/arc1410.algo.ts:128
+    // smart_contracts/security_token/arc1410.algo.ts:129
     // this.partitions(recipientPartitionKey).value = amount
     frame_dig 12
     frame_dig -1
@@ -604,7 +604,7 @@ arc200_transfer_after_if_else@4:
     retsub
 
 arc200_transfer_else_body@3:
-    // smart_contracts/security_token/arc1410.algo.ts:131
+    // smart_contracts/security_token/arc1410.algo.ts:132
     // amount.native + this.partitions(recipientPartitionKey).value.native,
     frame_dig 12
     dup
@@ -612,7 +612,7 @@ arc200_transfer_else_body@3:
     assert // Box must have value
     frame_dig -1
     b+
-    // smart_contracts/security_token/arc1410.algo.ts:130-132
+    // smart_contracts/security_token/arc1410.algo.ts:131-133
     // this.partitions(recipientPartitionKey).value = new arc4.UintN256(
     //   amount.native + this.partitions(recipientPartitionKey).value.native,
     // )
@@ -627,18 +627,18 @@ arc200_transfer_else_body@3:
     b arc200_transfer_after_if_else@4
 
 arc200_transfer_else_body@24:
-    // smart_contracts/security_token/arc1410.algo.ts:87
+    // smart_contracts/security_token/arc1410.algo.ts:88
     // const newLastPage = new arc4.UintN64(lastPage.native + 1)
     frame_dig 10
     intc_0 // 1
     +
     itob
-    // smart_contracts/security_token/arc1410.algo.ts:88
+    // smart_contracts/security_token/arc1410.algo.ts:89
     // this.holderPartitionsCurrentPage(holder).value = newLastPage
     frame_dig 13
     dig 1
     box_put
-    // smart_contracts/security_token/arc1410.algo.ts:89-92
+    // smart_contracts/security_token/arc1410.algo.ts:90-93
     // const newPaginatedKey = new arc1410_HoldingPartitionsPaginatedKey({
     //   holder: holder,
     //   page: newLastPage,
@@ -651,7 +651,7 @@ arc200_transfer_else_body@24:
     bytec_2 // "hp_a"
     swap
     concat
-    // smart_contracts/security_token/arc1410.algo.ts:93
+    // smart_contracts/security_token/arc1410.algo.ts:94
     // this.holderPartitionsAddresses(newPaginatedKey).value = [participation]
     dup
     box_del
@@ -661,7 +661,7 @@ arc200_transfer_else_body@24:
     b arc200_transfer_after_if_else@25
 
 arc200_transfer_after_if_else@19:
-    // smart_contracts/security_token/arc1410.algo.ts:60
+    // smart_contracts/security_token/arc1410.algo.ts:61
     // for (let curPage = page; curPage.native < lastPage.native; curPage = new arc4.UintN64(curPage.native + 1)) {
     frame_dig 9
     intc_0 // 1
@@ -678,22 +678,22 @@ arc200_transfer_after_if_else@15:
     b arc200_transfer_for_header@12
 
 arc200_transfer_after_for@16:
-    // smart_contracts/security_token/arc1410.algo.ts:46
+    // smart_contracts/security_token/arc1410.algo.ts:47
     // return false
     intc_2 // 0
-    // smart_contracts/security_token/arc1410.algo.ts:69
+    // smart_contracts/security_token/arc1410.algo.ts:70
     // if (this.containsAddress(this.holderPartitionsAddresses(paginatedKey).value, participation)) {
     b arc200_transfer_after_inlined_smart_contracts/security_token/arc1410.algo.ts::Arc1410.containsAddress@17
 
 
-// smart_contracts/security_token/arc1410.algo.ts::Arc1410.partitions_of(holder: bytes, page: bytes) -> bytes:
-partitions_of:
+// smart_contracts/security_token/arc1410.algo.ts::Arc1410.arc1410_partitions_of(holder: bytes, page: bytes) -> bytes:
+arc1410_partitions_of:
     // smart_contracts/security_token/arc1410.algo.ts:37-38
     // @arc4.abimethod()
-    // public partitions_of(holder: arc4.Address, page: arc4.UintN64): arc4.Address[] {
+    // public arc1410_partitions_of(holder: arc4.Address, page: arc4.UintN64): arc4.Address[] {
     proto 2 1
     // smart_contracts/security_token/arc1410.algo.ts:39
-    // return this.holderPartitionsAddresses(new arc1410_HoldingPartitionsPaginatedKey({ holder: holder, page: page }))
+    // const key = new arc1410_HoldingPartitionsPaginatedKey({ holder: holder, page: page })
     frame_dig -2
     frame_dig -1
     concat
@@ -702,13 +702,23 @@ partitions_of:
     bytec_2 // "hp_a"
     swap
     concat
+    dup
     // smart_contracts/security_token/arc1410.algo.ts:40
-    // .value
+    // if (!this.holderPartitionsAddresses(key).exists) return []
+    box_len
+    bury 1
+    bnz arc1410_partitions_of_after_if_else@2
+    pushbytes 0x0000
+    swap
+    retsub
+
+arc1410_partitions_of_after_if_else@2:
+    // smart_contracts/security_token/arc1410.algo.ts:41
+    // return this.holderPartitionsAddresses(key).value
+    frame_dig 0
     box_get
     assert // Box must have value
-    // smart_contracts/security_token/arc1410.algo.ts:39-40
-    // return this.holderPartitionsAddresses(new arc1410_HoldingPartitionsPaginatedKey({ holder: holder, page: page }))
-    //   .value
+    swap
     retsub
 
 

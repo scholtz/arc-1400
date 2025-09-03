@@ -20,7 +20,7 @@ export class Arc1410 extends Arc200 {
   })
 
   @arc4.abimethod({ readonly: true })
-  public balance_of_partition(holder: arc4.Address, partition: arc4.Address): arc4.UintN256 {
+  public arc1410_balance_of_partition(holder: arc4.Address, partition: arc4.Address): arc4.UintN256 {
     const key = new arc1410_PartitionKey({
       holder: holder,
       partition: partition,
@@ -35,7 +35,7 @@ export class Arc1410 extends Arc200 {
   }
 
   @arc4.abimethod()
-  public partitions_of(holder: arc4.Address, page: arc4.UintN64): arc4.Address[] {
+  public arc1410_partitions_of(holder: arc4.Address, page: arc4.UintN64): arc4.Address[] {
     const key = new arc1410_HoldingPartitionsPaginatedKey({ holder: holder, page: page })
     if (!this.holderPartitionsAddresses(key).exists) return []
     return this.holderPartitionsAddresses(key).value
