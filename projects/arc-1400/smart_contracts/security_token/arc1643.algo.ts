@@ -1,5 +1,5 @@
 import { arc4, assert, Box, BoxMap, emit, Global, Txn } from '@algorandfoundation/algorand-typescript'
-import { Arc88 } from './arc88.algo'
+import { Arc1594 } from './arc1594.algo'
 
 // Document record struct
 class arc1643_document_record extends arc4.Struct<{
@@ -21,7 +21,7 @@ class arc1643_document_removed_event extends arc4.Struct<{
 }> {}
 
 // Index box aggregates names (simple comma-separated list for minimal footprint)
-export class Arc1643 extends Arc88 {
+export class Arc1643 extends Arc1594 {
   // Store each document keyed by name; enumeration extension left for future (index omitted for minimal profile)
   public documents = BoxMap<arc4.DynamicBytes, arc1643_document_record>({ keyPrefix: 'doc' })
   public documentKeys = Box<arc4.DynamicBytes[]>({ key: 'docs' })
