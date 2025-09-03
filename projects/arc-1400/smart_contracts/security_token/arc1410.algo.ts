@@ -122,8 +122,8 @@ export class Arc1410 extends Arc200 {
     let receiverPartition = this._receiverPartition(to, partition)
 
     return new arc1410_can_transfer_by_partition_return({
-      code: new arc4.Byte(0),
-      status: new arc4.Str('success'),
+      code: new arc4.Byte(0x51),
+      status: new arc4.Str('Success'),
       receiverPartition: receiverPartition,
     })
   }
