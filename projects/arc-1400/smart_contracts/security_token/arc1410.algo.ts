@@ -20,6 +20,12 @@ class arc1410_partition_transfer extends arc4.Struct<{
   data: arc4.DynamicBytes
 }> {}
 
+class arc1410_can_transfer_by_partition_return extends arc4.Struct<{
+  code: arc4.Byte
+  status: arc4.Str
+  receiverPartition: arc4.Address
+}> {}
+
 export class Arc1410 extends Arc200 {
   public partitions = BoxMap<arc1410_PartitionKey, arc4.UintN256>({ keyPrefix: 'p' })
   public holderPartitionsCurrentPage = BoxMap<arc4.Address, arc4.UintN64>({ keyPrefix: 'hp_p' })
@@ -68,14 +74,8 @@ export class Arc1410 extends Arc200 {
     amount: arc4.UintN256,
     data: arc4.DynamicBytes,
   ): arc4.Address {
-    let receiverPartition = new arc4.Address()
-
-    if (this.partitions(new arc1410_PartitionKey({ holder: to, partition: partition })).exists) {
-      receiverPartition = partition
-    }
-
-    this._transfer_partition(new arc4.Address(Txn.sender), partition, to, new arc4.Address(), amount, data)
-
+    let receiverPartition = this._receiverPartition(to, partition)
+    this._transfer_partition(new arc4.Address(Txn.sender), partition, to, receiverPartition, amount, data)
     return receiverPartition
   }
 
@@ -84,6 +84,64 @@ export class Arc1410 extends Arc200 {
     const key = new arc1410_HoldingPartitionsPaginatedKey({ holder: holder, page: page })
     if (!this.holderPartitionsAddresses(key).exists) return []
     return this.holderPartitionsAddresses(key).value
+  }
+
+  @arc4.abimethod()
+  public arc1410_can_transfer_by_partition(
+    from: arc4.Address,
+    partition: arc4.Address,
+    to: arc4.Address,
+    amount: arc4.UintN256,
+    data: arc4.DynamicBytes,
+  ): arc1410_can_transfer_by_partition_return {
+    if (!this._validPartition(from, partition)) {
+      return new arc1410_can_transfer_by_partition_return({
+        code: new arc4.Byte(0x50),
+        status: new arc4.Str('Partition not exists'),
+        receiverPartition: new arc4.Address(),
+      })
+    }
+    if (
+      this.partitions(new arc1410_PartitionKey({ holder: from, partition: partition })).value.native < amount.native
+    ) {
+      return new arc1410_can_transfer_by_partition_return({
+        code: new arc4.Byte(0x52),
+        status: new arc4.Str('Insufficient balance'),
+        receiverPartition: new arc4.Address(),
+      })
+    }
+
+    if (to === new arc4.Address()) {
+      return new arc1410_can_transfer_by_partition_return({
+        code: new arc4.Byte(0x57),
+        status: new arc4.Str('Invalid receiver'),
+        receiverPartition: new arc4.Address(),
+      })
+    }
+
+    let receiverPartition = this._receiverPartition(to, partition)
+
+    return new arc1410_can_transfer_by_partition_return({
+      code: new arc4.Byte(0),
+      status: new arc4.Str('success'),
+      receiverPartition: receiverPartition,
+    })
+  }
+  /**
+   * If receiver partition exists, return it. Otherwise, return the default partition.
+   * @param receiver
+   * @param partition
+   * @returns
+   */
+  protected _receiverPartition(receiver: arc4.Address, partition: arc4.Address): arc4.Address {
+    let receiverPartition = new arc4.Address()
+    if (this.partitions(new arc1410_PartitionKey({ holder: receiver, partition: partition })).exists) {
+      receiverPartition = partition
+    }
+    return receiverPartition
+  }
+  protected _validPartition(holder: arc4.Address, partition: arc4.Address): boolean {
+    return this.partitions(new arc1410_PartitionKey({ holder: holder, partition: partition })).exists
   }
   protected containsAddress(a: arc4.Address[], x: arc4.Address): boolean {
     for (const v of a) {
