@@ -1,4 +1,4 @@
-import { arc4, assert, GlobalState, emit, Txn, Global } from '@algorandfoundation/algorand-typescript'
+import { arc4, assert, emit, Global, GlobalState, Txn } from '@algorandfoundation/algorand-typescript'
 import { Arc1594 } from './arc1594.algo'
 
 // Events (follow ARC-1644 doc tags conceptually; actual tag auto-derived by framework label)
