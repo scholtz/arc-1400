@@ -30,11 +30,11 @@ Many contracts require a single privileged authority (issuer, admin, upgrade con
 
 ## Specification
 
-### 3.1 Owner Definition
+### Owner Definition
 
 `owner` is an ARC-4 `address` stored in application global state (or a dedicated box `owner`). The zero address `0x000...0` indicates the absence of an owner (post-renouncement). Implementations MUST reject privileged calls when owner is zero (unless otherwise noted).
 
-### 3.2 Initialization
+### Initialization
 
 Default rule: If no explicit initialization occurs, the `owner` MUST be set to the application creator (deployment sender) at creation time. This gives a deterministic starting authority.
 
@@ -42,7 +42,7 @@ An `arc88_initialize_owner(new_owner: address)` call in the SAME atomic transact
 
 A deferred-zero pattern (starting with owner = zero) is NOT standard under ARC-88; implementers desiring that MUST document divergence. ARC-88 compliant tooling can safely assume a non-zero owner immediately after creation unless event `arc88_ownership_renounced` has occurred.
 
-### 3.3 Methods (ABI)
+### Methods (ABI)
 
 All method names are snake*case, prefixed with `arc88*`, and use ARC-4 data types.
 
@@ -56,7 +56,7 @@ Optional extensions:
 
 - `arc88_pending_owner() -> (pending: address)` plus a two-step pattern (`arc88_transfer_ownership_request` / `arc88_accept_ownership`) for safer transfer; see Appendix A.
 
-### 3.4 Semantics
+### Semantics
 
 - Initial owner is deployer unless overridden via `arc88_initialize_owner` in creation group.
 - `arc88_transfer_ownership` MUST fail if caller != current owner OR `new_owner` is zero.
@@ -65,7 +65,7 @@ Optional extensions:
 - `arc88_is_owner` returns 1 only if owner != zero AND query == stored owner.
 - Once renounced (owner zero) privileged methods relying on ownership MUST become permanently inaccessible unless contract defines an alternate revival extension (non-standard).
 
-### 3.5 Error Codes
+### Error Codes
 
 Implementations SHOULD surface deterministic short codes (uint8) via simulation helpers or revert messages (string) for UI mapping:
 
@@ -78,7 +78,7 @@ Implementations SHOULD surface deterministic short codes (uint8) via simulation 
 
 Codes >= `0x20` are reserved for project-specific extensions.
 
-### 3.6 Events (Logs)
+### Events (Logs)
 
 Recommended log schema (tag values illustrative; implementers MAY choose deterministic short tags):
 
@@ -87,18 +87,18 @@ Recommended log schema (tag values illustrative; implementers MAY choose determi
 - Tag `0x03` `arc88_ownership_transfer_requested` | previous_owner(address) | pending_owner(address) (two-step only)
 - Tag `0x04` `arc88_ownership_transfer_accepted` | previous_owner(address) | new_owner(address) (two-step only)
 
-### 3.7 Security Considerations
+### Security Considerations
 
 - Front-running: Two-step ownership transfer mitigates risk of transferring to an unintended address.
 - Renouncement: Irreversible; UIs MUST strongly warn before invoking.
 - Multisig owners: If using an escrow address (LogicSig) or multisig, ensure validity period and fallback plan.
 - Upgradeability: If used with upgradable proxy patterns, ensure both proxy and implementation align on ownership semantics to avoid lockout.
 
-### 3.8 Rationale
+### Rationale (Specification)
 
 A minimal interface enables straightforward layering of governance (timelock, DAO vote) where those systems call only the standardized methods. Explicit zero address semantics make post-renouncement state unambiguous.
 
-### 3.9 Reference Implementation Sketch
+### Reference Implementation Sketch
 
 Global state keys (or boxes):
 
@@ -122,11 +122,11 @@ arc88_renounce_ownership():
   emit OwnershipRenounced(previous)
 ```
 
-### 3.10 Backwards Compatibility
+### Backwards Compatibility (Specification)
 
 Projects may already expose non-standard naming. They can add ARC-88 methods alongside legacy ones to migrate clients gradually.
 
-### 3.11 Test Vectors (Illustrative)
+### Test Vectors (Illustrative)
 
 1. Deploy (no init) -> query owner -> expect creator.
 2. Deploy with grouped `arc88_initialize_owner(multisig)` -> query owner -> multisig.
