@@ -1,5 +1,5 @@
 import { arc4, assert, BoxMap, emit, Global, GlobalState, Txn } from '@algorandfoundation/algorand-typescript'
-import { Arc1410, arc1410_PartitionKey } from './arc1410.algo'
+import { Arc1410 } from './arc1410.algo'
 
 // Event structs
 class arc1594_issue_event extends arc4.Struct<{ to: arc4.Address; amount: arc4.UintN256; data: arc4.DynamicBytes }> {}
@@ -69,17 +69,20 @@ export class Arc1594 extends Arc1410 {
   }
 
   @arc4.abimethod()
-  public arc1594_redeem(from: arc4.Address, amount: arc4.UintN256, data: arc4.DynamicBytes): void {
+  public arc1594_redeemFrom(from: arc4.Address, amount: arc4.UintN256, data: arc4.DynamicBytes): void {
     const sender = new arc4.Address(Txn.sender)
     assert(sender === from || this.arc88_is_owner(sender).native === true, 'not_auth')
     assert(amount.native > 0n, 'invalid_amount')
-    // Redeem from default partition
-    const partKey = new arc1410_PartitionKey({ holder: from, partition: new arc4.Address() })
-    assert(
-      this.partitions(partKey).exists && this.partitions(partKey).value.native >= amount.native,
-      'insufficient_partition',
-    )
-    this.partitions(partKey).value = new arc4.UintN256(this.partitions(partKey).value.native - amount.native)
+    assert(this.balances(from).exists && this.balances(from).value.native >= amount.native, 'insufficient_balance')
+    this.balances(from).value = new arc4.UintN256(this.balances(from).value.native - amount.native)
+    this.totalSupply.value = new arc4.UintN256(this.totalSupply.value.native - amount.native)
+    emit('Redeem', new arc1594_redeem_event({ from, amount, data }))
+  }
+
+  @arc4.abimethod()
+  public arc1594_redeem(amount: arc4.UintN256, data: arc4.DynamicBytes): void {
+    const from = new arc4.Address(Txn.sender)
+    assert(amount.native > 0n, 'invalid_amount')
     assert(this.balances(from).exists && this.balances(from).value.native >= amount.native, 'insufficient_balance')
     this.balances(from).value = new arc4.UintN256(this.balances(from).value.native - amount.native)
     this.totalSupply.value = new arc4.UintN256(this.totalSupply.value.native - amount.native)
