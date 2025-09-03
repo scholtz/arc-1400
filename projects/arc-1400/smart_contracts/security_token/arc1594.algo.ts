@@ -12,11 +12,11 @@ class arc1594_redeem_event extends arc4.Struct<{
 export class Arc1594 extends Arc1410 {
   // Governance / control flags (owner via Arc88 acts as issuer)
   public halt = GlobalState<arc4.UintN64>({ key: 'hlt' }) // 1 = halted
+  public issuable = GlobalState<arc4.Bool>({ key: 'iss' }) // True = issuable
 
   // Per-account compliance flags (simple model)
   public kyc = BoxMap<arc4.Address, arc4.UintN64>({ keyPrefix: 'kyc' }) // 1 = eligible
   public lockupUntil = BoxMap<arc4.Address, arc4.UintN64>({ keyPrefix: 'lku' }) // round number until which locked
-
 
   constructor() {
     super()
@@ -77,4 +77,9 @@ export class Arc1594 extends Arc1410 {
     emit('Redeem', new arc1594_redeem_event({ from, amount, data }))
   }
 
+  /* ------------------------- query helpers ------------------------- */
+  @arc4.abimethod({ readonly: true })
+  public arc1594_is_issuable(): arc4.Bool {
+    return this.issuable.value
+  }
 }
