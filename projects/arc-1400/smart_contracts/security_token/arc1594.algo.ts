@@ -2,23 +2,16 @@ import { arc4, assert, BoxMap, emit, Global, GlobalState, Txn } from '@algorandf
 import { Arc1410, arc1410_PartitionKey } from './arc1410.algo'
 
 // Event structs
-class arc1594_issue_event extends arc4.Struct<{
-  to: arc4.Address
-  amount: arc4.UintN256
-  partition: arc4.Address
-  data: arc4.DynamicBytes
-}> {}
+class arc1594_issue_event extends arc4.Struct<{ to: arc4.Address; amount: arc4.UintN256; data: arc4.DynamicBytes }> {}
 class arc1594_redeem_event extends arc4.Struct<{
   from: arc4.Address
   amount: arc4.UintN256
-  partition: arc4.Address
   data: arc4.DynamicBytes
 }> {}
 class arc1594_validate_event extends arc4.Struct<{
   from: arc4.Address
   to: arc4.Address
   amount: arc4.UintN256
-  partition: arc4.Address
   code: arc4.UintN64
   reason: arc4.Str
 }> {}
@@ -67,39 +60,35 @@ export class Arc1594 extends Arc1410 {
 
   /* ------------------------- issuance / redemption ------------------------- */
   @arc4.abimethod()
-  public arc1594_issue(
-    to: arc4.Address,
-    amount: arc4.UintN256,
-    partition: arc4.Address,
-    data: arc4.DynamicBytes,
-  ): void {
+  public arc1594_issue(to: arc4.Address, amount: arc4.UintN256, data: arc4.DynamicBytes): void {
     this._onlyOwner()
     assert(amount.native > 0n, 'invalid_amount')
-    // Delegate to ARC-1410 issuance logic for partition & supply handling
-    this.arc1410_issue_by_partition(to, partition, amount, data)
-    emit('Issue', new arc1594_issue_event({ to, amount, partition, data }))
+    // Default/unrestricted partition (zero address) implicitly
+    this.arc1410_issue_by_partition(to, new arc4.Address(), amount, data)
+    emit('Issue', new arc1594_issue_event({ to, amount, data }))
   }
 
   @arc4.abimethod()
-  public arc1594_redeem(
-    from: arc4.Address,
-    amount: arc4.UintN256,
-    partition: arc4.Address,
-    data: arc4.DynamicBytes,
-  ): void {
+  public arc1594_redeem(from: arc4.Address, amount: arc4.UintN256, data: arc4.DynamicBytes): void {
     const sender = new arc4.Address(Txn.sender)
     assert(sender === from || this.arc88_is_owner(sender).native === true, 'not_auth')
     assert(amount.native > 0n, 'invalid_amount')
+    // Redeem from default partition
+    const partKey = new arc1410_PartitionKey({ holder: from, partition: new arc4.Address() })
+    assert(
+      this.partitions(partKey).exists && this.partitions(partKey).value.native >= amount.native,
+      'insufficient_partition',
+    )
+    this.partitions(partKey).value = new arc4.UintN256(this.partitions(partKey).value.native - amount.native)
     assert(this.balances(from).exists && this.balances(from).value.native >= amount.native, 'insufficient_balance')
     this.balances(from).value = new arc4.UintN256(this.balances(from).value.native - amount.native)
     this.totalSupply.value = new arc4.UintN256(this.totalSupply.value.native - amount.native)
-    emit('Redeem', new arc1594_redeem_event({ from, amount, partition, data }))
+    emit('Redeem', new arc1594_redeem_event({ from, amount, data }))
   }
 
   /* ------------------------- validation ------------------------- */
   @arc4.abimethod({ readonly: true })
   public arc1594_validate_transfer(
-    partition: arc4.Address,
     from: arc4.Address,
     to: arc4.Address,
     amount: arc4.UintN256,
@@ -134,10 +123,7 @@ export class Arc1594 extends Arc1410 {
       }
     }
     // Partition checks (simplified - if partition not zero and not supported)
-    if (code.native === 0 && partition !== new arc4.Address()) {
-      const partKey = new arc1410_PartitionKey({ holder: from, partition })
-      if (!this.partitions(partKey).exists) code = new arc4.UintN64(20)
-    }
+    // Partition checks removed (core profile partitionless)
     // Write last validation code (non-readonly variant would be needed; for pure readonly we skip persisting)
     return code
   }
