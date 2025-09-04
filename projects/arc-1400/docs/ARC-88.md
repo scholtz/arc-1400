@@ -158,6 +158,10 @@ State: store `pending_owner`.
 
 Semantics: Upon accept, emit both acceptance event and transfer event; clear pending.
 
+## Reference Implementation
+
+[arc88.algo.ts](https://github.com/scholtz/arc-1400/blob/main/projects/arc-1400/smart_contracts/security_token/arc88.algo.ts)
+
 ## Copyright
 
 CC0 1.0 Universal.
