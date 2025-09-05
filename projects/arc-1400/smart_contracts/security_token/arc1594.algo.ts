@@ -11,8 +11,7 @@ class arc1594_redeem_event extends arc4.Struct<{
 
 export class Arc1594 extends Arc1410 {
   // Governance / control flags (owner via Arc88 acts as issuer)
-  public halt = GlobalState<arc4.UintN64>({ key: 'hlt' }) // 1 = halted
-  public issuable = GlobalState<arc4.Bool>({ key: 'iss' }) // True = issuable
+  public arc1594_issuable = GlobalState<arc4.Bool>({ key: 'arc1594_iss' }) // True = issuable
 
   constructor() {
     super()
@@ -28,7 +27,7 @@ export class Arc1594 extends Arc1410 {
   @arc4.abimethod()
   public arc1594_set_issuable(flag: arc4.Bool): void {
     this._onlyOwner()
-    this.issuable.value = flag
+    this.arc1594_issuable.value = flag
   }
 
   /* ------------------------- issuance / redemption ------------------------- */
@@ -36,7 +35,7 @@ export class Arc1594 extends Arc1410 {
   public arc1594_issue(to: arc4.Address, amount: arc4.UintN256, data: arc4.DynamicBytes): void {
     this._onlyOwner()
     assert(amount.native > 0n, 'invalid_amount')
-    assert(this.issuable.hasValue && this.issuable.value.native === true, 'issuance_disabled')
+    assert(this.arc1594_issuable.hasValue && this.arc1594_issuable.value.native === true, 'issuance_disabled')
     // Default/unrestricted partition (zero address) implicitly
     this.arc1410_issue_by_partition(to, new arc4.Address(), amount, data)
     emit('Issue', new arc1594_issue_event({ to, amount, data }))
@@ -86,6 +85,6 @@ export class Arc1594 extends Arc1410 {
   /* ------------------------- query helpers ------------------------- */
   @arc4.abimethod({ readonly: true })
   public arc1594_is_issuable(): arc4.Bool {
-    return this.issuable.value
+    return this.arc1594_issuable.value
   }
 }

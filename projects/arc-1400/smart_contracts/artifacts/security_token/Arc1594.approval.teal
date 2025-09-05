@@ -4,7 +4,7 @@
 // @algorandfoundation/algorand-typescript/arc4/index.d.ts::Contract.approvalProgram() -> uint64:
 main:
     intcblock 0 1 32 8
-    bytecblock 0x151f7c75 0x0000000000000000000000000000000000000000000000000000000000000000 "arc88_o" "t" "b" "p" 0x0002 0x80 "arc88_po" 0x00 "arc88_oi" "opa" "iss" "hp_a" "op" 0x0042 0x01 0x0001 0x0062 0xd7fc4a98 0x0000 0x0000000000000000 0x5c27b4fc 0x7983c35c 0x4355d2ad
+    bytecblock 0x151f7c75 0x0000000000000000000000000000000000000000000000000000000000000000 "arc88_o" "t" "b" "arc1410_p" 0x0002 0x80 "arc88_po" 0x00 "arc88_oi" "arc1410_opa" "arc1594_iss" "arc1410_hp_a" "arc1410_op" 0x0042 0x01 0x0001 0x0062 0xd7fc4a98 0x0000 0x0000000000000000 0x5c27b4fc 0x7983c35c 0x4355d2ad
     // smart_contracts/security_token/arc1594.algo.ts:12
     // export class Arc1594 extends Arc1410 {
     txn NumAppArgs
@@ -623,7 +623,7 @@ main_arc1410_balance_of_partition_route@12:
     return
 
 main_arc1594_is_issuable_route@11:
-    // smart_contracts/security_token/arc1594.algo.ts:87
+    // smart_contracts/security_token/arc1594.algo.ts:86
     // @arc4.abimethod({ readonly: true })
     txn OnCompletion
     !
@@ -639,7 +639,7 @@ main_arc1594_is_issuable_route@11:
     return
 
 main_arc1594_transfer_from_with_data_route@10:
-    // smart_contracts/security_token/arc1594.algo.ts:75
+    // smart_contracts/security_token/arc1594.algo.ts:74
     // @arc4.abimethod()
     txn OnCompletion
     !
@@ -652,7 +652,7 @@ main_arc1594_transfer_from_with_data_route@10:
     txna ApplicationArgs 2
     txna ApplicationArgs 3
     txna ApplicationArgs 4
-    // smart_contracts/security_token/arc1594.algo.ts:75
+    // smart_contracts/security_token/arc1594.algo.ts:74
     // @arc4.abimethod()
     callsub arc1594_transfer_from_with_data
     bytec_0 // 0x151f7c75
@@ -663,7 +663,7 @@ main_arc1594_transfer_from_with_data_route@10:
     return
 
 main_arc1594_transfer_with_data_route@9:
-    // smart_contracts/security_token/arc1594.algo.ts:67
+    // smart_contracts/security_token/arc1594.algo.ts:66
     // @arc4.abimethod()
     txn OnCompletion
     !
@@ -675,7 +675,7 @@ main_arc1594_transfer_with_data_route@9:
     txna ApplicationArgs 1
     txna ApplicationArgs 2
     txna ApplicationArgs 3
-    // smart_contracts/security_token/arc1594.algo.ts:67
+    // smart_contracts/security_token/arc1594.algo.ts:66
     // @arc4.abimethod()
     callsub arc1594_transfer_with_data
     bytec_0 // 0x151f7c75
@@ -686,7 +686,7 @@ main_arc1594_transfer_with_data_route@9:
     return
 
 main_arc1594_redeem_route@8:
-    // smart_contracts/security_token/arc1594.algo.ts:56
+    // smart_contracts/security_token/arc1594.algo.ts:55
     // @arc4.abimethod()
     txn OnCompletion
     !
@@ -697,14 +697,14 @@ main_arc1594_redeem_route@8:
     // export class Arc1594 extends Arc1410 {
     txna ApplicationArgs 1
     txna ApplicationArgs 2
-    // smart_contracts/security_token/arc1594.algo.ts:56
+    // smart_contracts/security_token/arc1594.algo.ts:55
     // @arc4.abimethod()
     callsub arc1594_redeem
     intc_1 // 1
     return
 
 main_arc1594_redeemFrom_route@7:
-    // smart_contracts/security_token/arc1594.algo.ts:45
+    // smart_contracts/security_token/arc1594.algo.ts:44
     // @arc4.abimethod()
     txn OnCompletion
     !
@@ -716,14 +716,14 @@ main_arc1594_redeemFrom_route@7:
     txna ApplicationArgs 1
     txna ApplicationArgs 2
     txna ApplicationArgs 3
-    // smart_contracts/security_token/arc1594.algo.ts:45
+    // smart_contracts/security_token/arc1594.algo.ts:44
     // @arc4.abimethod()
     callsub arc1594_redeemFrom
     intc_1 // 1
     return
 
 main_arc1594_issue_route@6:
-    // smart_contracts/security_token/arc1594.algo.ts:35
+    // smart_contracts/security_token/arc1594.algo.ts:34
     // @arc4.abimethod()
     txn OnCompletion
     !
@@ -735,14 +735,14 @@ main_arc1594_issue_route@6:
     txna ApplicationArgs 1
     txna ApplicationArgs 2
     txna ApplicationArgs 3
-    // smart_contracts/security_token/arc1594.algo.ts:35
+    // smart_contracts/security_token/arc1594.algo.ts:34
     // @arc4.abimethod()
     callsub arc1594_issue
     intc_1 // 1
     return
 
 main_arc1594_set_issuable_route@5:
-    // smart_contracts/security_token/arc1594.algo.ts:28
+    // smart_contracts/security_token/arc1594.algo.ts:27
     // @arc4.abimethod()
     txn OnCompletion
     !
@@ -752,7 +752,7 @@ main_arc1594_set_issuable_route@5:
     // smart_contracts/security_token/arc1594.algo.ts:12
     // export class Arc1594 extends Arc1410 {
     txna ApplicationArgs 1
-    // smart_contracts/security_token/arc1594.algo.ts:28
+    // smart_contracts/security_token/arc1594.algo.ts:27
     // @arc4.abimethod()
     callsub arc1594_set_issuable
     intc_1 // 1
@@ -772,7 +772,7 @@ main_bare_routing@45:
 
 // smart_contracts/security_token/arc1594.algo.ts::Arc1594._onlyOwner() -> void:
 _onlyOwner:
-    // smart_contracts/security_token/arc1594.algo.ts:23
+    // smart_contracts/security_token/arc1594.algo.ts:22
     // assert(this.arc88_is_owner(new arc4.Address(Txn.sender)).native === true, 'only_owner')
     txn Sender
     callsub arc88_is_owner
@@ -786,18 +786,18 @@ _onlyOwner:
 
 // smart_contracts/security_token/arc1594.algo.ts::Arc1594.arc1594_set_issuable(flag: bytes) -> void:
 arc1594_set_issuable:
-    // smart_contracts/security_token/arc1594.algo.ts:28-29
+    // smart_contracts/security_token/arc1594.algo.ts:27-28
     // @arc4.abimethod()
     // public arc1594_set_issuable(flag: arc4.Bool): void {
     proto 1 0
-    // smart_contracts/security_token/arc1594.algo.ts:30
+    // smart_contracts/security_token/arc1594.algo.ts:29
     // this._onlyOwner()
     callsub _onlyOwner
-    // smart_contracts/security_token/arc1594.algo.ts:15
-    // public issuable = GlobalState<arc4.Bool>({ key: 'iss' }) // True = issuable
-    bytec 12 // "iss"
-    // smart_contracts/security_token/arc1594.algo.ts:31
-    // this.issuable.value = flag
+    // smart_contracts/security_token/arc1594.algo.ts:14
+    // public arc1594_issuable = GlobalState<arc4.Bool>({ key: 'arc1594_iss' }) // True = issuable
+    bytec 12 // "arc1594_iss"
+    // smart_contracts/security_token/arc1594.algo.ts:30
+    // this.arc1594_issuable.value = flag
     frame_dig -1
     app_global_put
     retsub
@@ -805,37 +805,37 @@ arc1594_set_issuable:
 
 // smart_contracts/security_token/arc1594.algo.ts::Arc1594.arc1594_issue(to: bytes, amount: bytes, data: bytes) -> void:
 arc1594_issue:
-    // smart_contracts/security_token/arc1594.algo.ts:35-36
+    // smart_contracts/security_token/arc1594.algo.ts:34-35
     // @arc4.abimethod()
     // public arc1594_issue(to: arc4.Address, amount: arc4.UintN256, data: arc4.DynamicBytes): void {
     proto 3 0
-    // smart_contracts/security_token/arc1594.algo.ts:37
+    // smart_contracts/security_token/arc1594.algo.ts:36
     // this._onlyOwner()
     callsub _onlyOwner
-    // smart_contracts/security_token/arc1594.algo.ts:38
+    // smart_contracts/security_token/arc1594.algo.ts:37
     // assert(amount.native > 0n, 'invalid_amount')
     frame_dig -2
     pushbytes 0x
     b>
     assert // invalid_amount
-    // smart_contracts/security_token/arc1594.algo.ts:15
-    // public issuable = GlobalState<arc4.Bool>({ key: 'iss' }) // True = issuable
+    // smart_contracts/security_token/arc1594.algo.ts:14
+    // public arc1594_issuable = GlobalState<arc4.Bool>({ key: 'arc1594_iss' }) // True = issuable
     intc_0 // 0
-    bytec 12 // "iss"
-    // smart_contracts/security_token/arc1594.algo.ts:39
-    // assert(this.issuable.hasValue && this.issuable.value.native === true, 'issuance_disabled')
+    bytec 12 // "arc1594_iss"
+    // smart_contracts/security_token/arc1594.algo.ts:38
+    // assert(this.arc1594_issuable.hasValue && this.arc1594_issuable.value.native === true, 'issuance_disabled')
     app_global_get_ex
     bury 1
     bz arc1594_issue_bool_false@3
-    // smart_contracts/security_token/arc1594.algo.ts:15
-    // public issuable = GlobalState<arc4.Bool>({ key: 'iss' }) // True = issuable
+    // smart_contracts/security_token/arc1594.algo.ts:14
+    // public arc1594_issuable = GlobalState<arc4.Bool>({ key: 'arc1594_iss' }) // True = issuable
     intc_0 // 0
-    bytec 12 // "iss"
+    bytec 12 // "arc1594_iss"
     app_global_get_ex
     assert // check GlobalState exists
     intc_0 // 0
-    // smart_contracts/security_token/arc1594.algo.ts:39
-    // assert(this.issuable.hasValue && this.issuable.value.native === true, 'issuance_disabled')
+    // smart_contracts/security_token/arc1594.algo.ts:38
+    // assert(this.arc1594_issuable.hasValue && this.arc1594_issuable.value.native === true, 'issuance_disabled')
     getbit
     intc_1 // 1
     ==
@@ -843,17 +843,17 @@ arc1594_issue:
     intc_1 // 1
 
 arc1594_issue_bool_merge@4:
-    // smart_contracts/security_token/arc1594.algo.ts:39
-    // assert(this.issuable.hasValue && this.issuable.value.native === true, 'issuance_disabled')
+    // smart_contracts/security_token/arc1594.algo.ts:38
+    // assert(this.arc1594_issuable.hasValue && this.arc1594_issuable.value.native === true, 'issuance_disabled')
     assert // issuance_disabled
-    // smart_contracts/security_token/arc1594.algo.ts:41
+    // smart_contracts/security_token/arc1594.algo.ts:40
     // this.arc1410_issue_by_partition(to, new arc4.Address(), amount, data)
     frame_dig -3
     bytec_1 // addr AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY5HFKQ
     frame_dig -2
     frame_dig -1
     callsub arc1410_issue_by_partition
-    // smart_contracts/security_token/arc1594.algo.ts:42
+    // smart_contracts/security_token/arc1594.algo.ts:41
     // emit('Issue', new arc1594_issue_event({ to, amount, data }))
     frame_dig -3
     frame_dig -2
@@ -878,16 +878,16 @@ arc1594_issue_bool_false@3:
 
 // smart_contracts/security_token/arc1594.algo.ts::Arc1594.arc1594_redeemFrom(from: bytes, amount: bytes, data: bytes) -> void:
 arc1594_redeemFrom:
-    // smart_contracts/security_token/arc1594.algo.ts:45-46
+    // smart_contracts/security_token/arc1594.algo.ts:44-45
     // @arc4.abimethod()
     // public arc1594_redeemFrom(from: arc4.Address, amount: arc4.UintN256, data: arc4.DynamicBytes): void {
     proto 3 0
     intc_0 // 0
-    // smart_contracts/security_token/arc1594.algo.ts:47
+    // smart_contracts/security_token/arc1594.algo.ts:46
     // const sender = new arc4.Address(Txn.sender)
     txn Sender
     dup
-    // smart_contracts/security_token/arc1594.algo.ts:48
+    // smart_contracts/security_token/arc1594.algo.ts:47
     // assert(sender === from || this.arc88_is_owner(sender).native === true, 'not_auth')
     frame_dig -3
     ==
@@ -904,10 +904,10 @@ arc1594_redeemFrom_bool_true@2:
     intc_1 // 1
 
 arc1594_redeemFrom_bool_merge@4:
-    // smart_contracts/security_token/arc1594.algo.ts:48
+    // smart_contracts/security_token/arc1594.algo.ts:47
     // assert(sender === from || this.arc88_is_owner(sender).native === true, 'not_auth')
     assert // not_auth
-    // smart_contracts/security_token/arc1594.algo.ts:49
+    // smart_contracts/security_token/arc1594.algo.ts:48
     // assert(amount.native > 0n, 'invalid_amount')
     frame_dig -2
     pushbytes 0x
@@ -920,7 +920,7 @@ arc1594_redeemFrom_bool_merge@4:
     concat
     dup
     frame_bury 0
-    // smart_contracts/security_token/arc1594.algo.ts:50
+    // smart_contracts/security_token/arc1594.algo.ts:49
     // assert(this.balances(from).exists && this.balances(from).value.native >= amount.native, 'insufficient_balance')
     box_len
     bury 1
@@ -934,10 +934,10 @@ arc1594_redeemFrom_bool_merge@4:
     intc_1 // 1
 
 arc1594_redeemFrom_bool_merge@8:
-    // smart_contracts/security_token/arc1594.algo.ts:50
+    // smart_contracts/security_token/arc1594.algo.ts:49
     // assert(this.balances(from).exists && this.balances(from).value.native >= amount.native, 'insufficient_balance')
     assert // insufficient_balance
-    // smart_contracts/security_token/arc1594.algo.ts:51
+    // smart_contracts/security_token/arc1594.algo.ts:50
     // this.balances(from).value = new arc4.UintN256(this.balances(from).value.native - amount.native)
     frame_dig 0
     dup
@@ -964,7 +964,7 @@ arc1594_redeemFrom_bool_merge@8:
     bytec_3 // "t"
     app_global_get_ex
     assert // check GlobalState exists
-    // smart_contracts/security_token/arc1594.algo.ts:52
+    // smart_contracts/security_token/arc1594.algo.ts:51
     // this.totalSupply.value = new arc4.UintN256(this.totalSupply.value.native - amount.native)
     frame_dig -2
     b-
@@ -977,11 +977,11 @@ arc1594_redeemFrom_bool_merge@8:
     // smart_contracts/security_token/arc200.algo.ts:51
     // public totalSupply = GlobalState<UintN256>({ key: 't' })
     bytec_3 // "t"
-    // smart_contracts/security_token/arc1594.algo.ts:52
+    // smart_contracts/security_token/arc1594.algo.ts:51
     // this.totalSupply.value = new arc4.UintN256(this.totalSupply.value.native - amount.native)
     swap
     app_global_put
-    // smart_contracts/security_token/arc1594.algo.ts:53
+    // smart_contracts/security_token/arc1594.algo.ts:52
     // emit('Redeem', new arc1594_redeem_event({ from, amount, data }))
     frame_dig -3
     frame_dig -2
@@ -1010,15 +1010,15 @@ arc1594_redeemFrom_bool_false@3:
 
 // smart_contracts/security_token/arc1594.algo.ts::Arc1594.arc1594_redeem(amount: bytes, data: bytes) -> void:
 arc1594_redeem:
-    // smart_contracts/security_token/arc1594.algo.ts:56-57
+    // smart_contracts/security_token/arc1594.algo.ts:55-56
     // @arc4.abimethod()
     // public arc1594_redeem(amount: arc4.UintN256, data: arc4.DynamicBytes): void {
     proto 2 0
-    // smart_contracts/security_token/arc1594.algo.ts:58
+    // smart_contracts/security_token/arc1594.algo.ts:57
     // const from = new arc4.Address(Txn.sender)
     txn Sender
     dup
-    // smart_contracts/security_token/arc1594.algo.ts:59
+    // smart_contracts/security_token/arc1594.algo.ts:58
     // assert(amount.native > 0n, 'invalid_amount')
     frame_dig -2
     pushbytes 0x
@@ -1030,7 +1030,7 @@ arc1594_redeem:
     swap
     concat
     dup
-    // smart_contracts/security_token/arc1594.algo.ts:60
+    // smart_contracts/security_token/arc1594.algo.ts:59
     // assert(this.balances(from).exists && this.balances(from).value.native >= amount.native, 'insufficient_balance')
     box_len
     bury 1
@@ -1044,10 +1044,10 @@ arc1594_redeem:
     intc_1 // 1
 
 arc1594_redeem_bool_merge@4:
-    // smart_contracts/security_token/arc1594.algo.ts:60
+    // smart_contracts/security_token/arc1594.algo.ts:59
     // assert(this.balances(from).exists && this.balances(from).value.native >= amount.native, 'insufficient_balance')
     assert // insufficient_balance
-    // smart_contracts/security_token/arc1594.algo.ts:61
+    // smart_contracts/security_token/arc1594.algo.ts:60
     // this.balances(from).value = new arc4.UintN256(this.balances(from).value.native - amount.native)
     frame_dig 1
     dup
@@ -1074,7 +1074,7 @@ arc1594_redeem_bool_merge@4:
     bytec_3 // "t"
     app_global_get_ex
     assert // check GlobalState exists
-    // smart_contracts/security_token/arc1594.algo.ts:62
+    // smart_contracts/security_token/arc1594.algo.ts:61
     // this.totalSupply.value = new arc4.UintN256(this.totalSupply.value.native - amount.native)
     frame_dig -2
     b-
@@ -1087,11 +1087,11 @@ arc1594_redeem_bool_merge@4:
     // smart_contracts/security_token/arc200.algo.ts:51
     // public totalSupply = GlobalState<UintN256>({ key: 't' })
     bytec_3 // "t"
-    // smart_contracts/security_token/arc1594.algo.ts:62
+    // smart_contracts/security_token/arc1594.algo.ts:61
     // this.totalSupply.value = new arc4.UintN256(this.totalSupply.value.native - amount.native)
     swap
     app_global_put
-    // smart_contracts/security_token/arc1594.algo.ts:63
+    // smart_contracts/security_token/arc1594.algo.ts:62
     // emit('Redeem', new arc1594_redeem_event({ from, amount, data }))
     frame_dig 0
     frame_dig -2
@@ -1116,23 +1116,23 @@ arc1594_redeem_bool_false@3:
 
 // smart_contracts/security_token/arc1594.algo.ts::Arc1594.arc1594_transfer_with_data(to: bytes, amount: bytes, data: bytes) -> bytes:
 arc1594_transfer_with_data:
-    // smart_contracts/security_token/arc1594.algo.ts:67-68
+    // smart_contracts/security_token/arc1594.algo.ts:66-67
     // @arc4.abimethod()
     // public arc1594_transfer_with_data(to: arc4.Address, amount: arc4.UintN256, data: arc4.DynamicBytes): arc4.Bool {
     proto 3 1
-    // smart_contracts/security_token/arc1594.algo.ts:70
+    // smart_contracts/security_token/arc1594.algo.ts:69
     // const res = this.arc200_transfer(to, amount)
     frame_dig -3
     frame_dig -2
     callsub arc200_transfer
-    // smart_contracts/security_token/arc1594.algo.ts:72
+    // smart_contracts/security_token/arc1594.algo.ts:71
     // return res
     retsub
 
 
 // smart_contracts/security_token/arc1594.algo.ts::Arc1594.arc1594_transfer_from_with_data(from: bytes, to: bytes, amount: bytes, data: bytes) -> bytes:
 arc1594_transfer_from_with_data:
-    // smart_contracts/security_token/arc1594.algo.ts:75-81
+    // smart_contracts/security_token/arc1594.algo.ts:74-80
     // @arc4.abimethod()
     // public arc1594_transfer_from_with_data(
     //   from: arc4.Address,
@@ -1141,27 +1141,27 @@ arc1594_transfer_from_with_data:
     //   data: arc4.DynamicBytes,
     // ): arc4.Bool {
     proto 4 1
-    // smart_contracts/security_token/arc1594.algo.ts:82
+    // smart_contracts/security_token/arc1594.algo.ts:81
     // const res = this.arc200_transferFrom(from, to, amount)
     frame_dig -4
     frame_dig -3
     frame_dig -2
     callsub arc200_transferFrom
-    // smart_contracts/security_token/arc1594.algo.ts:83
+    // smart_contracts/security_token/arc1594.algo.ts:82
     // return res
     retsub
 
 
 // smart_contracts/security_token/arc1594.algo.ts::Arc1594.arc1594_is_issuable() -> bytes:
 arc1594_is_issuable:
-    // smart_contracts/security_token/arc1594.algo.ts:15
-    // public issuable = GlobalState<arc4.Bool>({ key: 'iss' }) // True = issuable
+    // smart_contracts/security_token/arc1594.algo.ts:14
+    // public arc1594_issuable = GlobalState<arc4.Bool>({ key: 'arc1594_iss' }) // True = issuable
     intc_0 // 0
-    bytec 12 // "iss"
+    bytec 12 // "arc1594_iss"
     app_global_get_ex
     assert // check GlobalState exists
-    // smart_contracts/security_token/arc1594.algo.ts:89
-    // return this.issuable.value
+    // smart_contracts/security_token/arc1594.algo.ts:88
+    // return this.arc1594_issuable.value
     retsub
 
 
@@ -1180,8 +1180,8 @@ arc1410_balance_of_partition:
     frame_dig -1
     concat
     // smart_contracts/security_token/arc1410.algo.ts:57
-    // public partitions = BoxMap<arc1410_PartitionKey, arc4.UintN256>({ keyPrefix: 'p' })
-    bytec 5 // "p"
+    // public partitions = BoxMap<arc1410_PartitionKey, arc4.UintN256>({ keyPrefix: 'arc1410_p' })
+    bytec 5 // "arc1410_p"
     swap
     concat
     // smart_contracts/security_token/arc1410.algo.ts:75
@@ -1293,8 +1293,8 @@ arc1410_partitions_of:
     frame_dig -1
     concat
     // smart_contracts/security_token/arc1410.algo.ts:60
-    // keyPrefix: 'hp_a',
-    bytec 13 // "hp_a"
+    // keyPrefix: 'arc1410_hp_a',
+    bytec 13 // "arc1410_hp_a"
     swap
     concat
     dup
@@ -1346,8 +1346,8 @@ arc1410_is_operator_after_if_else@2:
     frame_dig -1
     concat
     // smart_contracts/security_token/arc1410.algo.ts:62
-    // public operators = BoxMap<arc1410_OperatorKey, arc4.Byte>({ keyPrefix: 'op' }) // value = 1 authorized
-    bytec 14 // "op"
+    // public operators = BoxMap<arc1410_OperatorKey, arc4.Byte>({ keyPrefix: 'arc1410_op' }) // value = 1 authorized
+    bytec 14 // "arc1410_op"
     swap
     concat
     dup
@@ -1377,8 +1377,8 @@ arc1410_is_operator_after_if_else@5:
     bytec_1 // addr AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY5HFKQ
     concat
     // smart_contracts/security_token/arc1410.algo.ts:62
-    // public operators = BoxMap<arc1410_OperatorKey, arc4.Byte>({ keyPrefix: 'op' }) // value = 1 authorized
-    bytec 14 // "op"
+    // public operators = BoxMap<arc1410_OperatorKey, arc4.Byte>({ keyPrefix: 'arc1410_op' }) // value = 1 authorized
+    bytec 14 // "arc1410_op"
     swap
     concat
     dup
@@ -1429,8 +1429,8 @@ arc1410_authorize_operator:
     frame_dig -1
     concat
     // smart_contracts/security_token/arc1410.algo.ts:62
-    // public operators = BoxMap<arc1410_OperatorKey, arc4.Byte>({ keyPrefix: 'op' }) // value = 1 authorized
-    bytec 14 // "op"
+    // public operators = BoxMap<arc1410_OperatorKey, arc4.Byte>({ keyPrefix: 'arc1410_op' }) // value = 1 authorized
+    bytec 14 // "arc1410_op"
     swap
     concat
     // smart_contracts/security_token/arc1410.algo.ts:132
@@ -1460,8 +1460,8 @@ arc1410_revoke_operator:
     frame_dig -1
     concat
     // smart_contracts/security_token/arc1410.algo.ts:62
-    // public operators = BoxMap<arc1410_OperatorKey, arc4.Byte>({ keyPrefix: 'op' }) // value = 1 authorized
-    bytec 14 // "op"
+    // public operators = BoxMap<arc1410_OperatorKey, arc4.Byte>({ keyPrefix: 'arc1410_op' }) // value = 1 authorized
+    bytec 14 // "arc1410_op"
     swap
     concat
     dup
@@ -1522,8 +1522,8 @@ arc1410_operator_transfer_by_partition:
     frame_dig -4
     concat
     // smart_contracts/security_token/arc1410.algo.ts:63
-    // public operatorPortionAllowances = BoxMap<arc1410_OperatorPortionKey, arc4.UintN256>({ keyPrefix: 'opa' })
-    bytec 11 // "opa"
+    // public operatorPortionAllowances = BoxMap<arc1410_OperatorPortionKey, arc4.UintN256>({ keyPrefix: 'arc1410_opa' })
+    bytec 11 // "arc1410_opa"
     swap
     concat
     dup
@@ -1614,8 +1614,8 @@ arc1410_can_transfer_by_partition:
     frame_dig -4
     concat
     // smart_contracts/security_token/arc1410.algo.ts:57
-    // public partitions = BoxMap<arc1410_PartitionKey, arc4.UintN256>({ keyPrefix: 'p' })
-    bytec 5 // "p"
+    // public partitions = BoxMap<arc1410_PartitionKey, arc4.UintN256>({ keyPrefix: 'arc1410_p' })
+    bytec 5 // "arc1410_p"
     swap
     concat
     dup
@@ -1712,8 +1712,8 @@ arc1410_can_transfer_by_partition_after_if_else@6:
     frame_dig -4
     concat
     // smart_contracts/security_token/arc1410.algo.ts:63
-    // public operatorPortionAllowances = BoxMap<arc1410_OperatorPortionKey, arc4.UintN256>({ keyPrefix: 'opa' })
-    bytec 11 // "opa"
+    // public operatorPortionAllowances = BoxMap<arc1410_OperatorPortionKey, arc4.UintN256>({ keyPrefix: 'arc1410_opa' })
+    bytec 11 // "arc1410_opa"
     swap
     concat
     dup
@@ -1802,8 +1802,8 @@ _receiverPartition:
     frame_dig -1
     concat
     // smart_contracts/security_token/arc1410.algo.ts:57
-    // public partitions = BoxMap<arc1410_PartitionKey, arc4.UintN256>({ keyPrefix: 'p' })
-    bytec 5 // "p"
+    // public partitions = BoxMap<arc1410_PartitionKey, arc4.UintN256>({ keyPrefix: 'arc1410_p' })
+    bytec 5 // "arc1410_p"
     swap
     concat
     // smart_contracts/security_token/arc1410.algo.ts:245
@@ -1832,8 +1832,8 @@ _add_participation_to_holder:
     pushbytes ""
     dupn 4
     // smart_contracts/security_token/arc1410.algo.ts:58
-    // public holderPartitionsCurrentPage = BoxMap<arc4.Address, arc4.UintN64>({ keyPrefix: 'hp_p' })
-    pushbytes "hp_p"
+    // public holderPartitionsCurrentPage = BoxMap<arc4.Address, arc4.UintN64>({ keyPrefix: 'arc1410_hp_p' })
+    pushbytes "arc1410_hp_p"
     frame_dig -2
     concat
     dup
@@ -1893,8 +1893,8 @@ _add_participation_to_holder_while_top@3:
     frame_dig 1
     concat
     // smart_contracts/security_token/arc1410.algo.ts:60
-    // keyPrefix: 'hp_a',
-    bytec 13 // "hp_a"
+    // keyPrefix: 'arc1410_hp_a',
+    bytec 13 // "arc1410_hp_a"
     swap
     concat
     dup
@@ -1978,8 +1978,8 @@ _add_participation_to_holder_block@10:
     frame_dig 2
     concat
     // smart_contracts/security_token/arc1410.algo.ts:60
-    // keyPrefix: 'hp_a',
-    bytec 13 // "hp_a"
+    // keyPrefix: 'arc1410_hp_a',
+    bytec 13 // "arc1410_hp_a"
     swap
     concat
     dup
@@ -2063,8 +2063,8 @@ _add_participation_to_holder_else_body@13:
     frame_dig -1
     concat
     // smart_contracts/security_token/arc1410.algo.ts:60
-    // keyPrefix: 'hp_a',
-    bytec 13 // "hp_a"
+    // keyPrefix: 'arc1410_hp_a',
+    bytec 13 // "arc1410_hp_a"
     uncover 2
     concat
     // smart_contracts/security_token/arc1410.algo.ts:304
@@ -2128,8 +2128,8 @@ _transfer_partition:
     frame_dig -5
     concat
     // smart_contracts/security_token/arc1410.algo.ts:57
-    // public partitions = BoxMap<arc1410_PartitionKey, arc4.UintN256>({ keyPrefix: 'p' })
-    bytec 5 // "p"
+    // public partitions = BoxMap<arc1410_PartitionKey, arc4.UintN256>({ keyPrefix: 'arc1410_p' })
+    bytec 5 // "arc1410_p"
     swap
     concat
     dup
@@ -2220,8 +2220,8 @@ _transfer_partition_after_if_else@4:
     frame_dig -3
     concat
     // smart_contracts/security_token/arc1410.algo.ts:57
-    // public partitions = BoxMap<arc1410_PartitionKey, arc4.UintN256>({ keyPrefix: 'p' })
-    bytec 5 // "p"
+    // public partitions = BoxMap<arc1410_PartitionKey, arc4.UintN256>({ keyPrefix: 'arc1410_p' })
+    bytec 5 // "arc1410_p"
     swap
     concat
     dup
@@ -2282,8 +2282,8 @@ arc1410_authorize_operator_by_portion:
     frame_dig -2
     concat
     // smart_contracts/security_token/arc1410.algo.ts:63
-    // public operatorPortionAllowances = BoxMap<arc1410_OperatorPortionKey, arc4.UintN256>({ keyPrefix: 'opa' })
-    bytec 11 // "opa"
+    // public operatorPortionAllowances = BoxMap<arc1410_OperatorPortionKey, arc4.UintN256>({ keyPrefix: 'arc1410_opa' })
+    bytec 11 // "arc1410_opa"
     swap
     concat
     // smart_contracts/security_token/arc1410.algo.ts:368
@@ -2323,8 +2323,8 @@ arc1410_is_operator_by_portion_after_if_else@2:
     frame_dig -1
     concat
     // smart_contracts/security_token/arc1410.algo.ts:63
-    // public operatorPortionAllowances = BoxMap<arc1410_OperatorPortionKey, arc4.UintN256>({ keyPrefix: 'opa' })
-    bytec 11 // "opa"
+    // public operatorPortionAllowances = BoxMap<arc1410_OperatorPortionKey, arc4.UintN256>({ keyPrefix: 'arc1410_opa' })
+    bytec 11 // "arc1410_opa"
     swap
     concat
     dup
@@ -2389,8 +2389,8 @@ arc1410_issue_by_partition:
     concat
     dup
     // smart_contracts/security_token/arc1410.algo.ts:57
-    // public partitions = BoxMap<arc1410_PartitionKey, arc4.UintN256>({ keyPrefix: 'p' })
-    bytec 5 // "p"
+    // public partitions = BoxMap<arc1410_PartitionKey, arc4.UintN256>({ keyPrefix: 'arc1410_p' })
+    bytec 5 // "arc1410_p"
     swap
     concat
     dup
@@ -2532,8 +2532,8 @@ arc1410_redeem_by_partition:
     dup
     cover 2
     // smart_contracts/security_token/arc1410.algo.ts:57
-    // public partitions = BoxMap<arc1410_PartitionKey, arc4.UintN256>({ keyPrefix: 'p' })
-    bytec 5 // "p"
+    // public partitions = BoxMap<arc1410_PartitionKey, arc4.UintN256>({ keyPrefix: 'arc1410_p' })
+    bytec 5 // "arc1410_p"
     swap
     concat
     // smart_contracts/security_token/arc1410.algo.ts:413
@@ -2697,8 +2697,8 @@ arc1410_operator_redeem_by_partition:
     frame_dig -3
     concat
     // smart_contracts/security_token/arc1410.algo.ts:63
-    // public operatorPortionAllowances = BoxMap<arc1410_OperatorPortionKey, arc4.UintN256>({ keyPrefix: 'opa' })
-    bytec 11 // "opa"
+    // public operatorPortionAllowances = BoxMap<arc1410_OperatorPortionKey, arc4.UintN256>({ keyPrefix: 'arc1410_opa' })
+    bytec 11 // "arc1410_opa"
     swap
     concat
     dup
@@ -2755,8 +2755,8 @@ arc1410_operator_redeem_by_partition_after_if_else@4:
     dup
     frame_bury 1
     // smart_contracts/security_token/arc1410.algo.ts:57
-    // public partitions = BoxMap<arc1410_PartitionKey, arc4.UintN256>({ keyPrefix: 'p' })
-    bytec 5 // "p"
+    // public partitions = BoxMap<arc1410_PartitionKey, arc4.UintN256>({ keyPrefix: 'arc1410_p' })
+    bytec 5 // "arc1410_p"
     swap
     concat
     // smart_contracts/security_token/arc1410.algo.ts:445

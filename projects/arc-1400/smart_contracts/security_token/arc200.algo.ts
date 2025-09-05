@@ -10,19 +10,19 @@ import {
 } from '@algorandfoundation/algorand-typescript/arc4'
 import { Arc88 } from './arc88.algo'
 
-class ApprovalStruct extends arc4.Struct<{
+export class ApprovalStruct extends arc4.Struct<{
   approvalAmount: UintN256
   owner: arc4.Address
   spender: arc4.Address
 }> {}
 // Define a struct for the event with named parameters
-class arc200_Transfer extends arc4.Struct<{
+export class arc200_Transfer extends arc4.Struct<{
   from: Address
   to: Address
   value: UintN256
 }> {}
 // Define a struct for the event with named parameters
-class arc200_Approval extends arc4.Struct<{
+export class arc200_Approval extends arc4.Struct<{
   owner: Address
   spender: Address
   value: UintN256

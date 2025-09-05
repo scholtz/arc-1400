@@ -3,23 +3,23 @@
 
 // @algorandfoundation/algorand-typescript/arc4/index.d.ts::Contract.approvalProgram() -> uint64:
 main:
-    intcblock 0 1 32 81
-    bytecblock 0x151f7c75 0x0000000000000000000000000000000000000000000000000000000000000000 "arc88_o" "t" "b" "ctrlen" 0x0002 0x80 "p" "arc88_po" "ctrl" 0x00 "arc88_oi" "opa" "mcai" "iss" "hp_a" "op" "rjust" "lcar" 0x0000000000000000 0x0042 0x01 0x0001 0x0062 0xd7fc4a98 0x0000 0x5c27b4fc 0x7983c35c 0x4355d2ad
+    intcblock 0 1 32 2
+    bytecblock 0x151f7c75 0x0000000000000000000000000000000000000000000000000000000000000000 "arc88_o" "t" "b" 0x0002 "arc1644_ctrlen" 0x80 "arc1410_p" "arc1643_docs" "arc88_po" "arc1644_ctrl" 0x00 "arc88_oi" "arc1410_opa" "arc1644_mcai" 0x0000 "arc1594_iss" "arc1410_hp_a" "arc1410_op" "arc1644_rjust" "arc1644_lcar" 0x0000000000000000 "arc1643_doc" 0x0042 0x01 0x0001 0x0062 0x0006 0xd7fc4a98 0x5c27b4fc 0x7983c35c 0x4355d2ad
     // smart_contracts/security_token/arc1644.algo.ts:29
-    // export class Arc1644 extends Arc1594 {
+    // export class Arc1644 extends Arc1643 {
     txn NumAppArgs
-    bz main_bare_routing@52
-    pushbytess 0x045472d0 0x7d7904a4 0xe6f4f861 0x2ebd2d34 0xee6f2d0e 0x1d5c7a17 0xe57a6e18 0x65b1682a 0x0130599b 0x142b5fcb 0xf8838eb9 0x31882bfa 0xa9cca16f 0x266597c0 0x35f8135f 0xda7025b9 0x3f256713 0x95b4f9e3 0x80cc49ab 0x07962165 0xe78961da 0xfd9480d7 0xb1b1d69a 0xc1bed789 0x3bfe1833 0x599cd1a5 0x6de94166 0x28f023d7 0x975382e2 0x657d13ec 0xb6ae1a25 0x84ec13d5 0xec996041 0x82e573c4 0x4a968f8f 0xb5422125 0xbbb319f3 0x0702654e 0xd015724e 0x029fecc0 0x7349334e 0xdb7c82ef 0xfd2c2c6e 0x42a5f065 0xad4f68ea // method "arc1644_set_controller(address)void", method "arc1644_set_controllable(bool)void", method "arc1644_set_require_justification(bool)void", method "arc1644_set_min_action_interval(uint64)void", method "arc1644_is_controllable()uint64", method "arc1644_controller_transfer(address,address,uint256,byte[],byte[])uint64", method "arc1644_controller_redeem(address,uint256,byte[])uint64", method "arc1594_set_issuable(bool)void", method "arc1594_issue(address,uint256,byte[])void", method "arc1594_redeemFrom(address,uint256,byte[])void", method "arc1594_redeem(uint256,byte[])void", method "arc1594_transfer_with_data(address,uint256,byte[])bool", method "arc1594_transfer_from_with_data(address,address,uint256,byte[])bool", method "arc1594_is_issuable()bool", method "arc1410_balance_of_partition(address,address)uint256", method "arc200_transfer(address,uint256)bool", method "arc1410_transfer_by_partition(address,address,uint256,byte[])address", method "arc1410_partitions_of(address,uint64)address[]", method "arc1410_is_operator(address,address,address)bool", method "arc1410_authorize_operator(address,address,address)void", method "arc1410_revoke_operator(address,address,address)void", method "arc1410_operator_transfer_by_partition(address,address,address,uint256,byte[])address", method "arc1410_can_transfer_by_partition(address,address,address,uint256,byte[])(byte,string,address)", method "arc1410_authorize_operator_by_portion(address,address,address,uint256)void", method "arc1410_is_operator_by_portion(address,address,address)bool", method "arc1410_issue_by_partition(address,address,uint256,byte[])void", method "arc1410_redeem_by_partition(address,uint256,byte[])void", method "arc1410_operator_redeem_by_partition(address,address,uint256,byte[])void", method "bootstrap(byte[],byte[],uint8,uint256)bool", method "arc200_name()byte[32]", method "arc200_symbol()byte[8]", method "arc200_decimals()uint8", method "arc200_totalSupply()uint256", method "arc200_balanceOf(address)uint256", method "arc200_transferFrom(address,address,uint256)bool", method "arc200_approve(address,uint256)bool", method "arc200_allowance(address,address)uint256", method "arc88_owner()address", method "arc88_is_owner(address)bool", method "arc88_initialize_owner(address)void", method "arc88_transfer_ownership(address)void", method "arc88_renounce_ownership()void", method "arc88_transfer_ownership_request(address)void", method "arc88_accept_ownership()void", method "arc88_cancel_ownership_request()void"
+    bz main_bare_routing@56
+    pushbytess 0x045472d0 0x7d7904a4 0xe6f4f861 0x2ebd2d34 0xee6f2d0e 0x1d5c7a17 0xe57a6e18 0x11cb36f5 0xb16d7a8c 0xa7cb3482 0xecb636c8 0x65b1682a 0x0130599b 0x142b5fcb 0xf8838eb9 0x31882bfa 0xa9cca16f 0x266597c0 0x35f8135f 0xda7025b9 0x3f256713 0x95b4f9e3 0x80cc49ab 0x07962165 0xe78961da 0xfd9480d7 0xb1b1d69a 0xc1bed789 0x3bfe1833 0x599cd1a5 0x6de94166 0x28f023d7 0x975382e2 0x657d13ec 0xb6ae1a25 0x84ec13d5 0xec996041 0x82e573c4 0x4a968f8f 0xb5422125 0xbbb319f3 0x0702654e 0xd015724e 0x029fecc0 0x7349334e 0xdb7c82ef 0xfd2c2c6e 0x42a5f065 0xad4f68ea // method "arc1644_set_controller(address)void", method "arc1644_set_controllable(bool)void", method "arc1644_set_require_justification(bool)void", method "arc1644_set_min_action_interval(uint64)void", method "arc1644_is_controllable()uint64", method "arc1644_controller_transfer(address,address,uint256,byte[],byte[])uint64", method "arc1644_controller_redeem(address,uint256,byte[])uint64", method "arc1643_set_document(byte[],string,byte[])void", method "arc1643_get_document(byte[])(string,byte[],uint64)", method "arc1643_remove_document(byte[])void", method "arc1643_get_all_documents()byte[][]", method "arc1594_set_issuable(bool)void", method "arc1594_issue(address,uint256,byte[])void", method "arc1594_redeemFrom(address,uint256,byte[])void", method "arc1594_redeem(uint256,byte[])void", method "arc1594_transfer_with_data(address,uint256,byte[])bool", method "arc1594_transfer_from_with_data(address,address,uint256,byte[])bool", method "arc1594_is_issuable()bool", method "arc1410_balance_of_partition(address,address)uint256", method "arc200_transfer(address,uint256)bool", method "arc1410_transfer_by_partition(address,address,uint256,byte[])address", method "arc1410_partitions_of(address,uint64)address[]", method "arc1410_is_operator(address,address,address)bool", method "arc1410_authorize_operator(address,address,address)void", method "arc1410_revoke_operator(address,address,address)void", method "arc1410_operator_transfer_by_partition(address,address,address,uint256,byte[])address", method "arc1410_can_transfer_by_partition(address,address,address,uint256,byte[])(byte,string,address)", method "arc1410_authorize_operator_by_portion(address,address,address,uint256)void", method "arc1410_is_operator_by_portion(address,address,address)bool", method "arc1410_issue_by_partition(address,address,uint256,byte[])void", method "arc1410_redeem_by_partition(address,uint256,byte[])void", method "arc1410_operator_redeem_by_partition(address,address,uint256,byte[])void", method "bootstrap(byte[],byte[],uint8,uint256)bool", method "arc200_name()byte[32]", method "arc200_symbol()byte[8]", method "arc200_decimals()uint8", method "arc200_totalSupply()uint256", method "arc200_balanceOf(address)uint256", method "arc200_transferFrom(address,address,uint256)bool", method "arc200_approve(address,uint256)bool", method "arc200_allowance(address,address)uint256", method "arc88_owner()address", method "arc88_is_owner(address)bool", method "arc88_initialize_owner(address)void", method "arc88_transfer_ownership(address)void", method "arc88_renounce_ownership()void", method "arc88_transfer_ownership_request(address)void", method "arc88_accept_ownership()void", method "arc88_cancel_ownership_request()void"
     txna ApplicationArgs 0
-    match main_arc1644_set_controller_route@5 main_arc1644_set_controllable_route@6 main_arc1644_set_require_justification_route@7 main_arc1644_set_min_action_interval_route@8 main_arc1644_is_controllable_route@9 main_arc1644_controller_transfer_route@10 main_arc1644_controller_redeem_route@11 main_arc1594_set_issuable_route@12 main_arc1594_issue_route@13 main_arc1594_redeemFrom_route@14 main_arc1594_redeem_route@15 main_arc1594_transfer_with_data_route@16 main_arc1594_transfer_from_with_data_route@17 main_arc1594_is_issuable_route@18 main_arc1410_balance_of_partition_route@19 main_arc200_transfer_route@20 main_arc1410_transfer_by_partition_route@21 main_arc1410_partitions_of_route@22 main_arc1410_is_operator_route@23 main_arc1410_authorize_operator_route@24 main_arc1410_revoke_operator_route@25 main_arc1410_operator_transfer_by_partition_route@26 main_arc1410_can_transfer_by_partition_route@27 main_arc1410_authorize_operator_by_portion_route@28 main_arc1410_is_operator_by_portion_route@29 main_arc1410_issue_by_partition_route@30 main_arc1410_redeem_by_partition_route@31 main_arc1410_operator_redeem_by_partition_route@32 main_bootstrap_route@33 main_arc200_name_route@34 main_arc200_symbol_route@35 main_arc200_decimals_route@36 main_arc200_totalSupply_route@37 main_arc200_balanceOf_route@38 main_arc200_transferFrom_route@39 main_arc200_approve_route@40 main_arc200_allowance_route@41 main_arc88_owner_route@42 main_arc88_is_owner_route@43 main_arc88_initialize_owner_route@44 main_arc88_transfer_ownership_route@45 main_arc88_renounce_ownership_route@46 main_arc88_transfer_ownership_request_route@47 main_arc88_accept_ownership_route@48 main_arc88_cancel_ownership_request_route@49
+    match main_arc1644_set_controller_route@5 main_arc1644_set_controllable_route@6 main_arc1644_set_require_justification_route@7 main_arc1644_set_min_action_interval_route@8 main_arc1644_is_controllable_route@9 main_arc1644_controller_transfer_route@10 main_arc1644_controller_redeem_route@11 main_arc1643_set_document_route@12 main_arc1643_get_document_route@13 main_arc1643_remove_document_route@14 main_arc1643_get_all_documents_route@15 main_arc1594_set_issuable_route@16 main_arc1594_issue_route@17 main_arc1594_redeemFrom_route@18 main_arc1594_redeem_route@19 main_arc1594_transfer_with_data_route@20 main_arc1594_transfer_from_with_data_route@21 main_arc1594_is_issuable_route@22 main_arc1410_balance_of_partition_route@23 main_arc200_transfer_route@24 main_arc1410_transfer_by_partition_route@25 main_arc1410_partitions_of_route@26 main_arc1410_is_operator_route@27 main_arc1410_authorize_operator_route@28 main_arc1410_revoke_operator_route@29 main_arc1410_operator_transfer_by_partition_route@30 main_arc1410_can_transfer_by_partition_route@31 main_arc1410_authorize_operator_by_portion_route@32 main_arc1410_is_operator_by_portion_route@33 main_arc1410_issue_by_partition_route@34 main_arc1410_redeem_by_partition_route@35 main_arc1410_operator_redeem_by_partition_route@36 main_bootstrap_route@37 main_arc200_name_route@38 main_arc200_symbol_route@39 main_arc200_decimals_route@40 main_arc200_totalSupply_route@41 main_arc200_balanceOf_route@42 main_arc200_transferFrom_route@43 main_arc200_approve_route@44 main_arc200_allowance_route@45 main_arc88_owner_route@46 main_arc88_is_owner_route@47 main_arc88_initialize_owner_route@48 main_arc88_transfer_ownership_route@49 main_arc88_renounce_ownership_route@50 main_arc88_transfer_ownership_request_route@51 main_arc88_accept_ownership_route@52 main_arc88_cancel_ownership_request_route@53
 
-main_after_if_else@56:
+main_after_if_else@60:
     // smart_contracts/security_token/arc1644.algo.ts:29
-    // export class Arc1644 extends Arc1594 {
+    // export class Arc1644 extends Arc1643 {
     intc_0 // 0
     return
 
-main_arc88_cancel_ownership_request_route@49:
+main_arc88_cancel_ownership_request_route@53:
     // smart_contracts/security_token/arc88.algo.ts:103
     // @arc4.abimethod()
     txn OnCompletion
@@ -31,7 +31,7 @@ main_arc88_cancel_ownership_request_route@49:
     intc_1 // 1
     return
 
-main_arc88_accept_ownership_route@48:
+main_arc88_accept_ownership_route@52:
     // smart_contracts/security_token/arc88.algo.ts:90
     // @arc4.abimethod()
     txn OnCompletion
@@ -43,7 +43,7 @@ main_arc88_accept_ownership_route@48:
     intc_1 // 1
     return
 
-main_arc88_transfer_ownership_request_route@47:
+main_arc88_transfer_ownership_request_route@51:
     // smart_contracts/security_token/arc88.algo.ts:78
     // @arc4.abimethod()
     txn OnCompletion
@@ -52,7 +52,7 @@ main_arc88_transfer_ownership_request_route@47:
     txn ApplicationID
     assert // can only call when not creating
     // smart_contracts/security_token/arc1644.algo.ts:29
-    // export class Arc1644 extends Arc1594 {
+    // export class Arc1644 extends Arc1643 {
     txna ApplicationArgs 1
     // smart_contracts/security_token/arc88.algo.ts:78
     // @arc4.abimethod()
@@ -60,7 +60,7 @@ main_arc88_transfer_ownership_request_route@47:
     intc_1 // 1
     return
 
-main_arc88_renounce_ownership_route@46:
+main_arc88_renounce_ownership_route@50:
     // smart_contracts/security_token/arc88.algo.ts:68
     // @arc4.abimethod()
     txn OnCompletion
@@ -72,7 +72,7 @@ main_arc88_renounce_ownership_route@46:
     intc_1 // 1
     return
 
-main_arc88_transfer_ownership_route@45:
+main_arc88_transfer_ownership_route@49:
     // smart_contracts/security_token/arc88.algo.ts:58
     // @arc4.abimethod()
     txn OnCompletion
@@ -81,7 +81,7 @@ main_arc88_transfer_ownership_route@45:
     txn ApplicationID
     assert // can only call when not creating
     // smart_contracts/security_token/arc1644.algo.ts:29
-    // export class Arc1644 extends Arc1594 {
+    // export class Arc1644 extends Arc1643 {
     txna ApplicationArgs 1
     // smart_contracts/security_token/arc88.algo.ts:58
     // @arc4.abimethod()
@@ -89,7 +89,7 @@ main_arc88_transfer_ownership_route@45:
     intc_1 // 1
     return
 
-main_arc88_initialize_owner_route@44:
+main_arc88_initialize_owner_route@48:
     // smart_contracts/security_token/arc88.algo.ts:50
     // @arc4.abimethod()
     txn OnCompletion
@@ -98,7 +98,7 @@ main_arc88_initialize_owner_route@44:
     txn ApplicationID
     assert // can only call when not creating
     // smart_contracts/security_token/arc1644.algo.ts:29
-    // export class Arc1644 extends Arc1594 {
+    // export class Arc1644 extends Arc1643 {
     txna ApplicationArgs 1
     // smart_contracts/security_token/arc88.algo.ts:50
     // @arc4.abimethod()
@@ -106,7 +106,7 @@ main_arc88_initialize_owner_route@44:
     intc_1 // 1
     return
 
-main_arc88_is_owner_route@43:
+main_arc88_is_owner_route@47:
     // smart_contracts/security_token/arc88.algo.ts:41
     // @arc4.abimethod({ readonly: true })
     txn OnCompletion
@@ -115,7 +115,7 @@ main_arc88_is_owner_route@43:
     txn ApplicationID
     assert // can only call when not creating
     // smart_contracts/security_token/arc1644.algo.ts:29
-    // export class Arc1644 extends Arc1594 {
+    // export class Arc1644 extends Arc1643 {
     txna ApplicationArgs 1
     // smart_contracts/security_token/arc88.algo.ts:41
     // @arc4.abimethod({ readonly: true })
@@ -127,7 +127,7 @@ main_arc88_is_owner_route@43:
     intc_1 // 1
     return
 
-main_arc88_owner_route@42:
+main_arc88_owner_route@46:
     // smart_contracts/security_token/arc88.algo.ts:35
     // @arc4.abimethod({ readonly: true })
     txn OnCompletion
@@ -143,7 +143,7 @@ main_arc88_owner_route@42:
     intc_1 // 1
     return
 
-main_arc200_allowance_route@41:
+main_arc200_allowance_route@45:
     // smart_contracts/security_token/arc200.algo.ts:177
     // @arc4.abimethod({ readonly: true })
     txn OnCompletion
@@ -152,7 +152,7 @@ main_arc200_allowance_route@41:
     txn ApplicationID
     assert // can only call when not creating
     // smart_contracts/security_token/arc1644.algo.ts:29
-    // export class Arc1644 extends Arc1594 {
+    // export class Arc1644 extends Arc1643 {
     txna ApplicationArgs 1
     txna ApplicationArgs 2
     // smart_contracts/security_token/arc200.algo.ts:177
@@ -165,7 +165,7 @@ main_arc200_allowance_route@41:
     intc_1 // 1
     return
 
-main_arc200_approve_route@40:
+main_arc200_approve_route@44:
     // smart_contracts/security_token/arc200.algo.ts:165
     // @arc4.abimethod()
     txn OnCompletion
@@ -174,7 +174,7 @@ main_arc200_approve_route@40:
     txn ApplicationID
     assert // can only call when not creating
     // smart_contracts/security_token/arc1644.algo.ts:29
-    // export class Arc1644 extends Arc1594 {
+    // export class Arc1644 extends Arc1643 {
     txna ApplicationArgs 1
     txna ApplicationArgs 2
     // smart_contracts/security_token/arc200.algo.ts:165
@@ -187,7 +187,7 @@ main_arc200_approve_route@40:
     intc_1 // 1
     return
 
-main_arc200_transferFrom_route@39:
+main_arc200_transferFrom_route@43:
     // smart_contracts/security_token/arc200.algo.ts:148
     // @arc4.abimethod()
     txn OnCompletion
@@ -196,7 +196,7 @@ main_arc200_transferFrom_route@39:
     txn ApplicationID
     assert // can only call when not creating
     // smart_contracts/security_token/arc1644.algo.ts:29
-    // export class Arc1644 extends Arc1594 {
+    // export class Arc1644 extends Arc1643 {
     txna ApplicationArgs 1
     txna ApplicationArgs 2
     txna ApplicationArgs 3
@@ -210,7 +210,7 @@ main_arc200_transferFrom_route@39:
     intc_1 // 1
     return
 
-main_arc200_balanceOf_route@38:
+main_arc200_balanceOf_route@42:
     // smart_contracts/security_token/arc200.algo.ts:123
     // @arc4.abimethod({ readonly: true })
     txn OnCompletion
@@ -219,7 +219,7 @@ main_arc200_balanceOf_route@38:
     txn ApplicationID
     assert // can only call when not creating
     // smart_contracts/security_token/arc1644.algo.ts:29
-    // export class Arc1644 extends Arc1594 {
+    // export class Arc1644 extends Arc1643 {
     txna ApplicationArgs 1
     // smart_contracts/security_token/arc200.algo.ts:123
     // @arc4.abimethod({ readonly: true })
@@ -231,7 +231,7 @@ main_arc200_balanceOf_route@38:
     intc_1 // 1
     return
 
-main_arc200_totalSupply_route@37:
+main_arc200_totalSupply_route@41:
     // smart_contracts/security_token/arc200.algo.ts:112
     // @arc4.abimethod({ readonly: true })
     txn OnCompletion
@@ -247,7 +247,7 @@ main_arc200_totalSupply_route@37:
     intc_1 // 1
     return
 
-main_arc200_decimals_route@36:
+main_arc200_decimals_route@40:
     // smart_contracts/security_token/arc200.algo.ts:102
     // @arc4.abimethod({ readonly: true })
     txn OnCompletion
@@ -263,7 +263,7 @@ main_arc200_decimals_route@36:
     intc_1 // 1
     return
 
-main_arc200_symbol_route@35:
+main_arc200_symbol_route@39:
     // smart_contracts/security_token/arc200.algo.ts:92
     // @arc4.abimethod({ readonly: true })
     txn OnCompletion
@@ -279,7 +279,7 @@ main_arc200_symbol_route@35:
     intc_1 // 1
     return
 
-main_arc200_name_route@34:
+main_arc200_name_route@38:
     // smart_contracts/security_token/arc200.algo.ts:82
     // @arc4.abimethod({ readonly: true })
     txn OnCompletion
@@ -295,7 +295,7 @@ main_arc200_name_route@34:
     intc_1 // 1
     return
 
-main_bootstrap_route@33:
+main_bootstrap_route@37:
     // smart_contracts/security_token/arc200.algo.ts:56
     // @arc4.abimethod()
     txn OnCompletion
@@ -304,7 +304,7 @@ main_bootstrap_route@33:
     txn ApplicationID
     assert // can only call when not creating
     // smart_contracts/security_token/arc1644.algo.ts:29
-    // export class Arc1644 extends Arc1594 {
+    // export class Arc1644 extends Arc1643 {
     txna ApplicationArgs 1
     txna ApplicationArgs 2
     txna ApplicationArgs 3
@@ -319,7 +319,7 @@ main_bootstrap_route@33:
     intc_1 // 1
     return
 
-main_arc1410_operator_redeem_by_partition_route@32:
+main_arc1410_operator_redeem_by_partition_route@36:
     // smart_contracts/security_token/arc1410.algo.ts:423
     // @arc4.abimethod()
     txn OnCompletion
@@ -328,7 +328,7 @@ main_arc1410_operator_redeem_by_partition_route@32:
     txn ApplicationID
     assert // can only call when not creating
     // smart_contracts/security_token/arc1644.algo.ts:29
-    // export class Arc1644 extends Arc1594 {
+    // export class Arc1644 extends Arc1643 {
     txna ApplicationArgs 1
     txna ApplicationArgs 2
     txna ApplicationArgs 3
@@ -339,7 +339,7 @@ main_arc1410_operator_redeem_by_partition_route@32:
     intc_1 // 1
     return
 
-main_arc1410_redeem_by_partition_route@31:
+main_arc1410_redeem_by_partition_route@35:
     // smart_contracts/security_token/arc1410.algo.ts:408
     // @arc4.abimethod()
     txn OnCompletion
@@ -348,7 +348,7 @@ main_arc1410_redeem_by_partition_route@31:
     txn ApplicationID
     assert // can only call when not creating
     // smart_contracts/security_token/arc1644.algo.ts:29
-    // export class Arc1644 extends Arc1594 {
+    // export class Arc1644 extends Arc1643 {
     txna ApplicationArgs 1
     txna ApplicationArgs 2
     txna ApplicationArgs 3
@@ -358,7 +358,7 @@ main_arc1410_redeem_by_partition_route@31:
     intc_1 // 1
     return
 
-main_arc1410_issue_by_partition_route@30:
+main_arc1410_issue_by_partition_route@34:
     // smart_contracts/security_token/arc1410.algo.ts:383
     // @arc4.abimethod()
     txn OnCompletion
@@ -367,7 +367,7 @@ main_arc1410_issue_by_partition_route@30:
     txn ApplicationID
     assert // can only call when not creating
     // smart_contracts/security_token/arc1644.algo.ts:29
-    // export class Arc1644 extends Arc1594 {
+    // export class Arc1644 extends Arc1643 {
     txna ApplicationArgs 1
     txna ApplicationArgs 2
     txna ApplicationArgs 3
@@ -378,7 +378,7 @@ main_arc1410_issue_by_partition_route@30:
     intc_1 // 1
     return
 
-main_arc1410_is_operator_by_portion_route@29:
+main_arc1410_is_operator_by_portion_route@33:
     // smart_contracts/security_token/arc1410.algo.ts:371
     // @arc4.abimethod({ readonly: true })
     txn OnCompletion
@@ -387,7 +387,7 @@ main_arc1410_is_operator_by_portion_route@29:
     txn ApplicationID
     assert // can only call when not creating
     // smart_contracts/security_token/arc1644.algo.ts:29
-    // export class Arc1644 extends Arc1594 {
+    // export class Arc1644 extends Arc1643 {
     txna ApplicationArgs 1
     txna ApplicationArgs 2
     txna ApplicationArgs 3
@@ -401,7 +401,7 @@ main_arc1410_is_operator_by_portion_route@29:
     intc_1 // 1
     return
 
-main_arc1410_authorize_operator_by_portion_route@28:
+main_arc1410_authorize_operator_by_portion_route@32:
     // smart_contracts/security_token/arc1410.algo.ts:359
     // @arc4.abimethod()
     txn OnCompletion
@@ -410,7 +410,7 @@ main_arc1410_authorize_operator_by_portion_route@28:
     txn ApplicationID
     assert // can only call when not creating
     // smart_contracts/security_token/arc1644.algo.ts:29
-    // export class Arc1644 extends Arc1594 {
+    // export class Arc1644 extends Arc1643 {
     txna ApplicationArgs 1
     txna ApplicationArgs 2
     txna ApplicationArgs 3
@@ -421,7 +421,7 @@ main_arc1410_authorize_operator_by_portion_route@28:
     intc_1 // 1
     return
 
-main_arc1410_can_transfer_by_partition_route@27:
+main_arc1410_can_transfer_by_partition_route@31:
     // smart_contracts/security_token/arc1410.algo.ts:174
     // @arc4.abimethod()
     txn OnCompletion
@@ -430,7 +430,7 @@ main_arc1410_can_transfer_by_partition_route@27:
     txn ApplicationID
     assert // can only call when not creating
     // smart_contracts/security_token/arc1644.algo.ts:29
-    // export class Arc1644 extends Arc1594 {
+    // export class Arc1644 extends Arc1643 {
     txna ApplicationArgs 1
     txna ApplicationArgs 2
     txna ApplicationArgs 3
@@ -446,7 +446,7 @@ main_arc1410_can_transfer_by_partition_route@27:
     intc_1 // 1
     return
 
-main_arc1410_operator_transfer_by_partition_route@26:
+main_arc1410_operator_transfer_by_partition_route@30:
     // smart_contracts/security_token/arc1410.algo.ts:144
     // @arc4.abimethod()
     txn OnCompletion
@@ -455,7 +455,7 @@ main_arc1410_operator_transfer_by_partition_route@26:
     txn ApplicationID
     assert // can only call when not creating
     // smart_contracts/security_token/arc1644.algo.ts:29
-    // export class Arc1644 extends Arc1594 {
+    // export class Arc1644 extends Arc1643 {
     txna ApplicationArgs 1
     txna ApplicationArgs 2
     txna ApplicationArgs 3
@@ -471,7 +471,7 @@ main_arc1410_operator_transfer_by_partition_route@26:
     intc_1 // 1
     return
 
-main_arc1410_revoke_operator_route@25:
+main_arc1410_revoke_operator_route@29:
     // smart_contracts/security_token/arc1410.algo.ts:135
     // @arc4.abimethod()
     txn OnCompletion
@@ -480,7 +480,7 @@ main_arc1410_revoke_operator_route@25:
     txn ApplicationID
     assert // can only call when not creating
     // smart_contracts/security_token/arc1644.algo.ts:29
-    // export class Arc1644 extends Arc1594 {
+    // export class Arc1644 extends Arc1643 {
     txna ApplicationArgs 1
     txna ApplicationArgs 2
     txna ApplicationArgs 3
@@ -490,7 +490,7 @@ main_arc1410_revoke_operator_route@25:
     intc_1 // 1
     return
 
-main_arc1410_authorize_operator_route@24:
+main_arc1410_authorize_operator_route@28:
     // smart_contracts/security_token/arc1410.algo.ts:128
     // @arc4.abimethod()
     txn OnCompletion
@@ -499,7 +499,7 @@ main_arc1410_authorize_operator_route@24:
     txn ApplicationID
     assert // can only call when not creating
     // smart_contracts/security_token/arc1644.algo.ts:29
-    // export class Arc1644 extends Arc1594 {
+    // export class Arc1644 extends Arc1643 {
     txna ApplicationArgs 1
     txna ApplicationArgs 2
     txna ApplicationArgs 3
@@ -509,7 +509,7 @@ main_arc1410_authorize_operator_route@24:
     intc_1 // 1
     return
 
-main_arc1410_is_operator_route@23:
+main_arc1410_is_operator_route@27:
     // smart_contracts/security_token/arc1410.algo.ts:114
     // @arc4.abimethod({ readonly: true })
     txn OnCompletion
@@ -518,7 +518,7 @@ main_arc1410_is_operator_route@23:
     txn ApplicationID
     assert // can only call when not creating
     // smart_contracts/security_token/arc1644.algo.ts:29
-    // export class Arc1644 extends Arc1594 {
+    // export class Arc1644 extends Arc1643 {
     txna ApplicationArgs 1
     txna ApplicationArgs 2
     txna ApplicationArgs 3
@@ -532,7 +532,7 @@ main_arc1410_is_operator_route@23:
     intc_1 // 1
     return
 
-main_arc1410_partitions_of_route@22:
+main_arc1410_partitions_of_route@26:
     // smart_contracts/security_token/arc1410.algo.ts:107
     // @arc4.abimethod()
     txn OnCompletion
@@ -541,7 +541,7 @@ main_arc1410_partitions_of_route@22:
     txn ApplicationID
     assert // can only call when not creating
     // smart_contracts/security_token/arc1644.algo.ts:29
-    // export class Arc1644 extends Arc1594 {
+    // export class Arc1644 extends Arc1643 {
     txna ApplicationArgs 1
     txna ApplicationArgs 2
     // smart_contracts/security_token/arc1410.algo.ts:107
@@ -554,7 +554,7 @@ main_arc1410_partitions_of_route@22:
     intc_1 // 1
     return
 
-main_arc1410_transfer_by_partition_route@21:
+main_arc1410_transfer_by_partition_route@25:
     // smart_contracts/security_token/arc1410.algo.ts:93
     // @arc4.abimethod()
     txn OnCompletion
@@ -563,7 +563,7 @@ main_arc1410_transfer_by_partition_route@21:
     txn ApplicationID
     assert // can only call when not creating
     // smart_contracts/security_token/arc1644.algo.ts:29
-    // export class Arc1644 extends Arc1594 {
+    // export class Arc1644 extends Arc1643 {
     txna ApplicationArgs 1
     txna ApplicationArgs 2
     txna ApplicationArgs 3
@@ -578,7 +578,7 @@ main_arc1410_transfer_by_partition_route@21:
     intc_1 // 1
     return
 
-main_arc200_transfer_route@20:
+main_arc200_transfer_route@24:
     // smart_contracts/security_token/arc1410.algo.ts:78
     // @arc4.abimethod()
     txn OnCompletion
@@ -587,7 +587,7 @@ main_arc200_transfer_route@20:
     txn ApplicationID
     assert // can only call when not creating
     // smart_contracts/security_token/arc1644.algo.ts:29
-    // export class Arc1644 extends Arc1594 {
+    // export class Arc1644 extends Arc1643 {
     txna ApplicationArgs 1
     txna ApplicationArgs 2
     // smart_contracts/security_token/arc1410.algo.ts:78
@@ -600,7 +600,7 @@ main_arc200_transfer_route@20:
     intc_1 // 1
     return
 
-main_arc1410_balance_of_partition_route@19:
+main_arc1410_balance_of_partition_route@23:
     // smart_contracts/security_token/arc1410.algo.ts:69
     // @arc4.abimethod({ readonly: true })
     txn OnCompletion
@@ -609,7 +609,7 @@ main_arc1410_balance_of_partition_route@19:
     txn ApplicationID
     assert // can only call when not creating
     // smart_contracts/security_token/arc1644.algo.ts:29
-    // export class Arc1644 extends Arc1594 {
+    // export class Arc1644 extends Arc1643 {
     txna ApplicationArgs 1
     txna ApplicationArgs 2
     // smart_contracts/security_token/arc1410.algo.ts:69
@@ -622,8 +622,8 @@ main_arc1410_balance_of_partition_route@19:
     intc_1 // 1
     return
 
-main_arc1594_is_issuable_route@18:
-    // smart_contracts/security_token/arc1594.algo.ts:87
+main_arc1594_is_issuable_route@22:
+    // smart_contracts/security_token/arc1594.algo.ts:86
     // @arc4.abimethod({ readonly: true })
     txn OnCompletion
     !
@@ -638,8 +638,8 @@ main_arc1594_is_issuable_route@18:
     intc_1 // 1
     return
 
-main_arc1594_transfer_from_with_data_route@17:
-    // smart_contracts/security_token/arc1594.algo.ts:75
+main_arc1594_transfer_from_with_data_route@21:
+    // smart_contracts/security_token/arc1594.algo.ts:74
     // @arc4.abimethod()
     txn OnCompletion
     !
@@ -647,12 +647,12 @@ main_arc1594_transfer_from_with_data_route@17:
     txn ApplicationID
     assert // can only call when not creating
     // smart_contracts/security_token/arc1644.algo.ts:29
-    // export class Arc1644 extends Arc1594 {
+    // export class Arc1644 extends Arc1643 {
     txna ApplicationArgs 1
     txna ApplicationArgs 2
     txna ApplicationArgs 3
     txna ApplicationArgs 4
-    // smart_contracts/security_token/arc1594.algo.ts:75
+    // smart_contracts/security_token/arc1594.algo.ts:74
     // @arc4.abimethod()
     callsub arc1594_transfer_from_with_data
     bytec_0 // 0x151f7c75
@@ -662,8 +662,8 @@ main_arc1594_transfer_from_with_data_route@17:
     intc_1 // 1
     return
 
-main_arc1594_transfer_with_data_route@16:
-    // smart_contracts/security_token/arc1594.algo.ts:67
+main_arc1594_transfer_with_data_route@20:
+    // smart_contracts/security_token/arc1594.algo.ts:66
     // @arc4.abimethod()
     txn OnCompletion
     !
@@ -671,11 +671,11 @@ main_arc1594_transfer_with_data_route@16:
     txn ApplicationID
     assert // can only call when not creating
     // smart_contracts/security_token/arc1644.algo.ts:29
-    // export class Arc1644 extends Arc1594 {
+    // export class Arc1644 extends Arc1643 {
     txna ApplicationArgs 1
     txna ApplicationArgs 2
     txna ApplicationArgs 3
-    // smart_contracts/security_token/arc1594.algo.ts:67
+    // smart_contracts/security_token/arc1594.algo.ts:66
     // @arc4.abimethod()
     callsub arc1594_transfer_with_data
     bytec_0 // 0x151f7c75
@@ -685,8 +685,8 @@ main_arc1594_transfer_with_data_route@16:
     intc_1 // 1
     return
 
-main_arc1594_redeem_route@15:
-    // smart_contracts/security_token/arc1594.algo.ts:56
+main_arc1594_redeem_route@19:
+    // smart_contracts/security_token/arc1594.algo.ts:55
     // @arc4.abimethod()
     txn OnCompletion
     !
@@ -694,17 +694,17 @@ main_arc1594_redeem_route@15:
     txn ApplicationID
     assert // can only call when not creating
     // smart_contracts/security_token/arc1644.algo.ts:29
-    // export class Arc1644 extends Arc1594 {
+    // export class Arc1644 extends Arc1643 {
     txna ApplicationArgs 1
     txna ApplicationArgs 2
-    // smart_contracts/security_token/arc1594.algo.ts:56
+    // smart_contracts/security_token/arc1594.algo.ts:55
     // @arc4.abimethod()
     callsub arc1594_redeem
     intc_1 // 1
     return
 
-main_arc1594_redeemFrom_route@14:
-    // smart_contracts/security_token/arc1594.algo.ts:45
+main_arc1594_redeemFrom_route@18:
+    // smart_contracts/security_token/arc1594.algo.ts:44
     // @arc4.abimethod()
     txn OnCompletion
     !
@@ -712,18 +712,18 @@ main_arc1594_redeemFrom_route@14:
     txn ApplicationID
     assert // can only call when not creating
     // smart_contracts/security_token/arc1644.algo.ts:29
-    // export class Arc1644 extends Arc1594 {
+    // export class Arc1644 extends Arc1643 {
     txna ApplicationArgs 1
     txna ApplicationArgs 2
     txna ApplicationArgs 3
-    // smart_contracts/security_token/arc1594.algo.ts:45
+    // smart_contracts/security_token/arc1594.algo.ts:44
     // @arc4.abimethod()
     callsub arc1594_redeemFrom
     intc_1 // 1
     return
 
-main_arc1594_issue_route@13:
-    // smart_contracts/security_token/arc1594.algo.ts:35
+main_arc1594_issue_route@17:
+    // smart_contracts/security_token/arc1594.algo.ts:34
     // @arc4.abimethod()
     txn OnCompletion
     !
@@ -731,18 +731,18 @@ main_arc1594_issue_route@13:
     txn ApplicationID
     assert // can only call when not creating
     // smart_contracts/security_token/arc1644.algo.ts:29
-    // export class Arc1644 extends Arc1594 {
+    // export class Arc1644 extends Arc1643 {
     txna ApplicationArgs 1
     txna ApplicationArgs 2
     txna ApplicationArgs 3
-    // smart_contracts/security_token/arc1594.algo.ts:35
+    // smart_contracts/security_token/arc1594.algo.ts:34
     // @arc4.abimethod()
     callsub arc1594_issue
     intc_1 // 1
     return
 
-main_arc1594_set_issuable_route@12:
-    // smart_contracts/security_token/arc1594.algo.ts:28
+main_arc1594_set_issuable_route@16:
+    // smart_contracts/security_token/arc1594.algo.ts:27
     // @arc4.abimethod()
     txn OnCompletion
     !
@@ -750,16 +750,32 @@ main_arc1594_set_issuable_route@12:
     txn ApplicationID
     assert // can only call when not creating
     // smart_contracts/security_token/arc1644.algo.ts:29
-    // export class Arc1644 extends Arc1594 {
+    // export class Arc1644 extends Arc1643 {
     txna ApplicationArgs 1
-    // smart_contracts/security_token/arc1594.algo.ts:28
+    // smart_contracts/security_token/arc1594.algo.ts:27
     // @arc4.abimethod()
     callsub arc1594_set_issuable
     intc_1 // 1
     return
 
-main_arc1644_controller_redeem_route@11:
-    // smart_contracts/security_token/arc1644.algo.ts:152
+main_arc1643_get_all_documents_route@15:
+    // smart_contracts/security_token/arc1643.algo.ts:65
+    // @arc4.abimethod({ readonly: true })
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    callsub arc1643_get_all_documents
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_arc1643_remove_document_route@14:
+    // smart_contracts/security_token/arc1643.algo.ts:54
     // @arc4.abimethod()
     txn OnCompletion
     !
@@ -767,11 +783,68 @@ main_arc1644_controller_redeem_route@11:
     txn ApplicationID
     assert // can only call when not creating
     // smart_contracts/security_token/arc1644.algo.ts:29
-    // export class Arc1644 extends Arc1594 {
+    // export class Arc1644 extends Arc1643 {
+    txna ApplicationArgs 1
+    // smart_contracts/security_token/arc1643.algo.ts:54
+    // @arc4.abimethod()
+    callsub arc1643_remove_document
+    intc_1 // 1
+    return
+
+main_arc1643_get_document_route@13:
+    // smart_contracts/security_token/arc1643.algo.ts:48
+    // @arc4.abimethod({ readonly: true })
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/security_token/arc1644.algo.ts:29
+    // export class Arc1644 extends Arc1643 {
+    txna ApplicationArgs 1
+    // smart_contracts/security_token/arc1643.algo.ts:48
+    // @arc4.abimethod({ readonly: true })
+    callsub arc1643_get_document
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_arc1643_set_document_route@12:
+    // smart_contracts/security_token/arc1643.algo.ts:34
+    // @arc4.abimethod()
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/security_token/arc1644.algo.ts:29
+    // export class Arc1644 extends Arc1643 {
     txna ApplicationArgs 1
     txna ApplicationArgs 2
     txna ApplicationArgs 3
-    // smart_contracts/security_token/arc1644.algo.ts:152
+    // smart_contracts/security_token/arc1643.algo.ts:34
+    // @arc4.abimethod()
+    callsub arc1643_set_document
+    intc_1 // 1
+    return
+
+main_arc1644_controller_redeem_route@11:
+    // smart_contracts/security_token/arc1644.algo.ts:159
+    // @arc4.abimethod()
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/security_token/arc1644.algo.ts:29
+    // export class Arc1644 extends Arc1643 {
+    txna ApplicationArgs 1
+    txna ApplicationArgs 2
+    txna ApplicationArgs 3
+    // smart_contracts/security_token/arc1644.algo.ts:159
     // @arc4.abimethod()
     callsub arc1644_controller_redeem
     bytec_0 // 0x151f7c75
@@ -782,7 +855,7 @@ main_arc1644_controller_redeem_route@11:
     return
 
 main_arc1644_controller_transfer_route@10:
-    // smart_contracts/security_token/arc1644.algo.ts:117
+    // smart_contracts/security_token/arc1644.algo.ts:124
     // @arc4.abimethod()
     txn OnCompletion
     !
@@ -790,13 +863,13 @@ main_arc1644_controller_transfer_route@10:
     txn ApplicationID
     assert // can only call when not creating
     // smart_contracts/security_token/arc1644.algo.ts:29
-    // export class Arc1644 extends Arc1594 {
+    // export class Arc1644 extends Arc1643 {
     txna ApplicationArgs 1
     txna ApplicationArgs 2
     txna ApplicationArgs 3
     txna ApplicationArgs 4
     txna ApplicationArgs 5
-    // smart_contracts/security_token/arc1644.algo.ts:117
+    // smart_contracts/security_token/arc1644.algo.ts:124
     // @arc4.abimethod()
     callsub arc1644_controller_transfer
     bytec_0 // 0x151f7c75
@@ -807,7 +880,7 @@ main_arc1644_controller_transfer_route@10:
     return
 
 main_arc1644_is_controllable_route@9:
-    // smart_contracts/security_token/arc1644.algo.ts:109
+    // smart_contracts/security_token/arc1644.algo.ts:112
     // @arc4.abimethod({ readonly: true })
     txn OnCompletion
     !
@@ -823,7 +896,7 @@ main_arc1644_is_controllable_route@9:
     return
 
 main_arc1644_set_min_action_interval_route@8:
-    // smart_contracts/security_token/arc1644.algo.ts:102
+    // smart_contracts/security_token/arc1644.algo.ts:105
     // @arc4.abimethod()
     txn OnCompletion
     !
@@ -831,16 +904,16 @@ main_arc1644_set_min_action_interval_route@8:
     txn ApplicationID
     assert // can only call when not creating
     // smart_contracts/security_token/arc1644.algo.ts:29
-    // export class Arc1644 extends Arc1594 {
+    // export class Arc1644 extends Arc1643 {
     txna ApplicationArgs 1
-    // smart_contracts/security_token/arc1644.algo.ts:102
+    // smart_contracts/security_token/arc1644.algo.ts:105
     // @arc4.abimethod()
     callsub arc1644_set_min_action_interval
     intc_1 // 1
     return
 
 main_arc1644_set_require_justification_route@7:
-    // smart_contracts/security_token/arc1644.algo.ts:96
+    // smart_contracts/security_token/arc1644.algo.ts:99
     // @arc4.abimethod()
     txn OnCompletion
     !
@@ -848,16 +921,16 @@ main_arc1644_set_require_justification_route@7:
     txn ApplicationID
     assert // can only call when not creating
     // smart_contracts/security_token/arc1644.algo.ts:29
-    // export class Arc1644 extends Arc1594 {
+    // export class Arc1644 extends Arc1643 {
     txna ApplicationArgs 1
-    // smart_contracts/security_token/arc1644.algo.ts:96
+    // smart_contracts/security_token/arc1644.algo.ts:99
     // @arc4.abimethod()
     callsub arc1644_set_require_justification
     intc_1 // 1
     return
 
 main_arc1644_set_controllable_route@6:
-    // smart_contracts/security_token/arc1644.algo.ts:82
+    // smart_contracts/security_token/arc1644.algo.ts:85
     // @arc4.abimethod()
     txn OnCompletion
     !
@@ -865,16 +938,16 @@ main_arc1644_set_controllable_route@6:
     txn ApplicationID
     assert // can only call when not creating
     // smart_contracts/security_token/arc1644.algo.ts:29
-    // export class Arc1644 extends Arc1594 {
+    // export class Arc1644 extends Arc1643 {
     txna ApplicationArgs 1
-    // smart_contracts/security_token/arc1644.algo.ts:82
+    // smart_contracts/security_token/arc1644.algo.ts:85
     // @arc4.abimethod()
     callsub arc1644_set_controllable
     intc_1 // 1
     return
 
 main_arc1644_set_controller_route@5:
-    // smart_contracts/security_token/arc1644.algo.ts:71
+    // smart_contracts/security_token/arc1644.algo.ts:74
     // @arc4.abimethod()
     txn OnCompletion
     !
@@ -882,24 +955,103 @@ main_arc1644_set_controller_route@5:
     txn ApplicationID
     assert // can only call when not creating
     // smart_contracts/security_token/arc1644.algo.ts:29
-    // export class Arc1644 extends Arc1594 {
+    // export class Arc1644 extends Arc1643 {
     txna ApplicationArgs 1
-    // smart_contracts/security_token/arc1644.algo.ts:71
+    // smart_contracts/security_token/arc1644.algo.ts:74
     // @arc4.abimethod()
     callsub arc1644_set_controller
     intc_1 // 1
     return
 
-main_bare_routing@52:
+main_bare_routing@56:
     // smart_contracts/security_token/arc1644.algo.ts:29
-    // export class Arc1644 extends Arc1594 {
+    // export class Arc1644 extends Arc1643 {
     txn OnCompletion
-    bnz main_after_if_else@56
+    bnz main_after_if_else@60
     txn ApplicationID
     !
     assert // can only call when creating
     intc_1 // 1
     return
+
+
+// _puya_lib.arc4.dynamic_array_concat_byte_length_head(array: bytes, new_items_bytes: bytes, new_items_count: uint64) -> bytes:
+dynamic_array_concat_byte_length_head:
+    proto 3 1
+    frame_dig -3
+    intc_0 // 0
+    extract_uint16
+    dup
+    frame_dig -1
+    +
+    swap
+    intc_3 // 2
+    *
+    intc_3 // 2
+    +
+    dig 1
+    itob
+    extract 6 2
+    cover 2
+    frame_dig -3
+    intc_3 // 2
+    dig 2
+    substring3
+    frame_dig -1
+    intc_3 // 2
+    *
+    bzero
+    concat
+    frame_dig -3
+    len
+    frame_dig -3
+    uncover 3
+    uncover 2
+    substring3
+    concat
+    frame_dig -2
+    concat
+    swap
+    intc_3 // 2
+    *
+    dup
+    intc_0 // 0
+    swap
+
+dynamic_array_concat_byte_length_head_for_header@2:
+    frame_dig 3
+    frame_dig 2
+    <
+    bz dynamic_array_concat_byte_length_head_after_for@5
+    frame_dig 4
+    dup
+    itob
+    extract 6 2
+    frame_dig 1
+    frame_dig 3
+    dup
+    cover 4
+    uncover 2
+    replace3
+    dup
+    frame_bury 1
+    dig 1
+    extract_uint16
+    intc_3 // 2
+    +
+    +
+    frame_bury 4
+    intc_3 // 2
+    +
+    frame_bury 3
+    b dynamic_array_concat_byte_length_head_for_header@2
+
+dynamic_array_concat_byte_length_head_after_for@5:
+    frame_dig 0
+    frame_dig 1
+    concat
+    frame_bury 0
+    retsub
 
 
 // smart_contracts/security_token/arc1644.algo.ts::Arc1644._onlyOwner() -> void:
@@ -919,45 +1071,45 @@ _onlyOwner:
 // smart_contracts/security_token/arc1644.algo.ts::Arc1644._onlyController() -> void:
 _onlyController:
     // smart_contracts/security_token/arc1644.algo.ts:31
-    // public controller = GlobalState<arc4.Address>({ key: 'ctrl' })
+    // public arc1644_controller = GlobalState<arc4.Address>({ key: 'arc1644_ctrl' })
     intc_0 // 0
-    bytec 10 // "ctrl"
+    bytec 11 // "arc1644_ctrl"
     // smart_contracts/security_token/arc1644.algo.ts:47
-    // assert(this.controller.hasValue, 'no_controller')
+    // assert(this.arc1644_controller.hasValue, 'no_controller')
     app_global_get_ex
     bury 1
     assert // no_controller
     // smart_contracts/security_token/arc1644.algo.ts:48
-    // assert(new arc4.Address(Txn.sender) === this.controller.value, 'not_controller')
+    // assert(new arc4.Address(Txn.sender) === this.arc1644_controller.value, 'not_controller')
     txn Sender
     // smart_contracts/security_token/arc1644.algo.ts:31
-    // public controller = GlobalState<arc4.Address>({ key: 'ctrl' })
+    // public arc1644_controller = GlobalState<arc4.Address>({ key: 'arc1644_ctrl' })
     intc_0 // 0
-    bytec 10 // "ctrl"
+    bytec 11 // "arc1644_ctrl"
     app_global_get_ex
     assert // check GlobalState exists
     // smart_contracts/security_token/arc1644.algo.ts:48
-    // assert(new arc4.Address(Txn.sender) === this.controller.value, 'not_controller')
+    // assert(new arc4.Address(Txn.sender) === this.arc1644_controller.value, 'not_controller')
     ==
     assert // not_controller
     // smart_contracts/security_token/arc1644.algo.ts:32
-    // public controllable = GlobalState<arc4.Bool>({ key: 'ctrlen' })
+    // public arc1644_controllable = GlobalState<arc4.Bool>({ key: 'arc1644_ctrlen' })
     intc_0 // 0
-    bytec 5 // "ctrlen"
+    bytec 6 // "arc1644_ctrlen"
     // smart_contracts/security_token/arc1644.algo.ts:49
-    // assert(this.controllable.hasValue && this.controllable.value.native === true, 'controller_disabled')
+    // assert(this.arc1644_controllable.hasValue && this.arc1644_controllable.value.native === true, 'controller_disabled')
     app_global_get_ex
     bury 1
     bz _onlyController_bool_false@3
     // smart_contracts/security_token/arc1644.algo.ts:32
-    // public controllable = GlobalState<arc4.Bool>({ key: 'ctrlen' })
+    // public arc1644_controllable = GlobalState<arc4.Bool>({ key: 'arc1644_ctrlen' })
     intc_0 // 0
-    bytec 5 // "ctrlen"
+    bytec 6 // "arc1644_ctrlen"
     app_global_get_ex
     assert // check GlobalState exists
     intc_0 // 0
     // smart_contracts/security_token/arc1644.algo.ts:49
-    // assert(this.controllable.hasValue && this.controllable.value.native === true, 'controller_disabled')
+    // assert(this.arc1644_controllable.hasValue && this.arc1644_controllable.value.native === true, 'controller_disabled')
     getbit
     intc_1 // 1
     ==
@@ -966,7 +1118,7 @@ _onlyController:
 
 _onlyController_bool_merge@4:
     // smart_contracts/security_token/arc1644.algo.ts:49
-    // assert(this.controllable.hasValue && this.controllable.value.native === true, 'controller_disabled')
+    // assert(this.arc1644_controllable.hasValue && this.arc1644_controllable.value.native === true, 'controller_disabled')
     assert // controller_disabled
     retsub
 
@@ -981,23 +1133,23 @@ _checkJustification:
     // protected _checkJustification(operator_data: arc4.DynamicBytes): void {
     proto 1 0
     // smart_contracts/security_token/arc1644.algo.ts:33
-    // public requireJustification = GlobalState<arc4.Bool>({ key: 'rjust' })
+    // public arc1644_requireJustification = GlobalState<arc4.Bool>({ key: 'arc1644_rjust' })
     intc_0 // 0
-    bytec 18 // "rjust"
+    bytec 20 // "arc1644_rjust"
     // smart_contracts/security_token/arc1644.algo.ts:53
-    // if (this.requireJustification.hasValue && this.requireJustification.value.native === true) {
+    // if (this.arc1644_requireJustification.hasValue && this.arc1644_requireJustification.value.native === true) {
     app_global_get_ex
     bury 1
     bz _checkJustification_after_if_else@3
     // smart_contracts/security_token/arc1644.algo.ts:33
-    // public requireJustification = GlobalState<arc4.Bool>({ key: 'rjust' })
+    // public arc1644_requireJustification = GlobalState<arc4.Bool>({ key: 'arc1644_rjust' })
     intc_0 // 0
-    bytec 18 // "rjust"
+    bytec 20 // "arc1644_rjust"
     app_global_get_ex
     assert // check GlobalState exists
     intc_0 // 0
     // smart_contracts/security_token/arc1644.algo.ts:53
-    // if (this.requireJustification.hasValue && this.requireJustification.value.native === true) {
+    // if (this.arc1644_requireJustification.hasValue && this.arc1644_requireJustification.value.native === true) {
     getbit
     intc_1 // 1
     ==
@@ -1016,57 +1168,63 @@ _checkJustification_after_if_else@3:
 // smart_contracts/security_token/arc1644.algo.ts::Arc1644._rateLimit() -> void:
 _rateLimit:
     // smart_contracts/security_token/arc1644.algo.ts:35
-    // public minControllerActionInterval = GlobalState<arc4.UintN64>({ key: 'mcai' })
+    // public arc1644_minControllerActionInterval = GlobalState<arc4.UintN64>({ key: 'arc1644_mcai' })
     intc_0 // 0
-    bytec 14 // "mcai"
-    // smart_contracts/security_token/arc1644.algo.ts:59
-    // if (this.minControllerActionInterval.hasValue && this.minControllerActionInterval.value.native > 0n) {
+    bytec 15 // "arc1644_mcai"
+    // smart_contracts/security_token/arc1644.algo.ts:60
+    // this.arc1644_minControllerActionInterval.hasValue &&
     app_global_get_ex
     bury 1
+    // smart_contracts/security_token/arc1644.algo.ts:60-61
+    // this.arc1644_minControllerActionInterval.hasValue &&
+    // this.arc1644_minControllerActionInterval.value.native > 0n
     bz _rateLimit_after_if_else@5
     // smart_contracts/security_token/arc1644.algo.ts:35
-    // public minControllerActionInterval = GlobalState<arc4.UintN64>({ key: 'mcai' })
+    // public arc1644_minControllerActionInterval = GlobalState<arc4.UintN64>({ key: 'arc1644_mcai' })
     intc_0 // 0
-    bytec 14 // "mcai"
+    bytec 15 // "arc1644_mcai"
     app_global_get_ex
     assert // check GlobalState exists
-    // smart_contracts/security_token/arc1644.algo.ts:59
-    // if (this.minControllerActionInterval.hasValue && this.minControllerActionInterval.value.native > 0n) {
+    // smart_contracts/security_token/arc1644.algo.ts:61
+    // this.arc1644_minControllerActionInterval.value.native > 0n
     btoi
+    // smart_contracts/security_token/arc1644.algo.ts:60-61
+    // this.arc1644_minControllerActionInterval.hasValue &&
+    // this.arc1644_minControllerActionInterval.value.native > 0n
     bz _rateLimit_after_if_else@5
     // smart_contracts/security_token/arc1644.algo.ts:34
-    // public lastControllerActionRound = GlobalState<arc4.UintN64>({ key: 'lcar' }) // optional rate limit tracking
+    // public arc1644_lastControllerActionRound = GlobalState<arc4.UintN64>({ key: 'arc1644_lcar' }) // optional rate limit tracking
     intc_0 // 0
-    bytec 19 // "lcar"
-    // smart_contracts/security_token/arc1644.algo.ts:60
-    // if (this.lastControllerActionRound.hasValue) {
+    bytec 21 // "arc1644_lcar"
+    // smart_contracts/security_token/arc1644.algo.ts:63
+    // if (this.arc1644_lastControllerActionRound.hasValue) {
     app_global_get_ex
     bury 1
     bz _rateLimit_after_if_else@4
     // smart_contracts/security_token/arc1644.algo.ts:34
-    // public lastControllerActionRound = GlobalState<arc4.UintN64>({ key: 'lcar' }) // optional rate limit tracking
+    // public arc1644_lastControllerActionRound = GlobalState<arc4.UintN64>({ key: 'arc1644_lcar' }) // optional rate limit tracking
     intc_0 // 0
-    bytec 19 // "lcar"
+    bytec 21 // "arc1644_lcar"
     app_global_get_ex
     assert // check GlobalState exists
-    // smart_contracts/security_token/arc1644.algo.ts:61
-    // const last = this.lastControllerActionRound.value.native
+    // smart_contracts/security_token/arc1644.algo.ts:64
+    // const last = this.arc1644_lastControllerActionRound.value.native
     btoi
     // smart_contracts/security_token/arc1644.algo.ts:35
-    // public minControllerActionInterval = GlobalState<arc4.UintN64>({ key: 'mcai' })
+    // public arc1644_minControllerActionInterval = GlobalState<arc4.UintN64>({ key: 'arc1644_mcai' })
     intc_0 // 0
-    bytec 14 // "mcai"
+    bytec 15 // "arc1644_mcai"
     app_global_get_ex
     assert // check GlobalState exists
-    // smart_contracts/security_token/arc1644.algo.ts:62
-    // const minGap = this.minControllerActionInterval.value.native
+    // smart_contracts/security_token/arc1644.algo.ts:65
+    // const minGap = this.arc1644_minControllerActionInterval.value.native
     btoi
-    // smart_contracts/security_token/arc1644.algo.ts:63
+    // smart_contracts/security_token/arc1644.algo.ts:66
     // const current = new arc4.UintN64(Global.round).native
     global Round
     itob
     btoi
-    // smart_contracts/security_token/arc1644.algo.ts:64
+    // smart_contracts/security_token/arc1644.algo.ts:67
     // assert(current >= last + minGap, 'rate_limited')
     cover 2
     +
@@ -1074,15 +1232,15 @@ _rateLimit:
     assert // rate_limited
 
 _rateLimit_after_if_else@4:
-    // smart_contracts/security_token/arc1644.algo.ts:66
-    // this.lastControllerActionRound.value = new arc4.UintN64(Global.round)
+    // smart_contracts/security_token/arc1644.algo.ts:69
+    // this.arc1644_lastControllerActionRound.value = new arc4.UintN64(Global.round)
     global Round
     itob
     // smart_contracts/security_token/arc1644.algo.ts:34
-    // public lastControllerActionRound = GlobalState<arc4.UintN64>({ key: 'lcar' }) // optional rate limit tracking
-    bytec 19 // "lcar"
-    // smart_contracts/security_token/arc1644.algo.ts:66
-    // this.lastControllerActionRound.value = new arc4.UintN64(Global.round)
+    // public arc1644_lastControllerActionRound = GlobalState<arc4.UintN64>({ key: 'arc1644_lcar' }) // optional rate limit tracking
+    bytec 21 // "arc1644_lcar"
+    // smart_contracts/security_token/arc1644.algo.ts:69
+    // this.arc1644_lastControllerActionRound.value = new arc4.UintN64(Global.round)
     swap
     app_global_put
 
@@ -1092,58 +1250,58 @@ _rateLimit_after_if_else@5:
 
 // smart_contracts/security_token/arc1644.algo.ts::Arc1644.arc1644_set_controller(new_controller: bytes) -> void:
 arc1644_set_controller:
-    // smart_contracts/security_token/arc1644.algo.ts:71-72
+    // smart_contracts/security_token/arc1644.algo.ts:74-75
     // @arc4.abimethod()
     // public arc1644_set_controller(new_controller: arc4.Address): void {
     proto 1 0
     intc_0 // 0
-    // smart_contracts/security_token/arc1644.algo.ts:73
+    // smart_contracts/security_token/arc1644.algo.ts:76
     // this._onlyOwner()
     callsub _onlyOwner
     // smart_contracts/security_token/arc1644.algo.ts:31
-    // public controller = GlobalState<arc4.Address>({ key: 'ctrl' })
+    // public arc1644_controller = GlobalState<arc4.Address>({ key: 'arc1644_ctrl' })
     intc_0 // 0
-    bytec 10 // "ctrl"
-    // smart_contracts/security_token/arc1644.algo.ts:74
-    // const old = this.controller.hasValue ? this.controller.value : new arc4.Address()
+    bytec 11 // "arc1644_ctrl"
+    // smart_contracts/security_token/arc1644.algo.ts:77
+    // const old = this.arc1644_controller.hasValue ? this.arc1644_controller.value : new arc4.Address()
     app_global_get_ex
     bury 1
     bz arc1644_set_controller_ternary_false@2
     // smart_contracts/security_token/arc1644.algo.ts:31
-    // public controller = GlobalState<arc4.Address>({ key: 'ctrl' })
+    // public arc1644_controller = GlobalState<arc4.Address>({ key: 'arc1644_ctrl' })
     intc_0 // 0
-    bytec 10 // "ctrl"
+    bytec 11 // "arc1644_ctrl"
     app_global_get_ex
     assert // check GlobalState exists
     frame_bury 0
 
 arc1644_set_controller_ternary_merge@3:
     // smart_contracts/security_token/arc1644.algo.ts:31
-    // public controller = GlobalState<arc4.Address>({ key: 'ctrl' })
-    bytec 10 // "ctrl"
-    // smart_contracts/security_token/arc1644.algo.ts:75
-    // this.controller.value = new_controller
+    // public arc1644_controller = GlobalState<arc4.Address>({ key: 'arc1644_ctrl' })
+    bytec 11 // "arc1644_ctrl"
+    // smart_contracts/security_token/arc1644.algo.ts:78
+    // this.arc1644_controller.value = new_controller
     frame_dig -1
     app_global_put
     // smart_contracts/security_token/arc1644.algo.ts:32
-    // public controllable = GlobalState<arc4.Bool>({ key: 'ctrlen' })
+    // public arc1644_controllable = GlobalState<arc4.Bool>({ key: 'arc1644_ctrlen' })
     intc_0 // 0
-    bytec 5 // "ctrlen"
-    // smart_contracts/security_token/arc1644.algo.ts:76
-    // if (!this.controllable.hasValue) {
+    bytec 6 // "arc1644_ctrlen"
+    // smart_contracts/security_token/arc1644.algo.ts:79
+    // if (!this.arc1644_controllable.hasValue) {
     app_global_get_ex
     bury 1
     bnz arc1644_set_controller_after_if_else@5
     // smart_contracts/security_token/arc1644.algo.ts:32
-    // public controllable = GlobalState<arc4.Bool>({ key: 'ctrlen' })
-    bytec 5 // "ctrlen"
-    // smart_contracts/security_token/arc1644.algo.ts:77
-    // this.controllable.value = new arc4.Bool(true)
+    // public arc1644_controllable = GlobalState<arc4.Bool>({ key: 'arc1644_ctrlen' })
+    bytec 6 // "arc1644_ctrlen"
+    // smart_contracts/security_token/arc1644.algo.ts:80
+    // this.arc1644_controllable.value = new arc4.Bool(true)
     bytec 7 // 0x80
     app_global_put
 
 arc1644_set_controller_after_if_else@5:
-    // smart_contracts/security_token/arc1644.algo.ts:79
+    // smart_contracts/security_token/arc1644.algo.ts:82
     // emit('ControllerChanged', new arc1644_controller_changed_event({ old, neu: new_controller }))
     frame_dig 0
     frame_dig -1
@@ -1155,8 +1313,8 @@ arc1644_set_controller_after_if_else@5:
     retsub
 
 arc1644_set_controller_ternary_false@2:
-    // smart_contracts/security_token/arc1644.algo.ts:74
-    // const old = this.controller.hasValue ? this.controller.value : new arc4.Address()
+    // smart_contracts/security_token/arc1644.algo.ts:77
+    // const old = this.arc1644_controller.hasValue ? this.arc1644_controller.value : new arc4.Address()
     bytec_1 // addr AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY5HFKQ
     frame_bury 0
     b arc1644_set_controller_ternary_merge@3
@@ -1164,24 +1322,24 @@ arc1644_set_controller_ternary_false@2:
 
 // smart_contracts/security_token/arc1644.algo.ts::Arc1644.arc1644_set_controllable(flag: bytes) -> void:
 arc1644_set_controllable:
-    // smart_contracts/security_token/arc1644.algo.ts:82-83
+    // smart_contracts/security_token/arc1644.algo.ts:85-86
     // @arc4.abimethod()
     // public arc1644_set_controllable(flag: arc4.Bool): void {
     proto 1 0
-    // smart_contracts/security_token/arc1644.algo.ts:84
+    // smart_contracts/security_token/arc1644.algo.ts:87
     // this._onlyOwner()
     callsub _onlyOwner
-    // smart_contracts/security_token/arc1644.algo.ts:86
+    // smart_contracts/security_token/arc1644.algo.ts:89
     // if (flag.native === false) {
     frame_dig -1
     intc_0 // 0
     getbit
     bnz arc1644_set_controllable_else_body@2
     // smart_contracts/security_token/arc1644.algo.ts:32
-    // public controllable = GlobalState<arc4.Bool>({ key: 'ctrlen' })
-    bytec 5 // "ctrlen"
-    // smart_contracts/security_token/arc1644.algo.ts:87
-    // this.controllable.value = flag
+    // public arc1644_controllable = GlobalState<arc4.Bool>({ key: 'arc1644_ctrlen' })
+    bytec 6 // "arc1644_ctrlen"
+    // smart_contracts/security_token/arc1644.algo.ts:90
+    // this.arc1644_controllable.value = flag
     frame_dig -1
     app_global_put
 
@@ -1190,23 +1348,23 @@ arc1644_set_controllable_after_if_else@6:
 
 arc1644_set_controllable_else_body@2:
     // smart_contracts/security_token/arc1644.algo.ts:32
-    // public controllable = GlobalState<arc4.Bool>({ key: 'ctrlen' })
+    // public arc1644_controllable = GlobalState<arc4.Bool>({ key: 'arc1644_ctrlen' })
     intc_0 // 0
-    bytec 5 // "ctrlen"
-    // smart_contracts/security_token/arc1644.algo.ts:90
-    // if (!this.controllable.hasValue || this.controllable.value.native === true) {
+    bytec 6 // "arc1644_ctrlen"
+    // smart_contracts/security_token/arc1644.algo.ts:93
+    // if (!this.arc1644_controllable.hasValue || this.arc1644_controllable.value.native === true) {
     app_global_get_ex
     bury 1
     bz arc1644_set_controllable_if_body@4
     // smart_contracts/security_token/arc1644.algo.ts:32
-    // public controllable = GlobalState<arc4.Bool>({ key: 'ctrlen' })
+    // public arc1644_controllable = GlobalState<arc4.Bool>({ key: 'arc1644_ctrlen' })
     intc_0 // 0
-    bytec 5 // "ctrlen"
+    bytec 6 // "arc1644_ctrlen"
     app_global_get_ex
     assert // check GlobalState exists
     intc_0 // 0
-    // smart_contracts/security_token/arc1644.algo.ts:90
-    // if (!this.controllable.hasValue || this.controllable.value.native === true) {
+    // smart_contracts/security_token/arc1644.algo.ts:93
+    // if (!this.arc1644_controllable.hasValue || this.arc1644_controllable.value.native === true) {
     getbit
     intc_1 // 1
     ==
@@ -1214,10 +1372,10 @@ arc1644_set_controllable_else_body@2:
 
 arc1644_set_controllable_if_body@4:
     // smart_contracts/security_token/arc1644.algo.ts:32
-    // public controllable = GlobalState<arc4.Bool>({ key: 'ctrlen' })
-    bytec 5 // "ctrlen"
-    // smart_contracts/security_token/arc1644.algo.ts:91
-    // this.controllable.value = flag
+    // public arc1644_controllable = GlobalState<arc4.Bool>({ key: 'arc1644_ctrlen' })
+    bytec 6 // "arc1644_ctrlen"
+    // smart_contracts/security_token/arc1644.algo.ts:94
+    // this.arc1644_controllable.value = flag
     frame_dig -1
     app_global_put
     retsub
@@ -1225,18 +1383,18 @@ arc1644_set_controllable_if_body@4:
 
 // smart_contracts/security_token/arc1644.algo.ts::Arc1644.arc1644_set_require_justification(flag: bytes) -> void:
 arc1644_set_require_justification:
-    // smart_contracts/security_token/arc1644.algo.ts:96-97
+    // smart_contracts/security_token/arc1644.algo.ts:99-100
     // @arc4.abimethod()
     // public arc1644_set_require_justification(flag: arc4.Bool): void {
     proto 1 0
-    // smart_contracts/security_token/arc1644.algo.ts:98
+    // smart_contracts/security_token/arc1644.algo.ts:101
     // this._onlyOwner()
     callsub _onlyOwner
     // smart_contracts/security_token/arc1644.algo.ts:33
-    // public requireJustification = GlobalState<arc4.Bool>({ key: 'rjust' })
-    bytec 18 // "rjust"
-    // smart_contracts/security_token/arc1644.algo.ts:99
-    // this.requireJustification.value = flag
+    // public arc1644_requireJustification = GlobalState<arc4.Bool>({ key: 'arc1644_rjust' })
+    bytec 20 // "arc1644_rjust"
+    // smart_contracts/security_token/arc1644.algo.ts:102
+    // this.arc1644_requireJustification.value = flag
     frame_dig -1
     app_global_put
     retsub
@@ -1244,18 +1402,18 @@ arc1644_set_require_justification:
 
 // smart_contracts/security_token/arc1644.algo.ts::Arc1644.arc1644_set_min_action_interval(interval: bytes) -> void:
 arc1644_set_min_action_interval:
-    // smart_contracts/security_token/arc1644.algo.ts:102-103
+    // smart_contracts/security_token/arc1644.algo.ts:105-106
     // @arc4.abimethod()
     // public arc1644_set_min_action_interval(interval: arc4.UintN64): void {
     proto 1 0
-    // smart_contracts/security_token/arc1644.algo.ts:104
+    // smart_contracts/security_token/arc1644.algo.ts:107
     // this._onlyOwner()
     callsub _onlyOwner
     // smart_contracts/security_token/arc1644.algo.ts:35
-    // public minControllerActionInterval = GlobalState<arc4.UintN64>({ key: 'mcai' })
-    bytec 14 // "mcai"
-    // smart_contracts/security_token/arc1644.algo.ts:105
-    // this.minControllerActionInterval.value = interval
+    // public arc1644_minControllerActionInterval = GlobalState<arc4.UintN64>({ key: 'arc1644_mcai' })
+    bytec 15 // "arc1644_mcai"
+    // smart_contracts/security_token/arc1644.algo.ts:108
+    // this.arc1644_minControllerActionInterval.value = interval
     frame_dig -1
     app_global_put
     retsub
@@ -1264,51 +1422,61 @@ arc1644_set_min_action_interval:
 // smart_contracts/security_token/arc1644.algo.ts::Arc1644.arc1644_is_controllable() -> bytes:
 arc1644_is_controllable:
     // smart_contracts/security_token/arc1644.algo.ts:32
-    // public controllable = GlobalState<arc4.Bool>({ key: 'ctrlen' })
+    // public arc1644_controllable = GlobalState<arc4.Bool>({ key: 'arc1644_ctrlen' })
     intc_0 // 0
-    bytec 5 // "ctrlen"
-    // smart_contracts/security_token/arc1644.algo.ts:111
-    // if (this.controllable.hasValue && this.controllable.value.native === true && this.controller.hasValue) {
+    bytec 6 // "arc1644_ctrlen"
+    // smart_contracts/security_token/arc1644.algo.ts:115
+    // this.arc1644_controllable.hasValue &&
     app_global_get_ex
     bury 1
+    // smart_contracts/security_token/arc1644.algo.ts:115-116
+    // this.arc1644_controllable.hasValue &&
+    // this.arc1644_controllable.value.native === true &&
     bz arc1644_is_controllable_after_if_else@4
     // smart_contracts/security_token/arc1644.algo.ts:32
-    // public controllable = GlobalState<arc4.Bool>({ key: 'ctrlen' })
+    // public arc1644_controllable = GlobalState<arc4.Bool>({ key: 'arc1644_ctrlen' })
     intc_0 // 0
-    bytec 5 // "ctrlen"
+    bytec 6 // "arc1644_ctrlen"
     app_global_get_ex
     assert // check GlobalState exists
     intc_0 // 0
-    // smart_contracts/security_token/arc1644.algo.ts:111
-    // if (this.controllable.hasValue && this.controllable.value.native === true && this.controller.hasValue) {
+    // smart_contracts/security_token/arc1644.algo.ts:116
+    // this.arc1644_controllable.value.native === true &&
     getbit
     intc_1 // 1
     ==
+    // smart_contracts/security_token/arc1644.algo.ts:115-116
+    // this.arc1644_controllable.hasValue &&
+    // this.arc1644_controllable.value.native === true &&
     bz arc1644_is_controllable_after_if_else@4
     // smart_contracts/security_token/arc1644.algo.ts:31
-    // public controller = GlobalState<arc4.Address>({ key: 'ctrl' })
+    // public arc1644_controller = GlobalState<arc4.Address>({ key: 'arc1644_ctrl' })
     intc_0 // 0
-    bytec 10 // "ctrl"
-    // smart_contracts/security_token/arc1644.algo.ts:111
-    // if (this.controllable.hasValue && this.controllable.value.native === true && this.controller.hasValue) {
+    bytec 11 // "arc1644_ctrl"
+    // smart_contracts/security_token/arc1644.algo.ts:117
+    // this.arc1644_controller.hasValue
     app_global_get_ex
     bury 1
+    // smart_contracts/security_token/arc1644.algo.ts:115-117
+    // this.arc1644_controllable.hasValue &&
+    // this.arc1644_controllable.value.native === true &&
+    // this.arc1644_controller.hasValue
     bz arc1644_is_controllable_after_if_else@4
-    // smart_contracts/security_token/arc1644.algo.ts:112
+    // smart_contracts/security_token/arc1644.algo.ts:119
     // return new arc4.UintN64(1n)
     pushbytes 0x0000000000000001
     retsub
 
 arc1644_is_controllable_after_if_else@4:
-    // smart_contracts/security_token/arc1644.algo.ts:114
+    // smart_contracts/security_token/arc1644.algo.ts:121
     // return new arc4.UintN64(0n)
-    bytec 20 // 0x0000000000000000
+    bytec 22 // 0x0000000000000000
     retsub
 
 
 // smart_contracts/security_token/arc1644.algo.ts::Arc1644.arc1644_controller_transfer(from: bytes, to: bytes, amount: bytes, data: bytes, operator_data: bytes) -> bytes:
 arc1644_controller_transfer:
-    // smart_contracts/security_token/arc1644.algo.ts:117-124
+    // smart_contracts/security_token/arc1644.algo.ts:124-131
     // @arc4.abimethod()
     // public arc1644_controller_transfer(
     //   from: arc4.Address,
@@ -1318,33 +1486,33 @@ arc1644_controller_transfer:
     //   operator_data: arc4.DynamicBytes,
     // ): arc4.UintN64 {
     proto 5 1
-    // smart_contracts/security_token/arc1644.algo.ts:125
+    // smart_contracts/security_token/arc1644.algo.ts:132
     // this._onlyController()
     callsub _onlyController
-    // smart_contracts/security_token/arc1644.algo.ts:126
+    // smart_contracts/security_token/arc1644.algo.ts:133
     // this._checkJustification(operator_data)
     frame_dig -1
     callsub _checkJustification
-    // smart_contracts/security_token/arc1644.algo.ts:127
+    // smart_contracts/security_token/arc1644.algo.ts:134
     // this._rateLimit()
     callsub _rateLimit
-    // smart_contracts/security_token/arc1644.algo.ts:129
+    // smart_contracts/security_token/arc1644.algo.ts:136
     // assert(from !== to, 'same_addr')
     frame_dig -5
     frame_dig -4
     !=
     assert // same_addr
-    // smart_contracts/security_token/arc1644.algo.ts:130
+    // smart_contracts/security_token/arc1644.algo.ts:137
     // const fromBal = this._balanceOf(from)
     frame_dig -5
     callsub _balanceOf
-    // smart_contracts/security_token/arc1644.algo.ts:131
+    // smart_contracts/security_token/arc1644.algo.ts:138
     // assert(fromBal.native >= amount.native, 'insufficient')
     dup
     frame_dig -3
     b>=
     assert // insufficient
-    // smart_contracts/security_token/arc1644.algo.ts:133
+    // smart_contracts/security_token/arc1644.algo.ts:140
     // this.balances(from).value = new arc4.UintN256(fromBal.native - amount.native)
     frame_dig -3
     b-
@@ -1363,15 +1531,15 @@ arc1644_controller_transfer:
     bytec 4 // "b"
     frame_dig -5
     concat
-    // smart_contracts/security_token/arc1644.algo.ts:133
+    // smart_contracts/security_token/arc1644.algo.ts:140
     // this.balances(from).value = new arc4.UintN256(fromBal.native - amount.native)
     swap
     box_put
-    // smart_contracts/security_token/arc1644.algo.ts:134
+    // smart_contracts/security_token/arc1644.algo.ts:141
     // const toBal = this._balanceOf(to)
     frame_dig -4
     callsub _balanceOf
-    // smart_contracts/security_token/arc1644.algo.ts:135
+    // smart_contracts/security_token/arc1644.algo.ts:142
     // this.balances(to).value = new arc4.UintN256(toBal.native + amount.native)
     frame_dig -3
     b+
@@ -1386,14 +1554,14 @@ arc1644_controller_transfer:
     bytec 4 // "b"
     frame_dig -4
     concat
-    // smart_contracts/security_token/arc1644.algo.ts:135
+    // smart_contracts/security_token/arc1644.algo.ts:142
     // this.balances(to).value = new arc4.UintN256(toBal.native + amount.native)
     swap
     box_put
-    // smart_contracts/security_token/arc1644.algo.ts:140
+    // smart_contracts/security_token/arc1644.algo.ts:147
     // controller: new arc4.Address(Txn.sender),
     txn Sender
-    // smart_contracts/security_token/arc1644.algo.ts:139-147
+    // smart_contracts/security_token/arc1644.algo.ts:146-154
     // new arc1644_controller_transfer_event({
     //   controller: new arc4.Address(Txn.sender),
     //   from,
@@ -1412,7 +1580,7 @@ arc1644_controller_transfer:
     // smart_contracts/security_token/arc1644.algo.ts:25
     // const CODE_SUCCESS = new arc4.Byte(0x51)
     pushbytes 0x51
-    // smart_contracts/security_token/arc1644.algo.ts:139-147
+    // smart_contracts/security_token/arc1644.algo.ts:146-154
     // new arc1644_controller_transfer_event({
     //   controller: new arc4.Address(Txn.sender),
     //   from,
@@ -1436,7 +1604,7 @@ arc1644_controller_transfer:
     concat
     frame_dig -1
     concat
-    // smart_contracts/security_token/arc1644.algo.ts:137-148
+    // smart_contracts/security_token/arc1644.algo.ts:144-155
     // emit(
     //   'ControllerTransfer',
     //   new arc1644_controller_transfer_event({
@@ -1449,23 +1617,23 @@ arc1644_controller_transfer:
     //     operator_data,
     //   }),
     // )
-    bytec 6 // 0x0002
+    bytec 5 // 0x0002
     swap
     concat
     pushbytes 0x346ea795 // method "ControllerTransfer((address,address,address,uint256,byte,byte[],byte[]))"
     swap
     concat
     log
-    // smart_contracts/security_token/arc1644.algo.ts:149
+    // smart_contracts/security_token/arc1644.algo.ts:156
     // return new arc4.UintN64(code.native)
-    intc_3 // 81
+    pushint 81 // 81
     itob
     retsub
 
 
 // smart_contracts/security_token/arc1644.algo.ts::Arc1644.arc1644_controller_redeem(from: bytes, amount: bytes, operator_data: bytes) -> bytes:
 arc1644_controller_redeem:
-    // smart_contracts/security_token/arc1644.algo.ts:152-157
+    // smart_contracts/security_token/arc1644.algo.ts:159-164
     // @arc4.abimethod()
     // public arc1644_controller_redeem(
     //   from: arc4.Address,
@@ -1473,27 +1641,27 @@ arc1644_controller_redeem:
     //   operator_data: arc4.DynamicBytes,
     // ): arc4.UintN64 {
     proto 3 1
-    // smart_contracts/security_token/arc1644.algo.ts:158
+    // smart_contracts/security_token/arc1644.algo.ts:165
     // this._onlyController()
     callsub _onlyController
-    // smart_contracts/security_token/arc1644.algo.ts:159
+    // smart_contracts/security_token/arc1644.algo.ts:166
     // this._checkJustification(operator_data)
     frame_dig -1
     callsub _checkJustification
-    // smart_contracts/security_token/arc1644.algo.ts:160
+    // smart_contracts/security_token/arc1644.algo.ts:167
     // this._rateLimit()
     callsub _rateLimit
-    // smart_contracts/security_token/arc1644.algo.ts:161
+    // smart_contracts/security_token/arc1644.algo.ts:168
     // const fromBal = this._balanceOf(from)
     frame_dig -3
     callsub _balanceOf
-    // smart_contracts/security_token/arc1644.algo.ts:162
+    // smart_contracts/security_token/arc1644.algo.ts:169
     // assert(fromBal.native >= amount.native, 'insufficient')
     dup
     frame_dig -2
     b>=
     assert // insufficient
-    // smart_contracts/security_token/arc1644.algo.ts:163
+    // smart_contracts/security_token/arc1644.algo.ts:170
     // this.balances(from).value = new arc4.UintN256(fromBal.native - amount.native)
     frame_dig -2
     b-
@@ -1512,7 +1680,7 @@ arc1644_controller_redeem:
     bytec 4 // "b"
     frame_dig -3
     concat
-    // smart_contracts/security_token/arc1644.algo.ts:163
+    // smart_contracts/security_token/arc1644.algo.ts:170
     // this.balances(from).value = new arc4.UintN256(fromBal.native - amount.native)
     swap
     box_put
@@ -1522,7 +1690,7 @@ arc1644_controller_redeem:
     bytec_3 // "t"
     app_global_get_ex
     assert // check GlobalState exists
-    // smart_contracts/security_token/arc1644.algo.ts:164
+    // smart_contracts/security_token/arc1644.algo.ts:171
     // this.totalSupply.value = new arc4.UintN256(this.totalSupply.value.native - amount.native)
     frame_dig -2
     b-
@@ -1535,14 +1703,14 @@ arc1644_controller_redeem:
     // smart_contracts/security_token/arc200.algo.ts:51
     // public totalSupply = GlobalState<UintN256>({ key: 't' })
     bytec_3 // "t"
-    // smart_contracts/security_token/arc1644.algo.ts:164
+    // smart_contracts/security_token/arc1644.algo.ts:171
     // this.totalSupply.value = new arc4.UintN256(this.totalSupply.value.native - amount.native)
     swap
     app_global_put
-    // smart_contracts/security_token/arc1644.algo.ts:169
+    // smart_contracts/security_token/arc1644.algo.ts:176
     // controller: new arc4.Address(Txn.sender),
     txn Sender
-    // smart_contracts/security_token/arc1644.algo.ts:168-174
+    // smart_contracts/security_token/arc1644.algo.ts:175-181
     // new arc1644_controller_redeem_event({
     //   controller: new arc4.Address(Txn.sender),
     //   from,
@@ -1557,7 +1725,7 @@ arc1644_controller_redeem:
     // smart_contracts/security_token/arc1644.algo.ts:25
     // const CODE_SUCCESS = new arc4.Byte(0x51)
     pushbytes 0x51
-    // smart_contracts/security_token/arc1644.algo.ts:168-174
+    // smart_contracts/security_token/arc1644.algo.ts:175-181
     // new arc1644_controller_redeem_event({
     //   controller: new arc4.Address(Txn.sender),
     //   from,
@@ -1570,7 +1738,7 @@ arc1644_controller_redeem:
     concat
     frame_dig -1
     concat
-    // smart_contracts/security_token/arc1644.algo.ts:166-175
+    // smart_contracts/security_token/arc1644.algo.ts:173-182
     // emit(
     //   'ControllerRedeem',
     //   new arc1644_controller_redeem_event({
@@ -1581,23 +1749,306 @@ arc1644_controller_redeem:
     //     operator_data,
     //   }),
     // )
-    bytec 6 // 0x0002
+    bytec 5 // 0x0002
     swap
     concat
     pushbytes 0x0dee14f5 // method "ControllerRedeem((address,address,uint256,byte,byte[]))"
     swap
     concat
     log
-    // smart_contracts/security_token/arc1644.algo.ts:176
+    // smart_contracts/security_token/arc1644.algo.ts:183
     // return new arc4.UintN64(code.native)
-    intc_3 // 81
+    pushint 81 // 81
     itob
+    retsub
+
+
+// smart_contracts/security_token/arc1643.algo.ts::Arc1643._onlyOwner() -> void:
+smart_contracts/security_token/arc1643.algo.ts::Arc1643._onlyOwner:
+    // smart_contracts/security_token/arc1643.algo.ts:30
+    // assert(this.arc88_is_owner(new arc4.Address(Txn.sender)).native === true, 'only_owner')
+    txn Sender
+    callsub arc88_is_owner
+    intc_0 // 0
+    getbit
+    intc_1 // 1
+    ==
+    assert // only_owner
+    retsub
+
+
+// smart_contracts/security_token/arc1643.algo.ts::Arc1643.arc1643_set_document(name: bytes, uri: bytes, hash: bytes) -> void:
+arc1643_set_document:
+    // smart_contracts/security_token/arc1643.algo.ts:34-35
+    // @arc4.abimethod()
+    // public arc1643_set_document(name: arc4.DynamicBytes, uri: arc4.Str, hash: arc4.DynamicBytes): void {
+    proto 3 0
+    // smart_contracts/security_token/arc1643.algo.ts:36
+    // this._onlyOwner()
+    callsub smart_contracts/security_token/arc1643.algo.ts::Arc1643._onlyOwner
+    // smart_contracts/security_token/arc1643.algo.ts:37
+    // assert(name.bytes.length > 0, 'empty_name')
+    frame_dig -3
+    len
+    dup
+    assert // empty_name
+    // smart_contracts/security_token/arc1643.algo.ts:38
+    // const rec = new arc1643_document_record({ uri, hash, timestamp: new arc4.UintN64(Global.round) })
+    global Round
+    itob
+    frame_dig -2
+    len
+    dup
+    cover 2
+    pushint 12 // 12
+    +
+    itob
+    extract 6 2
+    pushbytes 0x000c
+    swap
+    concat
+    swap
+    concat
+    frame_dig -2
+    concat
+    frame_dig -1
+    concat
+    // smart_contracts/security_token/arc1643.algo.ts:26
+    // public documents = BoxMap<arc4.DynamicBytes, arc1643_document_record>({ keyPrefix: 'arc1643_doc' })
+    bytec 23 // "arc1643_doc"
+    frame_dig -3
+    concat
+    // smart_contracts/security_token/arc1643.algo.ts:39
+    // this.documents(name).value = rec.copy()
+    dup
+    box_del
+    pop
+    swap
+    box_put
+    // smart_contracts/security_token/arc1643.algo.ts:27
+    // public documentKeys = Box<arc4.DynamicBytes[]>({ key: 'arc1643_docs' })
+    bytec 9 // "arc1643_docs"
+    // smart_contracts/security_token/arc1643.algo.ts:40
+    // if (!this.documentKeys.exists) {
+    box_len
+    bury 1
+    bnz arc1643_set_document_else_body@2
+    // smart_contracts/security_token/arc1643.algo.ts:41
+    // this.documentKeys.value = [name]
+    bytec 16 // 0x0000
+    frame_dig -3
+    intc_1 // 1
+    callsub dynamic_array_concat_byte_length_head
+    // smart_contracts/security_token/arc1643.algo.ts:27
+    // public documentKeys = Box<arc4.DynamicBytes[]>({ key: 'arc1643_docs' })
+    bytec 9 // "arc1643_docs"
+    // smart_contracts/security_token/arc1643.algo.ts:41
+    // this.documentKeys.value = [name]
+    box_del
+    pop
+    // smart_contracts/security_token/arc1643.algo.ts:27
+    // public documentKeys = Box<arc4.DynamicBytes[]>({ key: 'arc1643_docs' })
+    bytec 9 // "arc1643_docs"
+    // smart_contracts/security_token/arc1643.algo.ts:41
+    // this.documentKeys.value = [name]
+    swap
+    box_put
+
+arc1643_set_document_after_if_else@3:
+    // smart_contracts/security_token/arc1643.algo.ts:45
+    // emit('DocumentUpdated', new arc1643_document_updated_event({ name, uri, hash }))
+    pushint 6 // 6
+    frame_dig 0
+    +
+    dup
+    itob
+    extract 6 2
+    bytec 28 // 0x0006
+    swap
+    concat
+    swap
+    frame_dig 1
+    +
+    itob
+    extract 6 2
+    concat
+    frame_dig -3
+    concat
+    frame_dig -2
+    concat
+    frame_dig -1
+    concat
+    bytec 5 // 0x0002
+    swap
+    concat
+    pushbytes 0x2dc03c36 // method "DocumentUpdated((byte[],string,byte[]))"
+    swap
+    concat
+    log
+    retsub
+
+arc1643_set_document_else_body@2:
+    // smart_contracts/security_token/arc1643.algo.ts:27
+    // public documentKeys = Box<arc4.DynamicBytes[]>({ key: 'arc1643_docs' })
+    bytec 9 // "arc1643_docs"
+    // smart_contracts/security_token/arc1643.algo.ts:43
+    // this.documentKeys.value = [...this.documentKeys.value, name]
+    box_get
+    assert // Box must have value
+    bytec 16 // 0x0000
+    frame_dig -3
+    intc_1 // 1
+    callsub dynamic_array_concat_byte_length_head
+    dup
+    intc_0 // 0
+    extract_uint16
+    swap
+    extract 2 0
+    dig 1
+    intc_3 // 2
+    *
+    dig 1
+    len
+    substring3
+    swap
+    callsub dynamic_array_concat_byte_length_head
+    // smart_contracts/security_token/arc1643.algo.ts:27
+    // public documentKeys = Box<arc4.DynamicBytes[]>({ key: 'arc1643_docs' })
+    bytec 9 // "arc1643_docs"
+    // smart_contracts/security_token/arc1643.algo.ts:43
+    // this.documentKeys.value = [...this.documentKeys.value, name]
+    box_del
+    pop
+    // smart_contracts/security_token/arc1643.algo.ts:27
+    // public documentKeys = Box<arc4.DynamicBytes[]>({ key: 'arc1643_docs' })
+    bytec 9 // "arc1643_docs"
+    // smart_contracts/security_token/arc1643.algo.ts:43
+    // this.documentKeys.value = [...this.documentKeys.value, name]
+    swap
+    box_put
+    b arc1643_set_document_after_if_else@3
+
+
+// smart_contracts/security_token/arc1643.algo.ts::Arc1643.arc1643_get_document(name: bytes) -> bytes:
+arc1643_get_document:
+    // smart_contracts/security_token/arc1643.algo.ts:48-49
+    // @arc4.abimethod({ readonly: true })
+    // public arc1643_get_document(name: arc4.DynamicBytes): arc1643_document_record {
+    proto 1 1
+    // smart_contracts/security_token/arc1643.algo.ts:26
+    // public documents = BoxMap<arc4.DynamicBytes, arc1643_document_record>({ keyPrefix: 'arc1643_doc' })
+    bytec 23 // "arc1643_doc"
+    frame_dig -1
+    concat
+    // smart_contracts/security_token/arc1643.algo.ts:50
+    // assert(this.documents(name).exists, 'not_found')
+    dup
+    box_len
+    bury 1
+    assert // not_found
+    // smart_contracts/security_token/arc1643.algo.ts:51
+    // return this.documents(name).value.copy()
+    box_get
+    assert // Box must have value
+    retsub
+
+
+// smart_contracts/security_token/arc1643.algo.ts::Arc1643.arc1643_remove_document(name: bytes) -> void:
+arc1643_remove_document:
+    // smart_contracts/security_token/arc1643.algo.ts:54-55
+    // @arc4.abimethod()
+    // public arc1643_remove_document(name: arc4.DynamicBytes): void {
+    proto 1 0
+    // smart_contracts/security_token/arc1643.algo.ts:56
+    // this._onlyOwner()
+    callsub smart_contracts/security_token/arc1643.algo.ts::Arc1643._onlyOwner
+    // smart_contracts/security_token/arc1643.algo.ts:26
+    // public documents = BoxMap<arc4.DynamicBytes, arc1643_document_record>({ keyPrefix: 'arc1643_doc' })
+    bytec 23 // "arc1643_doc"
+    frame_dig -1
+    concat
+    // smart_contracts/security_token/arc1643.algo.ts:57
+    // assert(this.documents(name).exists, 'not_found')
+    dup
+    box_len
+    bury 1
+    assert // not_found
+    // smart_contracts/security_token/arc1643.algo.ts:58
+    // const prior = this.documents(name).value.copy()
+    dup
+    box_get
+    assert // Box must have value
+    // smart_contracts/security_token/arc1643.algo.ts:59
+    // this.documents(name).delete()
+    swap
+    box_del
+    pop
+    // smart_contracts/security_token/arc1643.algo.ts:62
+    // emit('DocumentRemoved', new arc1643_document_removed_event({ name, uri: prior.uri, hash: prior.hash }))
+    dup
+    intc_0 // 0
+    extract_uint16
+    dig 1
+    intc_3 // 2
+    extract_uint16
+    dig 2
+    uncover 2
+    dig 2
+    substring3
+    dig 2
+    len
+    uncover 3
+    uncover 3
+    uncover 2
+    substring3
+    frame_dig -1
+    len
+    pushint 6 // 6
+    +
+    dup
+    itob
+    extract 6 2
+    bytec 28 // 0x0006
+    swap
+    concat
+    dig 3
+    len
+    uncover 2
+    +
+    itob
+    extract 6 2
+    concat
+    frame_dig -1
+    concat
+    uncover 2
+    concat
+    swap
+    concat
+    bytec 5 // 0x0002
+    swap
+    concat
+    pushbytes 0xae7a4fa0 // method "DocumentRemoved((byte[],string,byte[]))"
+    swap
+    concat
+    log
+    retsub
+
+
+// smart_contracts/security_token/arc1643.algo.ts::Arc1643.arc1643_get_all_documents() -> bytes:
+arc1643_get_all_documents:
+    // smart_contracts/security_token/arc1643.algo.ts:27
+    // public documentKeys = Box<arc4.DynamicBytes[]>({ key: 'arc1643_docs' })
+    bytec 9 // "arc1643_docs"
+    // smart_contracts/security_token/arc1643.algo.ts:69
+    // return this.documentKeys.value
+    box_get
+    assert // Box must have value
     retsub
 
 
 // smart_contracts/security_token/arc1594.algo.ts::Arc1594._onlyOwner() -> void:
 smart_contracts/security_token/arc1594.algo.ts::Arc1594._onlyOwner:
-    // smart_contracts/security_token/arc1594.algo.ts:23
+    // smart_contracts/security_token/arc1594.algo.ts:22
     // assert(this.arc88_is_owner(new arc4.Address(Txn.sender)).native === true, 'only_owner')
     txn Sender
     callsub arc88_is_owner
@@ -1611,18 +2062,18 @@ smart_contracts/security_token/arc1594.algo.ts::Arc1594._onlyOwner:
 
 // smart_contracts/security_token/arc1594.algo.ts::Arc1594.arc1594_set_issuable(flag: bytes) -> void:
 arc1594_set_issuable:
-    // smart_contracts/security_token/arc1594.algo.ts:28-29
+    // smart_contracts/security_token/arc1594.algo.ts:27-28
     // @arc4.abimethod()
     // public arc1594_set_issuable(flag: arc4.Bool): void {
     proto 1 0
-    // smart_contracts/security_token/arc1594.algo.ts:30
+    // smart_contracts/security_token/arc1594.algo.ts:29
     // this._onlyOwner()
     callsub smart_contracts/security_token/arc1594.algo.ts::Arc1594._onlyOwner
-    // smart_contracts/security_token/arc1594.algo.ts:15
-    // public issuable = GlobalState<arc4.Bool>({ key: 'iss' }) // True = issuable
-    bytec 15 // "iss"
-    // smart_contracts/security_token/arc1594.algo.ts:31
-    // this.issuable.value = flag
+    // smart_contracts/security_token/arc1594.algo.ts:14
+    // public arc1594_issuable = GlobalState<arc4.Bool>({ key: 'arc1594_iss' }) // True = issuable
+    bytec 17 // "arc1594_iss"
+    // smart_contracts/security_token/arc1594.algo.ts:30
+    // this.arc1594_issuable.value = flag
     frame_dig -1
     app_global_put
     retsub
@@ -1630,37 +2081,37 @@ arc1594_set_issuable:
 
 // smart_contracts/security_token/arc1594.algo.ts::Arc1594.arc1594_issue(to: bytes, amount: bytes, data: bytes) -> void:
 arc1594_issue:
-    // smart_contracts/security_token/arc1594.algo.ts:35-36
+    // smart_contracts/security_token/arc1594.algo.ts:34-35
     // @arc4.abimethod()
     // public arc1594_issue(to: arc4.Address, amount: arc4.UintN256, data: arc4.DynamicBytes): void {
     proto 3 0
-    // smart_contracts/security_token/arc1594.algo.ts:37
+    // smart_contracts/security_token/arc1594.algo.ts:36
     // this._onlyOwner()
     callsub smart_contracts/security_token/arc1594.algo.ts::Arc1594._onlyOwner
-    // smart_contracts/security_token/arc1594.algo.ts:38
+    // smart_contracts/security_token/arc1594.algo.ts:37
     // assert(amount.native > 0n, 'invalid_amount')
     frame_dig -2
     pushbytes 0x
     b>
     assert // invalid_amount
-    // smart_contracts/security_token/arc1594.algo.ts:15
-    // public issuable = GlobalState<arc4.Bool>({ key: 'iss' }) // True = issuable
+    // smart_contracts/security_token/arc1594.algo.ts:14
+    // public arc1594_issuable = GlobalState<arc4.Bool>({ key: 'arc1594_iss' }) // True = issuable
     intc_0 // 0
-    bytec 15 // "iss"
-    // smart_contracts/security_token/arc1594.algo.ts:39
-    // assert(this.issuable.hasValue && this.issuable.value.native === true, 'issuance_disabled')
+    bytec 17 // "arc1594_iss"
+    // smart_contracts/security_token/arc1594.algo.ts:38
+    // assert(this.arc1594_issuable.hasValue && this.arc1594_issuable.value.native === true, 'issuance_disabled')
     app_global_get_ex
     bury 1
     bz arc1594_issue_bool_false@3
-    // smart_contracts/security_token/arc1594.algo.ts:15
-    // public issuable = GlobalState<arc4.Bool>({ key: 'iss' }) // True = issuable
+    // smart_contracts/security_token/arc1594.algo.ts:14
+    // public arc1594_issuable = GlobalState<arc4.Bool>({ key: 'arc1594_iss' }) // True = issuable
     intc_0 // 0
-    bytec 15 // "iss"
+    bytec 17 // "arc1594_iss"
     app_global_get_ex
     assert // check GlobalState exists
     intc_0 // 0
-    // smart_contracts/security_token/arc1594.algo.ts:39
-    // assert(this.issuable.hasValue && this.issuable.value.native === true, 'issuance_disabled')
+    // smart_contracts/security_token/arc1594.algo.ts:38
+    // assert(this.arc1594_issuable.hasValue && this.arc1594_issuable.value.native === true, 'issuance_disabled')
     getbit
     intc_1 // 1
     ==
@@ -1668,26 +2119,26 @@ arc1594_issue:
     intc_1 // 1
 
 arc1594_issue_bool_merge@4:
-    // smart_contracts/security_token/arc1594.algo.ts:39
-    // assert(this.issuable.hasValue && this.issuable.value.native === true, 'issuance_disabled')
+    // smart_contracts/security_token/arc1594.algo.ts:38
+    // assert(this.arc1594_issuable.hasValue && this.arc1594_issuable.value.native === true, 'issuance_disabled')
     assert // issuance_disabled
-    // smart_contracts/security_token/arc1594.algo.ts:41
+    // smart_contracts/security_token/arc1594.algo.ts:40
     // this.arc1410_issue_by_partition(to, new arc4.Address(), amount, data)
     frame_dig -3
     bytec_1 // addr AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY5HFKQ
     frame_dig -2
     frame_dig -1
     callsub arc1410_issue_by_partition
-    // smart_contracts/security_token/arc1594.algo.ts:42
+    // smart_contracts/security_token/arc1594.algo.ts:41
     // emit('Issue', new arc1594_issue_event({ to, amount, data }))
     frame_dig -3
     frame_dig -2
     concat
-    bytec 21 // 0x0042
+    bytec 24 // 0x0042
     concat
     frame_dig -1
     concat
-    bytec 6 // 0x0002
+    bytec 5 // 0x0002
     swap
     concat
     pushbytes 0xf2e998af // method "Issue((address,uint256,byte[]))"
@@ -1703,16 +2154,16 @@ arc1594_issue_bool_false@3:
 
 // smart_contracts/security_token/arc1594.algo.ts::Arc1594.arc1594_redeemFrom(from: bytes, amount: bytes, data: bytes) -> void:
 arc1594_redeemFrom:
-    // smart_contracts/security_token/arc1594.algo.ts:45-46
+    // smart_contracts/security_token/arc1594.algo.ts:44-45
     // @arc4.abimethod()
     // public arc1594_redeemFrom(from: arc4.Address, amount: arc4.UintN256, data: arc4.DynamicBytes): void {
     proto 3 0
     intc_0 // 0
-    // smart_contracts/security_token/arc1594.algo.ts:47
+    // smart_contracts/security_token/arc1594.algo.ts:46
     // const sender = new arc4.Address(Txn.sender)
     txn Sender
     dup
-    // smart_contracts/security_token/arc1594.algo.ts:48
+    // smart_contracts/security_token/arc1594.algo.ts:47
     // assert(sender === from || this.arc88_is_owner(sender).native === true, 'not_auth')
     frame_dig -3
     ==
@@ -1729,10 +2180,10 @@ arc1594_redeemFrom_bool_true@2:
     intc_1 // 1
 
 arc1594_redeemFrom_bool_merge@4:
-    // smart_contracts/security_token/arc1594.algo.ts:48
+    // smart_contracts/security_token/arc1594.algo.ts:47
     // assert(sender === from || this.arc88_is_owner(sender).native === true, 'not_auth')
     assert // not_auth
-    // smart_contracts/security_token/arc1594.algo.ts:49
+    // smart_contracts/security_token/arc1594.algo.ts:48
     // assert(amount.native > 0n, 'invalid_amount')
     frame_dig -2
     pushbytes 0x
@@ -1745,7 +2196,7 @@ arc1594_redeemFrom_bool_merge@4:
     concat
     dup
     frame_bury 0
-    // smart_contracts/security_token/arc1594.algo.ts:50
+    // smart_contracts/security_token/arc1594.algo.ts:49
     // assert(this.balances(from).exists && this.balances(from).value.native >= amount.native, 'insufficient_balance')
     box_len
     bury 1
@@ -1759,10 +2210,10 @@ arc1594_redeemFrom_bool_merge@4:
     intc_1 // 1
 
 arc1594_redeemFrom_bool_merge@8:
-    // smart_contracts/security_token/arc1594.algo.ts:50
+    // smart_contracts/security_token/arc1594.algo.ts:49
     // assert(this.balances(from).exists && this.balances(from).value.native >= amount.native, 'insufficient_balance')
     assert // insufficient_balance
-    // smart_contracts/security_token/arc1594.algo.ts:51
+    // smart_contracts/security_token/arc1594.algo.ts:50
     // this.balances(from).value = new arc4.UintN256(this.balances(from).value.native - amount.native)
     frame_dig 0
     dup
@@ -1789,7 +2240,7 @@ arc1594_redeemFrom_bool_merge@8:
     bytec_3 // "t"
     app_global_get_ex
     assert // check GlobalState exists
-    // smart_contracts/security_token/arc1594.algo.ts:52
+    // smart_contracts/security_token/arc1594.algo.ts:51
     // this.totalSupply.value = new arc4.UintN256(this.totalSupply.value.native - amount.native)
     frame_dig -2
     b-
@@ -1802,23 +2253,23 @@ arc1594_redeemFrom_bool_merge@8:
     // smart_contracts/security_token/arc200.algo.ts:51
     // public totalSupply = GlobalState<UintN256>({ key: 't' })
     bytec_3 // "t"
-    // smart_contracts/security_token/arc1594.algo.ts:52
+    // smart_contracts/security_token/arc1594.algo.ts:51
     // this.totalSupply.value = new arc4.UintN256(this.totalSupply.value.native - amount.native)
     swap
     app_global_put
-    // smart_contracts/security_token/arc1594.algo.ts:53
+    // smart_contracts/security_token/arc1594.algo.ts:52
     // emit('Redeem', new arc1594_redeem_event({ from, amount, data }))
     frame_dig -3
     frame_dig -2
     concat
-    bytec 21 // 0x0042
+    bytec 24 // 0x0042
     concat
     frame_dig -1
     concat
-    bytec 6 // 0x0002
+    bytec 5 // 0x0002
     swap
     concat
-    bytec 25 // method "Redeem((address,uint256,byte[]))"
+    bytec 29 // method "Redeem((address,uint256,byte[]))"
     swap
     concat
     log
@@ -1835,15 +2286,15 @@ arc1594_redeemFrom_bool_false@3:
 
 // smart_contracts/security_token/arc1594.algo.ts::Arc1594.arc1594_redeem(amount: bytes, data: bytes) -> void:
 arc1594_redeem:
-    // smart_contracts/security_token/arc1594.algo.ts:56-57
+    // smart_contracts/security_token/arc1594.algo.ts:55-56
     // @arc4.abimethod()
     // public arc1594_redeem(amount: arc4.UintN256, data: arc4.DynamicBytes): void {
     proto 2 0
-    // smart_contracts/security_token/arc1594.algo.ts:58
+    // smart_contracts/security_token/arc1594.algo.ts:57
     // const from = new arc4.Address(Txn.sender)
     txn Sender
     dup
-    // smart_contracts/security_token/arc1594.algo.ts:59
+    // smart_contracts/security_token/arc1594.algo.ts:58
     // assert(amount.native > 0n, 'invalid_amount')
     frame_dig -2
     pushbytes 0x
@@ -1855,7 +2306,7 @@ arc1594_redeem:
     swap
     concat
     dup
-    // smart_contracts/security_token/arc1594.algo.ts:60
+    // smart_contracts/security_token/arc1594.algo.ts:59
     // assert(this.balances(from).exists && this.balances(from).value.native >= amount.native, 'insufficient_balance')
     box_len
     bury 1
@@ -1869,10 +2320,10 @@ arc1594_redeem:
     intc_1 // 1
 
 arc1594_redeem_bool_merge@4:
-    // smart_contracts/security_token/arc1594.algo.ts:60
+    // smart_contracts/security_token/arc1594.algo.ts:59
     // assert(this.balances(from).exists && this.balances(from).value.native >= amount.native, 'insufficient_balance')
     assert // insufficient_balance
-    // smart_contracts/security_token/arc1594.algo.ts:61
+    // smart_contracts/security_token/arc1594.algo.ts:60
     // this.balances(from).value = new arc4.UintN256(this.balances(from).value.native - amount.native)
     frame_dig 1
     dup
@@ -1899,7 +2350,7 @@ arc1594_redeem_bool_merge@4:
     bytec_3 // "t"
     app_global_get_ex
     assert // check GlobalState exists
-    // smart_contracts/security_token/arc1594.algo.ts:62
+    // smart_contracts/security_token/arc1594.algo.ts:61
     // this.totalSupply.value = new arc4.UintN256(this.totalSupply.value.native - amount.native)
     frame_dig -2
     b-
@@ -1912,23 +2363,23 @@ arc1594_redeem_bool_merge@4:
     // smart_contracts/security_token/arc200.algo.ts:51
     // public totalSupply = GlobalState<UintN256>({ key: 't' })
     bytec_3 // "t"
-    // smart_contracts/security_token/arc1594.algo.ts:62
+    // smart_contracts/security_token/arc1594.algo.ts:61
     // this.totalSupply.value = new arc4.UintN256(this.totalSupply.value.native - amount.native)
     swap
     app_global_put
-    // smart_contracts/security_token/arc1594.algo.ts:63
+    // smart_contracts/security_token/arc1594.algo.ts:62
     // emit('Redeem', new arc1594_redeem_event({ from, amount, data }))
     frame_dig 0
     frame_dig -2
     concat
-    bytec 21 // 0x0042
+    bytec 24 // 0x0042
     concat
     frame_dig -1
     concat
-    bytec 6 // 0x0002
+    bytec 5 // 0x0002
     swap
     concat
-    bytec 25 // method "Redeem((address,uint256,byte[]))"
+    bytec 29 // method "Redeem((address,uint256,byte[]))"
     swap
     concat
     log
@@ -1941,23 +2392,23 @@ arc1594_redeem_bool_false@3:
 
 // smart_contracts/security_token/arc1594.algo.ts::Arc1594.arc1594_transfer_with_data(to: bytes, amount: bytes, data: bytes) -> bytes:
 arc1594_transfer_with_data:
-    // smart_contracts/security_token/arc1594.algo.ts:67-68
+    // smart_contracts/security_token/arc1594.algo.ts:66-67
     // @arc4.abimethod()
     // public arc1594_transfer_with_data(to: arc4.Address, amount: arc4.UintN256, data: arc4.DynamicBytes): arc4.Bool {
     proto 3 1
-    // smart_contracts/security_token/arc1594.algo.ts:70
+    // smart_contracts/security_token/arc1594.algo.ts:69
     // const res = this.arc200_transfer(to, amount)
     frame_dig -3
     frame_dig -2
     callsub arc200_transfer
-    // smart_contracts/security_token/arc1594.algo.ts:72
+    // smart_contracts/security_token/arc1594.algo.ts:71
     // return res
     retsub
 
 
 // smart_contracts/security_token/arc1594.algo.ts::Arc1594.arc1594_transfer_from_with_data(from: bytes, to: bytes, amount: bytes, data: bytes) -> bytes:
 arc1594_transfer_from_with_data:
-    // smart_contracts/security_token/arc1594.algo.ts:75-81
+    // smart_contracts/security_token/arc1594.algo.ts:74-80
     // @arc4.abimethod()
     // public arc1594_transfer_from_with_data(
     //   from: arc4.Address,
@@ -1966,27 +2417,27 @@ arc1594_transfer_from_with_data:
     //   data: arc4.DynamicBytes,
     // ): arc4.Bool {
     proto 4 1
-    // smart_contracts/security_token/arc1594.algo.ts:82
+    // smart_contracts/security_token/arc1594.algo.ts:81
     // const res = this.arc200_transferFrom(from, to, amount)
     frame_dig -4
     frame_dig -3
     frame_dig -2
     callsub arc200_transferFrom
-    // smart_contracts/security_token/arc1594.algo.ts:83
+    // smart_contracts/security_token/arc1594.algo.ts:82
     // return res
     retsub
 
 
 // smart_contracts/security_token/arc1594.algo.ts::Arc1594.arc1594_is_issuable() -> bytes:
 arc1594_is_issuable:
-    // smart_contracts/security_token/arc1594.algo.ts:15
-    // public issuable = GlobalState<arc4.Bool>({ key: 'iss' }) // True = issuable
+    // smart_contracts/security_token/arc1594.algo.ts:14
+    // public arc1594_issuable = GlobalState<arc4.Bool>({ key: 'arc1594_iss' }) // True = issuable
     intc_0 // 0
-    bytec 15 // "iss"
+    bytec 17 // "arc1594_iss"
     app_global_get_ex
     assert // check GlobalState exists
-    // smart_contracts/security_token/arc1594.algo.ts:89
-    // return this.issuable.value
+    // smart_contracts/security_token/arc1594.algo.ts:88
+    // return this.arc1594_issuable.value
     retsub
 
 
@@ -2005,8 +2456,8 @@ arc1410_balance_of_partition:
     frame_dig -1
     concat
     // smart_contracts/security_token/arc1410.algo.ts:57
-    // public partitions = BoxMap<arc1410_PartitionKey, arc4.UintN256>({ keyPrefix: 'p' })
-    bytec 8 // "p"
+    // public partitions = BoxMap<arc1410_PartitionKey, arc4.UintN256>({ keyPrefix: 'arc1410_p' })
+    bytec 8 // "arc1410_p"
     swap
     concat
     // smart_contracts/security_token/arc1410.algo.ts:75
@@ -2053,7 +2504,7 @@ arc200_transfer:
     frame_dig -1
     // smart_contracts/security_token/arc1410.algo.ts:86
     // new arc4.DynamicBytes(),
-    bytec 26 // 0x0000
+    bytec 16 // 0x0000
     // smart_contracts/security_token/arc1410.algo.ts:80-87
     // this._transfer_partition(
     //   new arc4.Address(Txn.sender),
@@ -2118,8 +2569,8 @@ arc1410_partitions_of:
     frame_dig -1
     concat
     // smart_contracts/security_token/arc1410.algo.ts:60
-    // keyPrefix: 'hp_a',
-    bytec 16 // "hp_a"
+    // keyPrefix: 'arc1410_hp_a',
+    bytec 18 // "arc1410_hp_a"
     swap
     concat
     dup
@@ -2128,7 +2579,7 @@ arc1410_partitions_of:
     box_len
     bury 1
     bnz arc1410_partitions_of_after_if_else@2
-    bytec 26 // 0x0000
+    bytec 16 // 0x0000
     swap
     retsub
 
@@ -2171,8 +2622,8 @@ arc1410_is_operator_after_if_else@2:
     frame_dig -1
     concat
     // smart_contracts/security_token/arc1410.algo.ts:62
-    // public operators = BoxMap<arc1410_OperatorKey, arc4.Byte>({ keyPrefix: 'op' }) // value = 1 authorized
-    bytec 17 // "op"
+    // public operators = BoxMap<arc1410_OperatorKey, arc4.Byte>({ keyPrefix: 'arc1410_op' }) // value = 1 authorized
+    bytec 19 // "arc1410_op"
     swap
     concat
     dup
@@ -2202,8 +2653,8 @@ arc1410_is_operator_after_if_else@5:
     bytec_1 // addr AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY5HFKQ
     concat
     // smart_contracts/security_token/arc1410.algo.ts:62
-    // public operators = BoxMap<arc1410_OperatorKey, arc4.Byte>({ keyPrefix: 'op' }) // value = 1 authorized
-    bytec 17 // "op"
+    // public operators = BoxMap<arc1410_OperatorKey, arc4.Byte>({ keyPrefix: 'arc1410_op' }) // value = 1 authorized
+    bytec 19 // "arc1410_op"
     swap
     concat
     dup
@@ -2229,7 +2680,7 @@ arc1410_is_operator_after_if_else@5:
 arc1410_is_operator_after_if_else@8:
     // smart_contracts/security_token/arc1410.algo.ts:125
     // return new arc4.Bool(false)
-    bytec 11 // 0x00
+    bytec 12 // 0x00
     frame_bury 0
     retsub
 
@@ -2254,13 +2705,13 @@ arc1410_authorize_operator:
     frame_dig -1
     concat
     // smart_contracts/security_token/arc1410.algo.ts:62
-    // public operators = BoxMap<arc1410_OperatorKey, arc4.Byte>({ keyPrefix: 'op' }) // value = 1 authorized
-    bytec 17 // "op"
+    // public operators = BoxMap<arc1410_OperatorKey, arc4.Byte>({ keyPrefix: 'arc1410_op' }) // value = 1 authorized
+    bytec 19 // "arc1410_op"
     swap
     concat
     // smart_contracts/security_token/arc1410.algo.ts:132
     // this.operators(key).value = new arc4.Byte(1)
-    bytec 22 // 0x01
+    bytec 25 // 0x01
     box_put
     retsub
 
@@ -2285,8 +2736,8 @@ arc1410_revoke_operator:
     frame_dig -1
     concat
     // smart_contracts/security_token/arc1410.algo.ts:62
-    // public operators = BoxMap<arc1410_OperatorKey, arc4.Byte>({ keyPrefix: 'op' }) // value = 1 authorized
-    bytec 17 // "op"
+    // public operators = BoxMap<arc1410_OperatorKey, arc4.Byte>({ keyPrefix: 'arc1410_op' }) // value = 1 authorized
+    bytec 19 // "arc1410_op"
     swap
     concat
     dup
@@ -2347,8 +2798,8 @@ arc1410_operator_transfer_by_partition:
     frame_dig -4
     concat
     // smart_contracts/security_token/arc1410.algo.ts:63
-    // public operatorPortionAllowances = BoxMap<arc1410_OperatorPortionKey, arc4.UintN256>({ keyPrefix: 'opa' })
-    bytec 13 // "opa"
+    // public operatorPortionAllowances = BoxMap<arc1410_OperatorPortionKey, arc4.UintN256>({ keyPrefix: 'arc1410_opa' })
+    bytec 14 // "arc1410_opa"
     swap
     concat
     dup
@@ -2439,8 +2890,8 @@ arc1410_can_transfer_by_partition:
     frame_dig -4
     concat
     // smart_contracts/security_token/arc1410.algo.ts:57
-    // public partitions = BoxMap<arc1410_PartitionKey, arc4.UintN256>({ keyPrefix: 'p' })
-    bytec 8 // "p"
+    // public partitions = BoxMap<arc1410_PartitionKey, arc4.UintN256>({ keyPrefix: 'arc1410_p' })
+    bytec 8 // "arc1410_p"
     swap
     concat
     dup
@@ -2537,8 +2988,8 @@ arc1410_can_transfer_by_partition_after_if_else@6:
     frame_dig -4
     concat
     // smart_contracts/security_token/arc1410.algo.ts:63
-    // public operatorPortionAllowances = BoxMap<arc1410_OperatorPortionKey, arc4.UintN256>({ keyPrefix: 'opa' })
-    bytec 13 // "opa"
+    // public operatorPortionAllowances = BoxMap<arc1410_OperatorPortionKey, arc4.UintN256>({ keyPrefix: 'arc1410_opa' })
+    bytec 14 // "arc1410_opa"
     swap
     concat
     dup
@@ -2627,8 +3078,8 @@ _receiverPartition:
     frame_dig -1
     concat
     // smart_contracts/security_token/arc1410.algo.ts:57
-    // public partitions = BoxMap<arc1410_PartitionKey, arc4.UintN256>({ keyPrefix: 'p' })
-    bytec 8 // "p"
+    // public partitions = BoxMap<arc1410_PartitionKey, arc4.UintN256>({ keyPrefix: 'arc1410_p' })
+    bytec 8 // "arc1410_p"
     swap
     concat
     // smart_contracts/security_token/arc1410.algo.ts:245
@@ -2657,8 +3108,8 @@ _add_participation_to_holder:
     pushbytes ""
     dupn 4
     // smart_contracts/security_token/arc1410.algo.ts:58
-    // public holderPartitionsCurrentPage = BoxMap<arc4.Address, arc4.UintN64>({ keyPrefix: 'hp_p' })
-    pushbytes "hp_p"
+    // public holderPartitionsCurrentPage = BoxMap<arc4.Address, arc4.UintN64>({ keyPrefix: 'arc1410_hp_p' })
+    pushbytes "arc1410_hp_p"
     frame_dig -2
     concat
     dup
@@ -2672,7 +3123,7 @@ _add_participation_to_holder:
     frame_dig 10
     // smart_contracts/security_token/arc1410.algo.ts:265
     // let page = new arc4.UintN64(0)
-    bytec 20 // 0x0000000000000000
+    bytec 22 // 0x0000000000000000
     // smart_contracts/security_token/arc1410.algo.ts:267
     // this.holderPartitionsCurrentPage(holder).value = page
     box_put
@@ -2691,7 +3142,7 @@ _add_participation_to_holder_after_if_else@2:
     frame_bury 6
     // smart_contracts/security_token/arc1410.algo.ts:265
     // let page = new arc4.UintN64(0)
-    bytec 20 // 0x0000000000000000
+    bytec 22 // 0x0000000000000000
     // smart_contracts/security_token/arc1410.algo.ts:271
     // for (let curPage = page; curPage.native < lastPage.native; curPage = new arc4.UintN64(curPage.native + 1)) {
     frame_bury 1
@@ -2718,8 +3169,8 @@ _add_participation_to_holder_while_top@3:
     frame_dig 1
     concat
     // smart_contracts/security_token/arc1410.algo.ts:60
-    // keyPrefix: 'hp_a',
-    bytec 16 // "hp_a"
+    // keyPrefix: 'arc1410_hp_a',
+    bytec 18 // "arc1410_hp_a"
     swap
     concat
     dup
@@ -2731,7 +3182,7 @@ _add_participation_to_holder_while_top@3:
     bnz _add_participation_to_holder_after_if_else@6
     // smart_contracts/security_token/arc1410.algo.ts:277
     // this.holderPartitionsAddresses(paginatedKey).value = [participation]
-    bytec 23 // 0x0001
+    bytec 26 // 0x0001
     frame_dig -1
     concat
     frame_dig 4
@@ -2803,8 +3254,8 @@ _add_participation_to_holder_block@10:
     frame_dig 2
     concat
     // smart_contracts/security_token/arc1410.algo.ts:60
-    // keyPrefix: 'hp_a',
-    bytec 16 // "hp_a"
+    // keyPrefix: 'arc1410_hp_a',
+    bytec 18 // "arc1410_hp_a"
     swap
     concat
     dup
@@ -2836,7 +3287,7 @@ _add_participation_to_holder_block@10:
     extract 2 0
     // smart_contracts/security_token/arc1410.algo.ts:295
     // participation,
-    bytec 23 // 0x0001
+    bytec 26 // 0x0001
     frame_dig -1
     concat
     // smart_contracts/security_token/arc1410.algo.ts:293-296
@@ -2884,12 +3335,12 @@ _add_participation_to_holder_else_body@13:
     concat
     // smart_contracts/security_token/arc1410.algo.ts:304
     // this.holderPartitionsAddresses(newPaginatedKey).value = [participation]
-    bytec 23 // 0x0001
+    bytec 26 // 0x0001
     frame_dig -1
     concat
     // smart_contracts/security_token/arc1410.algo.ts:60
-    // keyPrefix: 'hp_a',
-    bytec 16 // "hp_a"
+    // keyPrefix: 'arc1410_hp_a',
+    bytec 18 // "arc1410_hp_a"
     uncover 2
     concat
     // smart_contracts/security_token/arc1410.algo.ts:304
@@ -2953,8 +3404,8 @@ _transfer_partition:
     frame_dig -5
     concat
     // smart_contracts/security_token/arc1410.algo.ts:57
-    // public partitions = BoxMap<arc1410_PartitionKey, arc4.UintN256>({ keyPrefix: 'p' })
-    bytec 8 // "p"
+    // public partitions = BoxMap<arc1410_PartitionKey, arc4.UintN256>({ keyPrefix: 'arc1410_p' })
+    bytec 8 // "arc1410_p"
     swap
     concat
     dup
@@ -3019,7 +3470,7 @@ _transfer_partition_after_if_else@2:
     //     data: data,
     //   }),
     // )
-    bytec 6 // 0x0002
+    bytec 5 // 0x0002
     swap
     concat
     pushbytes 0x206b7940 // method "Transfer((address,address,address,uint256,byte[]))"
@@ -3045,8 +3496,8 @@ _transfer_partition_after_if_else@4:
     frame_dig -3
     concat
     // smart_contracts/security_token/arc1410.algo.ts:57
-    // public partitions = BoxMap<arc1410_PartitionKey, arc4.UintN256>({ keyPrefix: 'p' })
-    bytec 8 // "p"
+    // public partitions = BoxMap<arc1410_PartitionKey, arc4.UintN256>({ keyPrefix: 'arc1410_p' })
+    bytec 8 // "arc1410_p"
     swap
     concat
     dup
@@ -3107,8 +3558,8 @@ arc1410_authorize_operator_by_portion:
     frame_dig -2
     concat
     // smart_contracts/security_token/arc1410.algo.ts:63
-    // public operatorPortionAllowances = BoxMap<arc1410_OperatorPortionKey, arc4.UintN256>({ keyPrefix: 'opa' })
-    bytec 13 // "opa"
+    // public operatorPortionAllowances = BoxMap<arc1410_OperatorPortionKey, arc4.UintN256>({ keyPrefix: 'arc1410_opa' })
+    bytec 14 // "arc1410_opa"
     swap
     concat
     // smart_contracts/security_token/arc1410.algo.ts:368
@@ -3148,8 +3599,8 @@ arc1410_is_operator_by_portion_after_if_else@2:
     frame_dig -1
     concat
     // smart_contracts/security_token/arc1410.algo.ts:63
-    // public operatorPortionAllowances = BoxMap<arc1410_OperatorPortionKey, arc4.UintN256>({ keyPrefix: 'opa' })
-    bytec 13 // "opa"
+    // public operatorPortionAllowances = BoxMap<arc1410_OperatorPortionKey, arc4.UintN256>({ keyPrefix: 'arc1410_opa' })
+    bytec 14 // "arc1410_opa"
     swap
     concat
     dup
@@ -3159,7 +3610,7 @@ arc1410_is_operator_by_portion_after_if_else@2:
     box_len
     bury 1
     bnz arc1410_is_operator_by_portion_after_if_else@4
-    bytec 11 // 0x00
+    bytec 12 // 0x00
     swap
     retsub
 
@@ -3171,7 +3622,7 @@ arc1410_is_operator_by_portion_after_if_else@4:
     assert // Box must have value
     pushbytes 0x
     b>
-    bytec 11 // 0x00
+    bytec 12 // 0x00
     intc_0 // 0
     uncover 2
     setbit
@@ -3214,8 +3665,8 @@ arc1410_issue_by_partition:
     concat
     dup
     // smart_contracts/security_token/arc1410.algo.ts:57
-    // public partitions = BoxMap<arc1410_PartitionKey, arc4.UintN256>({ keyPrefix: 'p' })
-    bytec 8 // "p"
+    // public partitions = BoxMap<arc1410_PartitionKey, arc4.UintN256>({ keyPrefix: 'arc1410_p' })
+    bytec 8 // "arc1410_p"
     swap
     concat
     dup
@@ -3320,11 +3771,11 @@ arc1410_issue_by_partition_after_if_else@4:
     frame_dig 2
     frame_dig -2
     concat
-    bytec 24 // 0x0062
+    bytec 27 // 0x0062
     concat
     frame_dig -1
     concat
-    bytec 6 // 0x0002
+    bytec 5 // 0x0002
     swap
     concat
     pushbytes 0xfa443b1b // method "Issue((address,address,uint256,byte[]))"
@@ -3357,8 +3808,8 @@ arc1410_redeem_by_partition:
     dup
     cover 2
     // smart_contracts/security_token/arc1410.algo.ts:57
-    // public partitions = BoxMap<arc1410_PartitionKey, arc4.UintN256>({ keyPrefix: 'p' })
-    bytec 8 // "p"
+    // public partitions = BoxMap<arc1410_PartitionKey, arc4.UintN256>({ keyPrefix: 'arc1410_p' })
+    bytec 8 // "arc1410_p"
     swap
     concat
     // smart_contracts/security_token/arc1410.algo.ts:413
@@ -3462,14 +3913,14 @@ arc1410_redeem_by_partition_bool_merge@4:
     frame_dig 0
     frame_dig -2
     concat
-    bytec 24 // 0x0062
+    bytec 27 // 0x0062
     concat
     frame_dig -1
     concat
-    bytec 6 // 0x0002
+    bytec 5 // 0x0002
     swap
     concat
-    bytec 27 // method "Redeem((address,address,uint256,byte[]))"
+    bytec 30 // method "Redeem((address,address,uint256,byte[]))"
     swap
     concat
     log
@@ -3522,8 +3973,8 @@ arc1410_operator_redeem_by_partition:
     frame_dig -3
     concat
     // smart_contracts/security_token/arc1410.algo.ts:63
-    // public operatorPortionAllowances = BoxMap<arc1410_OperatorPortionKey, arc4.UintN256>({ keyPrefix: 'opa' })
-    bytec 13 // "opa"
+    // public operatorPortionAllowances = BoxMap<arc1410_OperatorPortionKey, arc4.UintN256>({ keyPrefix: 'arc1410_opa' })
+    bytec 14 // "arc1410_opa"
     swap
     concat
     dup
@@ -3580,8 +4031,8 @@ arc1410_operator_redeem_by_partition_after_if_else@4:
     dup
     frame_bury 1
     // smart_contracts/security_token/arc1410.algo.ts:57
-    // public partitions = BoxMap<arc1410_PartitionKey, arc4.UintN256>({ keyPrefix: 'p' })
-    bytec 8 // "p"
+    // public partitions = BoxMap<arc1410_PartitionKey, arc4.UintN256>({ keyPrefix: 'arc1410_p' })
+    bytec 8 // "arc1410_p"
     swap
     concat
     // smart_contracts/security_token/arc1410.algo.ts:445
@@ -3686,14 +4137,14 @@ arc1410_operator_redeem_by_partition_bool_merge@8:
     frame_dig 1
     frame_dig -2
     concat
-    bytec 24 // 0x0062
+    bytec 27 // 0x0062
     concat
     frame_dig -1
     concat
-    bytec 6 // 0x0002
+    bytec 5 // 0x0002
     swap
     concat
-    bytec 27 // method "Redeem((address,address,uint256,byte[]))"
+    bytec 30 // method "Redeem((address,address,uint256,byte[]))"
     swap
     concat
     log
@@ -3797,7 +4248,7 @@ bootstrap:
     concat
     frame_dig -1
     concat
-    bytec 28 // method "arc200_Transfer(address,address,uint256)"
+    bytec 31 // method "arc200_Transfer(address,address,uint256)"
     swap
     concat
     log
@@ -4071,7 +4522,7 @@ _transfer_after_if_else@2:
     concat
     frame_dig -1
     concat
-    bytec 28 // method "arc200_Transfer(address,address,uint256)"
+    bytec 31 // method "arc200_Transfer(address,address,uint256)"
     swap
     concat
     log
@@ -4189,7 +4640,7 @@ _ensureDefaultOwner:
     // smart_contracts/security_token/arc88.algo.ts:19
     // public initialized = GlobalState<arc4.Byte>({ key: 'arc88_oi' }) // 1 if initialized (explicit or implicit)
     intc_0 // 0
-    bytec 12 // "arc88_oi"
+    bytec 13 // "arc88_oi"
     // smart_contracts/security_token/arc88.algo.ts:27
     // if (!this.initialized.hasValue || this.initialized.value.native === 0) {
     app_global_get_ex
@@ -4198,7 +4649,7 @@ _ensureDefaultOwner:
     // smart_contracts/security_token/arc88.algo.ts:19
     // public initialized = GlobalState<arc4.Byte>({ key: 'arc88_oi' }) // 1 if initialized (explicit or implicit)
     intc_0 // 0
-    bytec 12 // "arc88_oi"
+    bytec 13 // "arc88_oi"
     app_global_get_ex
     assert // check GlobalState exists
     // smart_contracts/security_token/arc88.algo.ts:27
@@ -4227,10 +4678,10 @@ _ensureDefaultOwner_if_body@2:
 _ensureDefaultOwner_after_if_else@4:
     // smart_contracts/security_token/arc88.algo.ts:19
     // public initialized = GlobalState<arc4.Byte>({ key: 'arc88_oi' }) // 1 if initialized (explicit or implicit)
-    bytec 12 // "arc88_oi"
+    bytec 13 // "arc88_oi"
     // smart_contracts/security_token/arc88.algo.ts:31
     // this.initialized.value = new arc4.Byte(1)
-    bytec 22 // 0x01
+    bytec 25 // 0x01
     app_global_put
 
 _ensureDefaultOwner_after_if_else@5:
@@ -4271,7 +4722,7 @@ arc88_is_owner:
     app_global_get_ex
     bury 1
     bnz arc88_is_owner_after_if_else@2
-    bytec 11 // 0x00
+    bytec 12 // 0x00
     retsub
 
 arc88_is_owner_after_if_else@2:
@@ -4286,7 +4737,7 @@ arc88_is_owner_after_if_else@2:
     bytec_1 // addr AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY5HFKQ
     ==
     bz arc88_is_owner_after_if_else@4
-    bytec 11 // 0x00
+    bytec 12 // 0x00
     retsub
 
 arc88_is_owner_after_if_else@4:
@@ -4300,7 +4751,7 @@ arc88_is_owner_after_if_else@4:
     // return new arc4.Bool(this.owner.value === query)
     frame_dig -1
     ==
-    bytec 11 // 0x00
+    bytec 12 // 0x00
     intc_0 // 0
     uncover 2
     setbit
@@ -4316,7 +4767,7 @@ arc88_initialize_owner:
     // smart_contracts/security_token/arc88.algo.ts:19
     // public initialized = GlobalState<arc4.Byte>({ key: 'arc88_oi' }) // 1 if initialized (explicit or implicit)
     intc_0 // 0
-    bytec 12 // "arc88_oi"
+    bytec 13 // "arc88_oi"
     // smart_contracts/security_token/arc88.algo.ts:52
     // assert(!(this.initialized.hasValue && this.initialized.value.native === 1), 'already_initialized')
     app_global_get_ex
@@ -4325,7 +4776,7 @@ arc88_initialize_owner:
     // smart_contracts/security_token/arc88.algo.ts:19
     // public initialized = GlobalState<arc4.Byte>({ key: 'arc88_oi' }) // 1 if initialized (explicit or implicit)
     intc_0 // 0
-    bytec 12 // "arc88_oi"
+    bytec 13 // "arc88_oi"
     app_global_get_ex
     assert // check GlobalState exists
     // smart_contracts/security_token/arc88.algo.ts:52
@@ -4356,10 +4807,10 @@ arc88_initialize_owner_bool_merge@4:
     app_global_put
     // smart_contracts/security_token/arc88.algo.ts:19
     // public initialized = GlobalState<arc4.Byte>({ key: 'arc88_oi' }) // 1 if initialized (explicit or implicit)
-    bytec 12 // "arc88_oi"
+    bytec 13 // "arc88_oi"
     // smart_contracts/security_token/arc88.algo.ts:55
     // this.initialized.value = new arc4.Byte(1)
-    bytec 22 // 0x01
+    bytec 25 // 0x01
     app_global_put
     retsub
 
@@ -4411,7 +4862,7 @@ arc88_transfer_ownership:
     // emit(new arc88_OwnershipTransferred({ previous_owner: previous, new_owner }))
     frame_dig -1
     concat
-    bytec 29 // method "arc88_OwnershipTransferred(address,address)"
+    bytec 32 // method "arc88_OwnershipTransferred(address,address)"
     swap
     concat
     log
@@ -4487,7 +4938,7 @@ arc88_transfer_ownership_request:
     // smart_contracts/security_token/arc88.algo.ts:18
     // public pendingOwner = GlobalState<arc4.Address>({ key: 'arc88_po' }) // optional two-step
     intc_0 // 0
-    bytec 9 // "arc88_po"
+    bytec 10 // "arc88_po"
     // smart_contracts/security_token/arc88.algo.ts:83
     // if (this.pendingOwner.hasValue && this.pendingOwner.value !== new arc4.Address()) {
     app_global_get_ex
@@ -4496,7 +4947,7 @@ arc88_transfer_ownership_request:
     // smart_contracts/security_token/arc88.algo.ts:18
     // public pendingOwner = GlobalState<arc4.Address>({ key: 'arc88_po' }) // optional two-step
     intc_0 // 0
-    bytec 9 // "arc88_po"
+    bytec 10 // "arc88_po"
     app_global_get_ex
     assert // check GlobalState exists
     // smart_contracts/security_token/arc88.algo.ts:83
@@ -4509,7 +4960,7 @@ arc88_transfer_ownership_request:
 arc88_transfer_ownership_request_after_if_else@3:
     // smart_contracts/security_token/arc88.algo.ts:18
     // public pendingOwner = GlobalState<arc4.Address>({ key: 'arc88_po' }) // optional two-step
-    bytec 9 // "arc88_po"
+    bytec 10 // "arc88_po"
     // smart_contracts/security_token/arc88.algo.ts:86
     // this.pendingOwner.value = pending
     frame_dig -1
@@ -4539,7 +4990,7 @@ arc88_accept_ownership:
     // smart_contracts/security_token/arc88.algo.ts:18
     // public pendingOwner = GlobalState<arc4.Address>({ key: 'arc88_po' }) // optional two-step
     intc_0 // 0
-    bytec 9 // "arc88_po"
+    bytec 10 // "arc88_po"
     // smart_contracts/security_token/arc88.algo.ts:93
     // assert(this.pendingOwner.hasValue, 'not_pending_owner')
     app_global_get_ex
@@ -4551,7 +5002,7 @@ arc88_accept_ownership:
     // smart_contracts/security_token/arc88.algo.ts:18
     // public pendingOwner = GlobalState<arc4.Address>({ key: 'arc88_po' }) // optional two-step
     intc_0 // 0
-    bytec 9 // "arc88_po"
+    bytec 10 // "arc88_po"
     app_global_get_ex
     assert // check GlobalState exists
     // smart_contracts/security_token/arc88.algo.ts:95
@@ -4572,7 +5023,7 @@ arc88_accept_ownership:
     app_global_put
     // smart_contracts/security_token/arc88.algo.ts:18
     // public pendingOwner = GlobalState<arc4.Address>({ key: 'arc88_po' }) // optional two-step
-    bytec 9 // "arc88_po"
+    bytec 10 // "arc88_po"
     // smart_contracts/security_token/arc88.algo.ts:98
     // this.pendingOwner.value = new arc4.Address()
     bytec_1 // addr AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY5HFKQ
@@ -4587,7 +5038,7 @@ arc88_accept_ownership:
     log
     // smart_contracts/security_token/arc88.algo.ts:100
     // emit(new arc88_OwnershipTransferred({ previous_owner: previous, new_owner: sender }))
-    bytec 29 // method "arc88_OwnershipTransferred(address,address)"
+    bytec 32 // method "arc88_OwnershipTransferred(address,address)"
     swap
     concat
     log
@@ -4614,7 +5065,7 @@ arc88_cancel_ownership_request:
     assert // not_owner
     // smart_contracts/security_token/arc88.algo.ts:18
     // public pendingOwner = GlobalState<arc4.Address>({ key: 'arc88_po' }) // optional two-step
-    bytec 9 // "arc88_po"
+    bytec 10 // "arc88_po"
     // smart_contracts/security_token/arc88.algo.ts:107
     // this.pendingOwner.value = new arc4.Address()
     bytec_1 // addr AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY5HFKQ

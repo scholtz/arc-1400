@@ -54,13 +54,13 @@ class arc1410_OperatorPortionKey extends arc4.Struct<{
 }> {}
 
 export class Arc1410 extends Arc200 {
-  public partitions = BoxMap<arc1410_PartitionKey, arc4.UintN256>({ keyPrefix: 'p' })
-  public holderPartitionsCurrentPage = BoxMap<arc4.Address, arc4.UintN64>({ keyPrefix: 'hp_p' })
+  public partitions = BoxMap<arc1410_PartitionKey, arc4.UintN256>({ keyPrefix: 'arc1410_p' })
+  public holderPartitionsCurrentPage = BoxMap<arc4.Address, arc4.UintN64>({ keyPrefix: 'arc1410_hp_p' })
   public holderPartitionsAddresses = BoxMap<arc1410_HoldingPartitionsPaginatedKey, arc4.Address[]>({
-    keyPrefix: 'hp_a',
+    keyPrefix: 'arc1410_hp_a',
   })
-  public operators = BoxMap<arc1410_OperatorKey, arc4.Byte>({ keyPrefix: 'op' }) // value = 1 authorized
-  public operatorPortionAllowances = BoxMap<arc1410_OperatorPortionKey, arc4.UintN256>({ keyPrefix: 'opa' })
+  public operators = BoxMap<arc1410_OperatorKey, arc4.Byte>({ keyPrefix: 'arc1410_op' }) // value = 1 authorized
+  public operatorPortionAllowances = BoxMap<arc1410_OperatorPortionKey, arc4.UintN256>({ keyPrefix: 'arc1410_opa' })
 
   constructor() {
     super()
@@ -86,6 +86,18 @@ export class Arc1410 extends Arc200 {
       new arc4.DynamicBytes(),
     )
     return this._transfer(new arc4.Address(Txn.sender), to, value)
+  }
+
+  @arc4.abimethod()
+  public override arc200_transferFrom(from: arc4.Address, to: arc4.Address, value: arc4.UintN256): arc4.Bool {
+    const spender = new arc4.Address(Txn.sender)
+    const spender_allowance = this._allowance(from, spender)
+    assert(spender_allowance.native >= value.native, 'insufficient approval')
+    const new_spender_allowance = new arc4.UintN256(spender_allowance.native - value.native)
+    this._approve(from, spender, new_spender_allowance)
+
+    this._transfer_partition(from, new arc4.Address(), to, new arc4.Address(), value, new arc4.DynamicBytes())
+    return this._transfer(from, to, value)
   }
   /**
    * Transfer an amount of tokens from partition to receiver. Sender must be msg.sender or authorized operator.

@@ -23,8 +23,8 @@ class arc1643_document_removed_event extends arc4.Struct<{
 // Index box aggregates names (simple comma-separated list for minimal footprint)
 export class Arc1643 extends Arc1594 {
   // Store each document keyed by name; enumeration extension left for future (index omitted for minimal profile)
-  public documents = BoxMap<arc4.DynamicBytes, arc1643_document_record>({ keyPrefix: 'doc' })
-  public documentKeys = Box<arc4.DynamicBytes[]>({ key: 'docs' })
+  public documents = BoxMap<arc4.DynamicBytes, arc1643_document_record>({ keyPrefix: 'arc1643_doc' })
+  public documentKeys = Box<arc4.DynamicBytes[]>({ key: 'arc1643_docs' })
 
   protected _onlyOwner() {
     assert(this.arc88_is_owner(new arc4.Address(Txn.sender)).native === true, 'only_owner')

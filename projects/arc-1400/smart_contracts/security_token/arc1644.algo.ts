@@ -28,11 +28,11 @@ const CODE_JUSTIFICATION_REQUIRED = new arc4.Byte(0x52)
 
 export class Arc1644 extends Arc1643 {
   // Controller address (single-controller base). If unset, controllable = false.
-  public controller = GlobalState<arc4.Address>({ key: 'ctrl' })
-  public controllable = GlobalState<arc4.Bool>({ key: 'ctrlen' })
-  public requireJustification = GlobalState<arc4.Bool>({ key: 'rjust' })
-  public lastControllerActionRound = GlobalState<arc4.UintN64>({ key: 'lcar' }) // optional rate limit tracking
-  public minControllerActionInterval = GlobalState<arc4.UintN64>({ key: 'mcai' })
+  public arc1644_controller = GlobalState<arc4.Address>({ key: 'arc1644_ctrl' })
+  public arc1644_controllable = GlobalState<arc4.Bool>({ key: 'arc1644_ctrlen' })
+  public arc1644_requireJustification = GlobalState<arc4.Bool>({ key: 'arc1644_rjust' })
+  public arc1644_lastControllerActionRound = GlobalState<arc4.UintN64>({ key: 'arc1644_lcar' }) // optional rate limit tracking
+  public arc1644_minControllerActionInterval = GlobalState<arc4.UintN64>({ key: 'arc1644_mcai' })
 
   constructor() {
     super()
@@ -44,26 +44,29 @@ export class Arc1644 extends Arc1643 {
   }
 
   protected _onlyController(): void {
-    assert(this.controller.hasValue, 'no_controller')
-    assert(new arc4.Address(Txn.sender) === this.controller.value, 'not_controller')
-    assert(this.controllable.hasValue && this.controllable.value.native === true, 'controller_disabled')
+    assert(this.arc1644_controller.hasValue, 'no_controller')
+    assert(new arc4.Address(Txn.sender) === this.arc1644_controller.value, 'not_controller')
+    assert(this.arc1644_controllable.hasValue && this.arc1644_controllable.value.native === true, 'controller_disabled')
   }
 
   protected _checkJustification(operator_data: arc4.DynamicBytes): void {
-    if (this.requireJustification.hasValue && this.requireJustification.value.native === true) {
+    if (this.arc1644_requireJustification.hasValue && this.arc1644_requireJustification.value.native === true) {
       assert(operator_data.native.length > 0, 'justification_required')
     }
   }
 
   protected _rateLimit(): void {
-    if (this.minControllerActionInterval.hasValue && this.minControllerActionInterval.value.native > 0n) {
-      if (this.lastControllerActionRound.hasValue) {
-        const last = this.lastControllerActionRound.value.native
-        const minGap = this.minControllerActionInterval.value.native
+    if (
+      this.arc1644_minControllerActionInterval.hasValue &&
+      this.arc1644_minControllerActionInterval.value.native > 0n
+    ) {
+      if (this.arc1644_lastControllerActionRound.hasValue) {
+        const last = this.arc1644_lastControllerActionRound.value.native
+        const minGap = this.arc1644_minControllerActionInterval.value.native
         const current = new arc4.UintN64(Global.round).native
         assert(current >= last + minGap, 'rate_limited')
       }
-      this.lastControllerActionRound.value = new arc4.UintN64(Global.round)
+      this.arc1644_lastControllerActionRound.value = new arc4.UintN64(Global.round)
     }
   }
 
@@ -71,10 +74,10 @@ export class Arc1644 extends Arc1643 {
   @arc4.abimethod()
   public arc1644_set_controller(new_controller: arc4.Address): void {
     this._onlyOwner()
-    const old = this.controller.hasValue ? this.controller.value : new arc4.Address()
-    this.controller.value = new_controller
-    if (!this.controllable.hasValue) {
-      this.controllable.value = new arc4.Bool(true)
+    const old = this.arc1644_controller.hasValue ? this.arc1644_controller.value : new arc4.Address()
+    this.arc1644_controller.value = new_controller
+    if (!this.arc1644_controllable.hasValue) {
+      this.arc1644_controllable.value = new arc4.Bool(true)
     }
     emit('ControllerChanged', new arc1644_controller_changed_event({ old, neu: new_controller }))
   }
@@ -84,11 +87,11 @@ export class Arc1644 extends Arc1643 {
     this._onlyOwner()
     // Irreversible disable if set false
     if (flag.native === false) {
-      this.controllable.value = flag
+      this.arc1644_controllable.value = flag
     } else {
       // allow enabling only if previously unset or true (idempotent)
-      if (!this.controllable.hasValue || this.controllable.value.native === true) {
-        this.controllable.value = flag
+      if (!this.arc1644_controllable.hasValue || this.arc1644_controllable.value.native === true) {
+        this.arc1644_controllable.value = flag
       }
     }
   }
@@ -96,19 +99,23 @@ export class Arc1644 extends Arc1643 {
   @arc4.abimethod()
   public arc1644_set_require_justification(flag: arc4.Bool): void {
     this._onlyOwner()
-    this.requireJustification.value = flag
+    this.arc1644_requireJustification.value = flag
   }
 
   @arc4.abimethod()
   public arc1644_set_min_action_interval(interval: arc4.UintN64): void {
     this._onlyOwner()
-    this.minControllerActionInterval.value = interval
+    this.arc1644_minControllerActionInterval.value = interval
   }
 
   /* ------------------------ base required methods ------------------------ */
   @arc4.abimethod({ readonly: true })
   public arc1644_is_controllable(): arc4.UintN64 {
-    if (this.controllable.hasValue && this.controllable.value.native === true && this.controller.hasValue) {
+    if (
+      this.arc1644_controllable.hasValue &&
+      this.arc1644_controllable.value.native === true &&
+      this.arc1644_controller.hasValue
+    ) {
       return new arc4.UintN64(1n)
     }
     return new arc4.UintN64(0n)
